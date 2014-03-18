@@ -7,6 +7,74 @@
     "crypto": "http://www.w3.org/2000/10/swap/crypto#"
   },
   "entity": {
+    "niiri:coordinate_space_id_1": {
+      "prov:type": {
+        "$": "nidm:coordinateSpace",
+        "type": "xsd:QName"
+      },
+      "prov:label": {
+        "$": "Coordinate space 1",
+        "type": "xsd:string"
+      },
+      "nidm:voxelToWorldMapping": {
+        "$": "[[-3, 0, 0, 78],[0, 3, 0, -112],[0, 0, 3, -50],[0, 0, 0, 1]]",
+        "type": "xsd:string"
+      },
+      "nidm:voxelUnits": {
+        "$": "['mm', 'mm', 'mm']",
+        "type": "xsd:string"
+      },
+      "nidm:voxelSize": {
+        "$": "[3, 3, 3]",
+        "type": "xsd:string"
+      },
+      "nidm:coordinateSystem": {
+        "$": "nidm:mniCoordinateSystem",
+        "type": "xsd:string"
+      },
+      "nidm:numberOfDimensions": {
+        "$": "3",
+        "type": "xsd:int"
+      },
+      "nidm:dimensions": {
+        "$": "[53,63,46]",
+        "type": "xsd:string"
+      }
+    },
+    "niiri:coordinate_space_id_2": {
+      "prov:type": {
+        "$": "nidm:coordinateSpace",
+        "type": "xsd:QName"
+      },
+      "prov:label": {
+        "$": "Coordinate space 2",
+        "type": "xsd:string"
+      },
+      "nidm:voxelToWorldMapping": {
+        "$": "[[-3, 0, 0, 78],[0, 3, 0, -112],[0, 0, 3, -50],[0, 0, 0, 1]]",
+        "type": "xsd:string"
+      },
+      "nidm:voxelUnits": {
+        "$": "['mm', 'mm', 'mm']",
+        "type": "xsd:string"
+      },
+      "nidm:voxelSize": {
+        "$": "[3, 3, 3]",
+        "type": "xsd:string"
+      },
+      "nidm:coordinateSystem": {
+        "$": "nidm:mniCoordinateSystem",
+        "type": "xsd:string"
+      },
+      "nidm:numberOfDimensions": {
+        "$": "3",
+        "type": "xsd:int"
+      },
+      "nidm:dimensions": {
+        "$": "[53,63,46]",
+        "type": "xsd:string"
+      }
+    },
     "niiri:statistical_map_id": {
       "prov:type": {
         "$": "nidm:statisticalMap",
@@ -40,28 +108,8 @@
         "$": "1",
         "type": "xsd:float"
       },
-      "nidm:numberOfDimensions": {
-        "$": "3",
-        "type": "xsd:int"
-      },
-      "nidm:dimensions": {
-        "$": "[53,63,46]",
-        "type": "xsd:string"
-      },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
-      "nidm:voxelSize": {
-        "$": "[3, 3, 3]",
-        "type": "xsd:string"
-      },
-      "nidm:voxelUnits": {
-        "$": "['mm', 'mm', 'mm']",
-        "type": "xsd:string"
-      },
-      "nidm:voxelToWorldMapping": {
-        "$": "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]",
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_1",
         "type": "xsd:string"
       },
       "crypto:sha": {
@@ -86,28 +134,8 @@
         "$": "data_scaling.nii",
         "type": "xsd:string"
       },
-      "nidm:numberOfDimensions": {
-        "$": "3",
-        "type": "xsd:int"
-      },
-      "nidm:dimensions": {
-        "$": "[53,63,46]",
-        "type": "xsd:string"
-      },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
-      "nidm:voxelSize": {
-        "$": "[3, 3, 3]",
-        "type": "xsd:string"
-      },
-      "nidm:voxelUnits": {
-        "$": "['mm', 'mm', 'mm']",
-        "type": "xsd:string"
-      },
-      "nidm:voxelToWorldMapping": {
-        "$": "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]",
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_1",
         "type": "xsd:string"
       },
       "crypto:sha": {
@@ -136,28 +164,60 @@
         "$": "con_0001.img",
         "type": "xsd:string"
       },
-      "nidm:numberOfDimensions": {
-        "$": "3",
-        "type": "xsd:int"
-      },
-      "nidm:dimensions": {
-        "$": "[53,63,46]",
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_1",
         "type": "xsd:string"
       },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
+      "crypto:sha": {
+        "$": "e43b6e01b0463fe7d40782137867a...",
+        "type": "xsd:string"
+      }
+    },
+    "niiri:beta_map_id_1": {
+      "prov:type": {
+        "$": "nidm:betaMap",
+        "type": "xsd:QName"
+      },
+      "prov:location": {
+        "$": "file:///path/to/beta_0001.img",
+        "type": "xsd:anyURI"
+      },
+      "prov:label": {
+        "$": "Beta Map 1",
         "type": "xsd:string"
       },
-      "nidm:voxelSize": {
-        "$": "[3, 3, 3]",
+      "nidm:fileName": {
+        "$": "beta_0001.img",
         "type": "xsd:string"
       },
-      "nidm:voxelUnits": {
-        "$": "['mm', 'mm', 'mm']",
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_1",
         "type": "xsd:string"
       },
-      "nidm:voxelToWorldMapping": {
-        "$": "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]",
+      "crypto:sha": {
+        "$": "e43b6e01b0463fe7d40782137867a...",
+        "type": "xsd:string"
+      }
+    },
+    "niiri:beta_map_id_2": {
+      "prov:type": {
+        "$": "nidm:betaMap",
+        "type": "xsd:QName"
+      },
+      "prov:location": {
+        "$": "file:///path/to/beta_0002.img",
+        "type": "xsd:anyURI"
+      },
+      "prov:label": {
+        "$": "Beta Map 2",
+        "type": "xsd:string"
+      },
+      "nidm:fileName": {
+        "$": "beta_0002.img",
+        "type": "xsd:string"
+      },
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_1",
         "type": "xsd:string"
       },
       "crypto:sha": {
@@ -168,6 +228,10 @@
     "niiri:contrast_standard_error_map_id": {
       "prov:type": {
         "$": "nidm:contrastStandardErrorMap",
+        "type": "xsd:QName"
+      },
+      "prov:type": {
+        "$": "spm:standardError",
         "type": "xsd:QName"
       },
       "prov:location": {
@@ -182,28 +246,8 @@
         "$": "contrastSE.nii",
         "type": "xsd:string"
       },
-      "nidm:numberOfDimensions": {
-        "$": "3",
-        "type": "xsd:int"
-      },
-      "nidm:dimensions": {
-        "$": "[53,63,46]",
-        "type": "xsd:string"
-      },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
-      "nidm:voxelSize": {
-        "$": "[3, 3, 3]",
-        "type": "xsd:string"
-      },
-      "nidm:voxelUnits": {
-        "$": "['mm', 'mm', 'mm']",
-        "type": "xsd:string"
-      },
-      "nidm:voxelToWorldMapping": {
-        "$": "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]",
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_1",
         "type": "xsd:string"
       },
       "crypto:sha": {
@@ -228,28 +272,8 @@
         "$": "ResMS.img",
         "type": "xsd:string"
       },
-      "nidm:numberOfDimensions": {
-        "$": "3",
-        "type": "xsd:int"
-      },
-      "nidm:dimensions": {
-        "$": "[53,63,46]",
-        "type": "xsd:string"
-      },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
-      "nidm:voxelSize": {
-        "$": "[3, 3, 3]",
-        "type": "xsd:string"
-      },
-      "nidm:voxelUnits": {
-        "$": "['mm', 'mm', 'mm']",
-        "type": "xsd:string"
-      },
-      "nidm:voxelToWorldMapping": {
-        "$": "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]",
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_1",
         "type": "xsd:string"
       },
       "crypto:sha": {
@@ -280,16 +304,56 @@
         "$": "nidm:contrast",
         "type": "xsd:QName"
       },
+      "nidm:statisticType": {
+        "$": "nidm:tStatistic",
+        "type": "xsd:string"
+      },
       "nidm:contrastName": {
         "$": "listening > rest",
         "type": "xsd:string"
       },
       "prov:label": {
-        "$": "Contrast weights",
+        "$": "Contrast",
         "type": "xsd:string"
       },
       "prov:value": {
         "$": "[1, 0, 0]",
+        "type": "xsd:string"
+      }
+    },
+    "niiri:input_data_id": {
+      "prov:type": {
+        "$": "prov:collection",
+        "type": "xsd:QName"
+      },
+      "prov:type": {
+        "$": "nidm:modelEstimationInputs",
+        "type": "xsd:QName"
+      },
+      "prov:label": {
+        "$": "Model Estimation Inputs",
+        "type": "xsd:string"
+      }
+    },
+    "niiri:scaled_data_id": {
+      "prov:type": {
+        "$": "nidm:scaledData",
+        "type": "xsd:QName"
+      },
+      "prov:location": {
+        "$": "file:///path/to/sd_0001.nii.gz",
+        "type": "xsd:anyURI"
+      },
+      "prov:label": {
+        "$": "Scaled Data",
+        "type": "xsd:string"
+      },
+      "nidm:fileName": {
+        "$": "sd_0001.nii.gz",
+        "type": "xsd:string"
+      },
+      "crypto:sha": {
+        "$": "e43b6e01b0463fe7d40782137867a...",
         "type": "xsd:string"
       }
     },
@@ -310,28 +374,8 @@
         "$": "mask.img",
         "type": "xsd:string"
       },
-      "nidm:numberOfDimensions": {
-        "$": "3",
-        "type": "xsd:int"
-      },
-      "nidm:dimensions": {
-        "$": "[53,63,46]",
-        "type": "xsd:string"
-      },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
-      "nidm:voxelSize": {
-        "$": "[3, 3, 3]",
-        "type": "xsd:string"
-      },
-      "nidm:voxelUnits": {
-        "$": "['mm', 'mm', 'mm']",
-        "type": "xsd:string"
-      },
-      "nidm:voxelToWorldMapping": {
-        "$": "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]",
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_2",
         "type": "xsd:string"
       },
       "spm:searchVolumeInVoxels": {
@@ -424,6 +468,10 @@
         "$": "spm:statisticImageProperties",
         "type": "xsd:QName"
       },
+      "prov:label": {
+        "$": "Statistical image properties",
+        "type": "xsd:string"
+      },
       "spm:expectedNumberOfVoxelsPerCluster": {
         "$": "0.553331387916112",
         "type": "xsd:float"
@@ -474,28 +522,8 @@
         "$": "thresh_spmT_0001.img",
         "type": "xsd:string"
       },
-      "nidm:numberOfDimensions": {
-        "$": "3",
-        "type": "xsd:int"
-      },
-      "nidm:dimensions": {
-        "$": "[53,63,46]",
-        "type": "xsd:string"
-      },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
-      "nidm:voxelSize": {
-        "$": "[3, 3, 3]",
-        "type": "xsd:string"
-      },
-      "nidm:voxelUnits": {
-        "$": "['mm', 'mm', 'mm']",
-        "type": "xsd:string"
-      },
-      "nidm:voxelToWorldMapping": {
-        "$": "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]",
+      "nidm:coordinateSpace": {
+        "$": "niiri:coordinate_space_id_1",
         "type": "xsd:string"
       },
       "crypto:sha": {
@@ -620,7 +648,7 @@
         "$": "Peak Level Statistic: 0001",
         "type": "xsd:string"
       },
-      "prov:atLocation": {
+      "prov:location": {
         "$": "niiri:coordinate_0001",
         "type": "xsd:string"
       },
@@ -658,10 +686,6 @@
         "$": "Coordinate: 0001",
         "type": "xsd:string"
       },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
       "nidm:coordinate1": {
         "$": "-60",
         "type": "xsd:float"
@@ -684,7 +708,7 @@
         "$": "Peak Level Statistic: 0002",
         "type": "xsd:string"
       },
-      "prov:atLocation": {
+      "prov:location": {
         "$": "niiri:coordinate_0002",
         "type": "xsd:string"
       },
@@ -722,10 +746,6 @@
         "$": "Coordinate: 0002",
         "type": "xsd:string"
       },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
       "nidm:coordinate1": {
         "$": "-66",
         "type": "xsd:float"
@@ -748,7 +768,7 @@
         "$": "Peak Level Statistic: 0003",
         "type": "xsd:string"
       },
-      "prov:atLocation": {
+      "prov:location": {
         "$": "niiri:coordinate_0003",
         "type": "xsd:string"
       },
@@ -786,10 +806,6 @@
         "$": "Coordinate: 0003",
         "type": "xsd:string"
       },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
       "nidm:coordinate1": {
         "$": "-63",
         "type": "xsd:float"
@@ -812,7 +828,7 @@
         "$": "Peak Level Statistic: 0004",
         "type": "xsd:string"
       },
-      "prov:atLocation": {
+      "prov:location": {
         "$": "niiri:coordinate_0004",
         "type": "xsd:string"
       },
@@ -850,10 +866,6 @@
         "$": "Coordinate: 0004",
         "type": "xsd:string"
       },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
       "nidm:coordinate1": {
         "$": "57",
         "type": "xsd:float"
@@ -876,7 +888,7 @@
         "$": "Peak Level Statistic: 0005",
         "type": "xsd:string"
       },
-      "prov:atLocation": {
+      "prov:location": {
         "$": "niiri:coordinate_0005",
         "type": "xsd:string"
       },
@@ -914,10 +926,6 @@
         "$": "Coordinate: 0005",
         "type": "xsd:string"
       },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
       "nidm:coordinate1": {
         "$": "66",
         "type": "xsd:float"
@@ -940,7 +948,7 @@
         "$": "Peak Level Statistic: 0006",
         "type": "xsd:string"
       },
-      "prov:atLocation": {
+      "prov:location": {
         "$": "niiri:coordinate_0006",
         "type": "xsd:string"
       },
@@ -978,10 +986,6 @@
         "$": "Coordinate: 0006",
         "type": "xsd:string"
       },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
       "nidm:coordinate1": {
         "$": "57",
         "type": "xsd:float"
@@ -1004,7 +1008,7 @@
         "$": "Peak Level Statistic: 0007",
         "type": "xsd:string"
       },
-      "prov:atLocation": {
+      "prov:location": {
         "$": "niiri:coordinate_0007",
         "type": "xsd:string"
       },
@@ -1042,10 +1046,6 @@
         "$": "Coordinate: 0007",
         "type": "xsd:string"
       },
-      "nidm:coordinateSystem": {
-        "$": "nidm:mniCoordinateSystem",
-        "type": "xsd:string"
-      },
       "nidm:coordinate1": {
         "$": "36",
         "type": "xsd:float"
@@ -1061,13 +1061,23 @@
     }
   },
   "activity": {
-    "niiri:statistical_estimation_id": {
+    "niiri:model_fitting_id": {
       "prov:type": {
         "$": "spm:estimation",
         "type": "xsd:QName"
       },
       "prov:label": {
-        "$": "Statistical estimation",
+        "$": "Model fitting",
+        "type": "xsd:string"
+      }
+    },
+    "niiri:contrast_estimation_id": {
+      "prov:type": {
+        "$": "spm:contrast",
+        "type": "xsd:QName"
+      },
+      "prov:label": {
+        "$": "Contrast estimation",
         "type": "xsd:string"
       }
     },
@@ -1078,6 +1088,10 @@
       },
       "prov:label": {
         "$": "Inference",
+        "type": "xsd:string"
+      },
+      "nidm:statisticalTest": {
+        "$": "nidm:oneTailedTtest",
         "type": "xsd:string"
       }
     }
@@ -1101,129 +1115,151 @@
         "type": "xsd:string"
       },
       "nidm:softwareRevision": {
-        "$": "5765",
+        "$": "5853",
         "type": "xsd:string"
       }
     }
   },
   "wasGeneratedBy": {
-    "_:wGB15": {
-      "prov:entity": "niiri:contrast_map_id",
-      "prov:activity": "niiri:statistical_estimation_id"
+    "_:wGB7": {
+      "prov:entity": "niiri:beta_map_id_1",
+      "prov:activity": "niiri:model_fitting_id"
     },
-    "_:wGB16": {
-      "prov:entity": "niiri:contrast_standard_error_map_id",
-      "prov:activity": "niiri:statistical_estimation_id"
+    "_:wGB10": {
+      "prov:entity": "niiri:beta_map_id_2",
+      "prov:activity": "niiri:model_fitting_id"
     },
-    "_:wGB17": {
+    "_:wGB23": {
       "prov:entity": "niiri:residual_mean_squares_map_id",
-      "prov:activity": "niiri:statistical_estimation_id"
+      "prov:activity": "niiri:model_fitting_id"
     },
-    "_:wGB18": {
-      "prov:entity": "niiri:statistical_map_id",
-      "prov:activity": "niiri:statistical_estimation_id"
+    "_:wGB28": {
+      "prov:entity": "niiri:contrast_map_id",
+      "prov:activity": "niiri:contrast_estimation_id"
+    },
+    "_:wGB29": {
+      "prov:entity": "niiri:contrast_standard_error_map_id",
+      "prov:activity": "niiri:contrast_estimation_id"
     },
     "_:wGB30": {
+      "prov:entity": "niiri:statistical_map_id",
+      "prov:activity": "niiri:contrast_estimation_id"
+    },
+    "_:wGB42": {
       "prov:entity": "niiri:stat_image_properties_id",
       "prov:activity": "niiri:inference_id"
     },
-    "_:wGB32": {
+    "_:wGB44": {
       "prov:entity": "niiri:excursion_set_id",
       "prov:activity": "niiri:inference_id"
     }
   },
   "used": {
-    "_:u3": {
-      "prov:activity": "niiri:statistical_estimation_id",
-      "prov:entity": "niiri:data_scaling_id"
+    "_:u8": {
+      "prov:activity": "niiri:contrast_estimation_id",
+      "prov:entity": "niiri:beta_map_id_1"
     },
-    "_:u13": {
-      "prov:activity": "niiri:statistical_estimation_id",
-      "prov:entity": "niiri:contrast_id"
+    "_:u11": {
+      "prov:activity": "niiri:contrast_estimation_id",
+      "prov:entity": "niiri:beta_map_id_2"
     },
-    "_:u14": {
-      "prov:activity": "niiri:statistical_estimation_id",
+    "_:u17": {
+      "prov:activity": "niiri:model_fitting_id",
       "prov:entity": "niiri:design_matrix_id"
     },
-    "_:u23": {
+    "_:u22": {
+      "prov:activity": "niiri:model_fitting_id",
+      "prov:entity": "niiri:input_data_id"
+    },
+    "_:u25": {
+      "prov:activity": "niiri:contrast_estimation_id",
+      "prov:entity": "niiri:residual_mean_squares_map_id"
+    },
+    "_:u26": {
+      "prov:activity": "niiri:contrast_estimation_id",
+      "prov:entity": "niiri:design_matrix_id"
+    },
+    "_:u27": {
+      "prov:activity": "niiri:contrast_estimation_id",
+      "prov:entity": "niiri:contrast_id"
+    },
+    "_:u35": {
       "prov:activity": "niiri:inference_id",
       "prov:entity": "niiri:statistical_map_id"
     },
-    "_:u24": {
+    "_:u36": {
       "prov:activity": "niiri:inference_id",
       "prov:entity": "niiri:search_space_id"
     },
-    "_:u25": {
+    "_:u37": {
       "prov:activity": "niiri:inference_id",
       "prov:entity": "niiri:height_threshold_id"
     },
-    "_:u26": {
+    "_:u38": {
       "prov:activity": "niiri:inference_id",
       "prov:entity": "niiri:extent_threshold_id"
     }
   },
   "wasDerivedFrom": {
-    "_:wDF5": {
-      "prov:generatedEntity": "niiri:statistical_map_id",
-      "prov:usedEntity": "niiri:contrast_map_id"
-    },
-    "_:wDF7": {
-      "prov:generatedEntity": "niiri:statistical_map_id",
-      "prov:usedEntity": "niiri:contrast_standard_error_map_id"
-    },
-    "_:wDF9": {
-      "prov:generatedEntity": "niiri:contrast_standard_error_map_id",
-      "prov:usedEntity": "niiri:residual_mean_squares_map_id"
-    },
-    "_:wDF34": {
+    "_:wDF46": {
       "prov:generatedEntity": "niiri:set_level_statistic_id",
       "prov:usedEntity": "niiri:excursion_set_id"
     },
-    "_:wDF36": {
+    "_:wDF48": {
       "prov:generatedEntity": "niiri:cluster_0001",
       "prov:usedEntity": "niiri:set_level_statistic_id"
     },
-    "_:wDF38": {
+    "_:wDF50": {
       "prov:generatedEntity": "niiri:cluster_0002",
       "prov:usedEntity": "niiri:set_level_statistic_id"
     },
-    "_:wDF40": {
+    "_:wDF52": {
       "prov:generatedEntity": "niiri:cluster_0003",
       "prov:usedEntity": "niiri:set_level_statistic_id"
     },
-    "_:wDF43": {
+    "_:wDF55": {
       "prov:generatedEntity": "niiri:peak_0001",
       "prov:usedEntity": "niiri:cluster_0001"
     },
-    "_:wDF46": {
+    "_:wDF58": {
       "prov:generatedEntity": "niiri:peak_0002",
       "prov:usedEntity": "niiri:cluster_0001"
     },
-    "_:wDF49": {
+    "_:wDF61": {
       "prov:generatedEntity": "niiri:peak_0003",
       "prov:usedEntity": "niiri:cluster_0001"
     },
-    "_:wDF52": {
+    "_:wDF64": {
       "prov:generatedEntity": "niiri:peak_0004",
       "prov:usedEntity": "niiri:cluster_0002"
     },
-    "_:wDF55": {
+    "_:wDF67": {
       "prov:generatedEntity": "niiri:peak_0005",
       "prov:usedEntity": "niiri:cluster_0002"
     },
-    "_:wDF58": {
+    "_:wDF70": {
       "prov:generatedEntity": "niiri:peak_0006",
       "prov:usedEntity": "niiri:cluster_0002"
     },
-    "_:wDF61": {
+    "_:wDF73": {
       "prov:generatedEntity": "niiri:peak_0007",
       "prov:usedEntity": "niiri:cluster_0003"
     }
   },
   "wasAssociatedWith": {
-    "_:wAW28": {
+    "_:wAW40": {
       "prov:activity": "niiri:inference_id",
       "prov:agent": "niiri:software_id"
+    }
+  },
+  "hadMember": {
+    "_:hM20": {
+      "prov:collection": "niiri:input_data_id",
+      "prov:entity": "niiri:scaled_data_id"
+    },
+    "_:hM21": {
+      "prov:collection": "niiri:input_data_id",
+      "prov:entity": "niiri:data_scaling_id"
     }
   }
 }
