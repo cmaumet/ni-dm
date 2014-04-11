@@ -17,9 +17,6 @@ logger = logging.getLogger(__name__)
 
 # FIXME: Extend tests to more than one dataset (group analysis, ...)
 '''Tests based on the analysis of single-subject auditory data based on test01_spm_batch.m using SPM12b r5918.
-
-@author: Camille Maumet <c.m.j.maumet@warwick.ac.uk>, Satrajit Ghosh
-@copyright: University of Warwick 2014
 '''
 class TestSPMResultsDataModel(unittest.TestCase):
 
