@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-'''Test of NI-DM SPM export 
+'''Test of NI-DM SPM export tool
 
 @author: Camille Maumet <c.m.j.maumet@warwick.ac.uk>, Satrajit Ghosh
 @copyright: University of Warwick 2014

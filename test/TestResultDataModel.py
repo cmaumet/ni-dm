@@ -6,7 +6,7 @@ The software-specific test classes must inherit from this class.
 @copyright: University of Warwick 2014
 '''
 import unittest
-import os
+import os, inspect
 from subprocess import call
 import re
 import rdflib
@@ -22,7 +22,15 @@ logger = logging.getLogger(__name__)
 @author: Camille Maumet <c.m.j.maumet@warwick.ac.uk>, Satrajit Ghosh
 @copyright: University of Warwick 2014
 '''
-class TestResultsDataModel(object):
+class TestResultDataModel(object):
+    def setUp(self):
+        self.my_execption = ""
+
+        # Display log messages in console
+        logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+        # Current script directory is test directory (containing test data)
+        self.test_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
     '''Print the results query 'res' to the console'''
     def print_results(self, res):
