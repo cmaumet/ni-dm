@@ -16,6 +16,32 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
+def get_readable_name(graph, item):
+    # Look for label
+    name = graph.label(item)
+    # Look for name without path
+    if not name:
+        name = os.path.basename(item)
+        # Keep full path
+        if not name:
+            name = item
+    return name
+
+def get_alternatives(graph,s=None,p=None, o=None):
+    found = ""
+    
+    for (s_in,  p_in, o_in) in graph.triples((s,  p, o)):
+        if not o:  
+            found += "; "+get_readable_name(graph, o_in)
+        if not p:  
+            found += "; "+get_readable_name(graph, p_in)
+    if len(found) > 100:
+        found = '<many alternatives>'
+    else:
+        found = found[2:]
+    return found
+
 # FIXME: Extend tests to more than one dataset (group analysis, ...)
 '''Tests based on the analysis of single-subject auditory data based on test01_spm_batch.m using SPM12b r5918.
 
@@ -58,6 +84,7 @@ class TestResultDataModel(object):
         if not self.successful_retreive(self.spmexport.query(query), 'ContrastMap and ContrastStandardErrorMap'):
             raise Exception(self.my_execption)
 
+
     ''' Compare gt_graph and other_graph '''
     def compare_full_graphs(self, gt_graph, other_graph):
         # Check for predicates which are not in common to both graphs (XOR)
@@ -74,22 +101,37 @@ class TestResultDataModel(object):
         for s,p,o in diff_graph.triples( (None,  None, None) ):
             # If triple is found in other_graph
             if (s,  p, o) in other_graph:
-                # If subject and predicate found in gt_graph
+                # If subject and predicate found in gt_graph, then object is wrong
                 if (s,  p, None) in gt_graph:
-                    gt_graph_possible_value = ""
-                    for (s_gt_graph,  p_gt_graph, o_gt_graph) in gt_graph.triples((s,  p, None)):
-                        gt_graph_possible_value += "; "+os.path.basename(o_gt_graph)
-                    exc_wrong += "\nWrong:   '%s' \ton '%s' \tis '%s' (instead of '%s')"%(os.path.basename(p),other_graph.label(s),os.path.basename(o),gt_graph_possible_value[2:])
-                # If subject found in gt_graph
+                    exc_wrong += "\nWrong o:\t'%s' on '%s' should be '%s' (instead of '%s'?)"%(get_readable_name(other_graph, p),get_readable_name(other_graph, s),get_alternatives(gt_graph,s=s,p=p),get_readable_name(other_graph, o))
+                # If subject and object found in gt_graph, then predicate is wrong
+                elif (s,  None, o) in gt_graph:
+                    exc_wrong += "\nWrong p:\tBetween '%s' \tand '%s' \tshould be '%s' (instead of '%s'?)"%(get_readable_name(other_graph,s),get_readable_name(other_graph,o),get_readable_name(other_graph,p),get_alternatives(gt_graph,s=s,o=o))
+                # If predicate and object found in gt_graph, then subject is wrong
+                elif (None,  p, o) in gt_graph:
+                    if not (s, None, None) in gt_graph:
+                        if not s in exlude_s:
+                            exc_added += "\nAdded:\t'%s'"%(s)
+                            exlude_s.append(s)
+                    else:
+                        found_subject = ""
+                        for (s_gt_graph,  p_gt_graph, o_gt_graph) in gt_graph.triples((None,  p, o)):
+                            found_subject += "; "+os.path.basename(s_gt_graph)
+                        if len(found_subject) > 20:
+                            found_subject = 'many alternatives'
+                        else:
+                            found_subject = "'"+found_subject[2:]+"'?"
+                        exc_wrong += "\nWrong s:\t'%s' \tto '%s' \tis '%s' (instead of %s)."%(os.path.basename(p),get_readable_name(other_graph, o),os.path.basename(s),found_subject)
+                # If only subject found in gt_graph
                 elif (s,  None, None) in gt_graph:
-                    gt_graph_possible_value = ""
-                    for (s_gt_graph,  p_gt_graph, o_gt_graph) in gt_graph.triples((s,  p, None)):
-                        gt_graph_possible_value += "; "+os.path.basename(p_gt_graph)
-                    exc_added += "\nAdded:   '%s' \ton '%s' (instead of '%s')"%(os.path.basename(p),other_graph.label(s),gt_graph_possible_value[2:])
+                    # gt_graph_possible_value = ""
+                    # for (s_gt_graph,  p_gt_graph, o_gt_graph) in gt_graph.triples((s,  p, None)):
+                    #     gt_graph_possible_value += "; "+os.path.basename(p_gt_graph)
+                    exc_added += "\nAdded:\tin '%s', '%s' \t ('%s')."%(other_graph.label(s),os.path.basename(p),os.path.basename(o))
                 # If subject is *not* found in gt_graph
                 else:
                     if not s in exlude_s:
-                        exc_added += "\nAdded:   '%s'"%(s)
+                        exc_added += "\nAdded:\t'%s'"%(s)
                         exlude_s.append(s)
             # If subject and predicate are found in gt_graph 
             elif (s,  p, o) in gt_graph:
@@ -100,13 +142,13 @@ class TestResultDataModel(object):
                 # If subject found in other_graph
                 elif (s,  None, None) in other_graph:
                     other_graph_possible_value = ""
-                    for (s_export,  p_export, o_export) in other_graph.triples((s,  p, None)):
+                    for (s_export,  p_export, o_export) in other_graph.triples((s,  None, None)):
                         other_graph_possible_value += "; "+os.path.basename(p_export)
-                    exc_missing += "\nMissing:   '%s' \ton '%s' (instead of '%s')"%(os.path.basename(p),gt_graph.label(s),other_graph_possible_value[2:])
+                    exc_missing += "\nMissing:\t'%s' \ton '%s'"%(os.path.basename(p),gt_graph.label(s))
                 # If subject is *not* found in other_graph
                 else:
                     if not s in missing_s:
-                        exc_missing += "\nMissing:   '%s' "%(s)
+                        exc_missing += "\nMissing:\t'%s' "%(s)
                         missing_s.append(s)
 
         self.my_execption += exc_wrong+exc_added+exc_missing
