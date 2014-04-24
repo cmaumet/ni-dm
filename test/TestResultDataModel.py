@@ -103,7 +103,8 @@ class TestResultDataModel(object):
             if (s,  p, o) in other_graph:
                 # If subject and predicate found in gt_graph, then object is wrong
                 if (s,  p, None) in gt_graph:
-                    exc_wrong += "\nWrong o:\t'%s' on '%s' should be '%s' (instead of '%s'?)"%(get_readable_name(other_graph, p),get_readable_name(other_graph, s),get_alternatives(gt_graph,s=s,p=p),get_readable_name(other_graph, o))
+                    exc_wrong += "\nWrong o:\ts('%s') p('%s') o('%s') not in gold std (instead o: '%s'?)"%(get_readable_name(other_graph, s),get_readable_name(other_graph, p),get_readable_name(other_graph, o),get_alternatives(gt_graph,s=s,p=p))
+                    # exc_wrong += "\nWrong o:\t'%s' on '%s' should be '%s' (instead of '%s'?)"%(get_readable_name(other_graph, p),get_readable_name(other_graph, s),get_alternatives(gt_graph,s=s,p=p),get_readable_name(other_graph, o))
                 # If subject and object found in gt_graph, then predicate is wrong
                 elif (s,  None, o) in gt_graph:
                     exc_wrong += "\nWrong p:\tBetween '%s' and '%s' is '%s' (instead of '%s'?)"%(get_readable_name(other_graph,s),get_readable_name(other_graph,o),get_readable_name(other_graph,p),get_alternatives(gt_graph,s=s,o=o))
