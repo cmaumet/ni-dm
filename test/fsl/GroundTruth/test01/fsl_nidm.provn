@@ -27,7 +27,7 @@ document
     entity(niiri:statistical_map_id,
         [prov:type = 'nidm:statisticalMap',
         prov:type = 'nidm:TStatisticalMap',
-        prov:location = "file:///path/to/tstat1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./tstat1.nii.gz" %% xsd:anyURI,
         prov:label = "Statistical Map: Generation: tstat1",
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "tstat1.nii.gz" %% xsd:string,
@@ -40,7 +40,7 @@ document
     entity(niiri:z_statistical_map_id,
         [prov:type = 'nidm:statisticalMap',
         prov:type = 'fsl:ZStatisticalMap',
-        prov:location = "file:///path/to/zstat1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./zstat1.nii.gz" %% xsd:anyURI,
         prov:label = "Z-statistical Map: Generation: zstat1",
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "zstat1.nii.gz" %% xsd:string,
@@ -50,7 +50,7 @@ document
    
     entity(niiri:contrast_map_id,
         [prov:type = 'nidm:contrastMap',
-        prov:location = "file:///path/to/cope1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./cope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Map: Generation" %% xsd:string,
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "cope1.nii.gz" %% xsd:string,
@@ -59,7 +59,7 @@ document
 
     entity(niiri:beta_map_id_1,
         [prov:type = 'nidm:betaMap',
-        prov:location = "file:///path/to/pe1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./pe1.nii.gz" %% xsd:anyURI,
         prov:label = "Parameter estimate 1" %% xsd:string,
         nidm:fileName = "pe1.nii.gz" %% xsd:string,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
@@ -68,7 +68,7 @@ document
 
     entity(niiri:beta_map_id_2,
         [prov:type = 'nidm:betaMap',
-        prov:location = "file:///path/to/pe2.img" %% xsd:anyURI,
+        prov:location = "file://./pe2.img" %% xsd:anyURI,
         prov:label = "Parameter estimate 2" %% xsd:string,
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "pe2.nii.gz" %% xsd:string,
@@ -78,7 +78,7 @@ document
 
     entity(niiri:beta_map_id_3,
         [prov:type = 'nidm:betaMap',
-        prov:location = "file:///path/to/pe3.img" %% xsd:anyURI,
+        prov:location = "file://./pe3.img" %% xsd:anyURI,
         prov:label = "Parameter estimate 3" %% xsd:string,
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "pe3.nii.gz" %% xsd:string,
@@ -88,7 +88,7 @@ document
 
     entity(niiri:beta_map_id_4,
         [prov:type = 'nidm:betaMap',
-        prov:location = "file:///path/to/pe4.img" %% xsd:anyURI,
+        prov:location = "file://./pe4.img" %% xsd:anyURI,
         prov:label = "Parameter estimate 4" %% xsd:string,
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "pe4.nii.gz" %% xsd:string,
@@ -103,7 +103,7 @@ document
   
     entity(niiri:contrast_variance_map_id,
         [prov:type = 'fsl:varcope',
-        prov:location = "file:///path/to/varcope1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./varcope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Variance Map 1" %% xsd:string,
         nidm:fileName = "varcope1.nii.gz" %% xsd:string,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
@@ -112,7 +112,7 @@ document
 
     entity(niiri:contrast_standard_error_map_id,
         [prov:type = 'nidm:contrastStandardErrorMap',
-        prov:location = "file:///path/to/sqrt_varcope1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./sqrt_varcope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Standard Error Map" %% xsd:string,
         nidm:fileName = "std_varcope1.nii.gz" %% xsd:string,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
@@ -120,7 +120,7 @@ document
   
     entity(niiri:residual_mean_squares_map_id,
         [prov:type = 'nidm:residualMeanSquaresMap',
-        prov:location = "file:///path/to/sigmasquareds.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./sigmasquareds.nii.gz" %% xsd:anyURI,
         prov:label = "Residual Mean Squares Map" %% xsd:string,
         nidm:fileName = "sigmasquareds.nii.gz" %% xsd:string,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
@@ -128,7 +128,7 @@ document
 
     entity(niiri:design_matrix_id,
         [prov:type = 'nidm:designMatrix',
-        prov:location = "file:///path/to/design_matrix.csv" %% xsd:anyURI,
+        prov:location = "file://./design_matrix.csv" %% xsd:anyURI,
         prov:label = "Design Matrix" %% xsd:string,
         nidm:fileName = "design_matrix.csv" %% xsd:string])
     entity(niiri:contrast_id,
@@ -161,7 +161,7 @@ document
 
     entity(niiri:search_space_id,
         [prov:type = 'nidm:mask',
-        prov:location = "file:///path/to/mask.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./mask.nii.gz" %% xsd:anyURI,
         crypto:sha = "400a2f07d99ed9be06577e6ecc89222cf4b688c654bc89067da558e88b73b97dd1b25e6c98f2a735fa0a1409598cff7e6025bda55abb6b9f5ef65d8d307eeba8",
         nidm:fileName = "mask.nii.gz" %% xsd:string,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_2',
@@ -201,13 +201,13 @@ document
 
     entity(niiri:excursion_set_id,
         [prov:type = 'nidm:excursionSet',
-        prov:location = "file:///path/to/thresh_zstat1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./thresh_zstat1.nii.gz" %% xsd:anyURI,
         crypto:sha = "400a2f07d99ed9be06577e6ecc89222cf4b688c654bc89067da558e88b73b97dd1b25e6c98f2a735fa0a1409598cff7e6025bda55abb6b9f5ef65d8d307eeba8",
         nidm:fileName = "thresh_zstat1.nii.gz" %% xsd:string,
         nidm:voxelToWorldMapping = "[[1,2,3,4], [1,2,3,4], [1,2,3,4], [0,0,0,1]]" %% xsd:string,
         prov:label = "Excursion Set" %% xsd:string,        
-        fsl:slicesPlot = "file:///path/to/rendered_thresh_zstat1.png" %% xsd:anyURI,
-        nidm:underlayFile = "file:///path/to/example_func.nii.nii.gz" %% xsd:anyURI,
+        fsl:slicesPlot = "file://./rendered_thresh_zstat1.png" %% xsd:anyURI,
+        nidm:underlayFile = "file://./example_func.nii.nii.gz" %% xsd:anyURI,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_TODO'])
 
     wasGeneratedBy(niiri:excursion_set_id, niiri:inference_id, -)
