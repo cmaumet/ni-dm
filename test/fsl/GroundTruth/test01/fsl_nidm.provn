@@ -179,7 +179,7 @@ document
 
     entity(niiri:extent_threshold_id,
         [prov:type = 'nidm:extentThreshold',
-        prov:label = "Cluster Threshold",
+        prov:label = "Extent Threshold: p<0.05 corr.",
         nidm:pValueFWER = "0.05" %% xsd:float])
 
     activity(niiri:inference_id_1,
