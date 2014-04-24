@@ -184,7 +184,7 @@ document
 
     activity(niiri:inference_id_1,
         [prov:type = 'nidm:inference',
-        prov:label = "Inference"])
+        prov:label = "Inference: Generation"])
 
     used(niiri:inference_id_1, niiri:z_statistical_map_id_1, -)
     used(niiri:inference_id_1, niiri:search_space_id, -)
