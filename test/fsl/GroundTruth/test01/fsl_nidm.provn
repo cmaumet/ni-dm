@@ -1,60 +1,112 @@
 document
     prefix neurolex <http://neurolex.org/wiki/Main_Page/>
-    prefix fsl <http://http://fsl.fmrib.ox.ac.uk/>
-    prefix nidm <http://nidm.nidash.org/>
+    prefix fsl <http://www.incf.org/ns/nidash/fsl#>
+    prefix nidm <http://www.incf.org/ns/nidash/nidm#>
     prefix niiri <http://iri.nidash.org/>
     prefix crypto <http://www.w3.org/2000/10/swap/crypto#>
 
     entity(niiri:coordinate_space_id_1,
         [prov:type = 'nidm:coordinateSpace',
         prov:label = "Coordinate space 1" %% xsd:string,
-        nidm:voxelToWorldMapping = "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]" %% xsd:string,
+        nidm:voxelToWorldMapping = "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]" %% xsd:string,
         nidm:voxelUnits = "['mm', 'mm', 'mm']" %% xsd:string,
-        nidm:voxelSize = "[3, 3, 3]" %% xsd:string,
+        nidm:voxelSize = "[3.5, 3.5, 3.5]" %% xsd:string,
         nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
         nidm:numberOfDimensions = "3" %% xsd:int,
-        nidm:dimensions = "[53,63,46]" %% xsd:string])
+        nidm:dimensions = "[64, 64, 42]" %% xsd:string])
+
     entity(niiri:coordinate_space_id_2,
         [prov:type = 'nidm:coordinateSpace',
         prov:label = "Coordinate space 2" %% xsd:string,
-        nidm:voxelToWorldMapping = "[[-3, 0, 0, 81],[0, 3, 0, -115],[0, 0, 3, -53],[0, 0, 0, 1]]" %% xsd:string,
+        nidm:voxelToWorldMapping = "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]" %% xsd:string,
         nidm:voxelUnits = "['mm', 'mm', 'mm']" %% xsd:string,
-        nidm:voxelSize = "[3, 3, 3]" %% xsd:string,
+        nidm:voxelSize = "[3.5, 3.5, 3.5]" %% xsd:string,
         nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
         nidm:numberOfDimensions = "3" %% xsd:int,
-        nidm:dimensions = "[53,63,46]" %% xsd:string])
+        nidm:dimensions = "[64, 64, 42]" %% xsd:string])
+
+    entity(niiri:coordinate_space_id_3,
+        [prov:type = 'nidm:coordinateSpace',
+        prov:label = "Coordinate space 3" %% xsd:string,
+        nidm:voxelToWorldMapping = "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]" %% xsd:string,
+        nidm:voxelUnits = "['mm', 'mm', 'mm']" %% xsd:string,
+        nidm:voxelSize = "[3.5, 3.5, 3.5]" %% xsd:string,
+        nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
+        nidm:numberOfDimensions = "3" %% xsd:int,
+        nidm:dimensions = "[64, 64, 42]" %% xsd:string])
+
+    entity(niiri:coordinate_space_id_4,
+        [prov:type = 'nidm:coordinateSpace',
+        prov:label = "Coordinate space 4" %% xsd:string,
+        nidm:voxelToWorldMapping = "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]" %% xsd:string,
+        nidm:voxelUnits = "['mm', 'mm', 'mm']" %% xsd:string,
+        nidm:voxelSize = "[3.5, 3.5, 3.5]" %% xsd:string,
+        nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
+        nidm:numberOfDimensions = "3" %% xsd:int,
+        nidm:dimensions = "[64, 64, 42]" %% xsd:string])
+
+    entity(niiri:coordinate_space_id_5,
+        [prov:type = 'nidm:coordinateSpace',
+        prov:label = "Coordinate space 5" %% xsd:string,
+        nidm:voxelToWorldMapping = "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]" %% xsd:string,
+        nidm:voxelUnits = "['mm', 'mm', 'mm']" %% xsd:string,
+        nidm:voxelSize = "[3.5, 3.5, 3.5]" %% xsd:string,
+        nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
+        nidm:numberOfDimensions = "3" %% xsd:int,
+        nidm:dimensions = "[64, 64, 42]" %% xsd:string])
+
+    entity(niiri:coordinate_space_id_6,
+        [prov:type = 'nidm:coordinateSpace',
+        prov:label = "Coordinate space 6" %% xsd:string,
+        nidm:voxelToWorldMapping = "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]" %% xsd:string,
+        nidm:voxelUnits = "['mm', 'mm', 'mm']" %% xsd:string,
+        nidm:voxelSize = "[3.5, 3.5, 3.5]" %% xsd:string,
+        nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
+        nidm:numberOfDimensions = "3" %% xsd:int,
+        nidm:dimensions = "[64, 64, 42]" %% xsd:string])
+
+    entity(niiri:coordinate_space_id_7,
+        [prov:type = 'nidm:coordinateSpace',
+        prov:label = "Coordinate space 7" %% xsd:string,
+        nidm:voxelToWorldMapping = "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]" %% xsd:string,
+        nidm:voxelUnits = "['mm', 'mm', 'mm']" %% xsd:string,
+        nidm:voxelSize = "[3.5, 3.5, 3.5]" %% xsd:string,
+        nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
+        nidm:numberOfDimensions = "3" %% xsd:int,
+        nidm:dimensions = "[64, 64, 42]" %% xsd:string])
+    
 
     entity(niiri:statistical_map_id_1,
         [prov:type = 'nidm:statisticalMap',
         prov:type = 'nidm:TStatisticalMap',
-        prov:location = "file://./tstat1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./stats/tstat1.nii.gz" %% xsd:anyURI,
         prov:label = "Statistical Map: Generation",
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "tstat1.nii.gz" %% xsd:string,
         nidm:statisticType = 'nidm:tStatistic',
         nidm:errorDegreesOfFreedom = "102" %% xsd:float,
         nidm:effectDegreesOfFreedom = "1" %% xsd:float,
-        nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
+        nidm:coordinateSpace = 'niiri:coordinate_space_id_6',
         crypto:sha = "400a2f07d99ed9be06577e6ecc89222cf4b688c654bc89067da558e88b73b97dd1b25e6c98f2a735fa0a1409598cff7e6025bda55abb6b9f5ef65d8d307eeba8"])
 
     entity(niiri:z_statistical_map_id_1,
         [prov:type = 'nidm:statisticalMap',
         prov:type = 'fsl:ZStatisticalMap',
-        prov:location = "file://./zstat1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./stats/zstat1.nii.gz" %% xsd:anyURI,
         prov:label = "Z-statistical Map: Generation",
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "zstat1.nii.gz" %% xsd:string,
-        nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
+        nidm:coordinateSpace = 'niiri:coordinate_space_id_5',
         crypto:sha = "400a2f07d99ed9be06577e6ecc89222cf4b688c654bc89067da558e88b73b97dd1b25e6c98f2a735fa0a1409598cff7e6025bda55abb6b9f5ef65d8d307eeba8"])
 
    
-    entity(niiri:contrast_map_id,
+    entity(niiri:contrast_map_id_1,
         [prov:type = 'nidm:contrastMap',
-        prov:location = "file://./cope1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./stats/cope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Map: Generation" %% xsd:string,
         nidm:contrastName = "Generation" %% xsd:string,
         nidm:fileName = "cope1.nii.gz" %% xsd:string,
-        nidm:coordinateSpace = 'niiri:coordinate_space_id_1',        
+        nidm:coordinateSpace = 'niiri:coordinate_space_id_3',        
         crypto:sha = "400a2f07d99ed9be06577e6ecc89222cf4b688c654bc89067da558e88b73b97dd1b25e6c98f2a735fa0a1409598cff7e6025bda55abb6b9f5ef65d8d307eeba8"])
 
     entity(niiri:beta_map_id_1,
@@ -106,7 +158,7 @@ document
         prov:location = "file://./varcope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Variance Map 1" %% xsd:string,
         nidm:fileName = "varcope1.nii.gz" %% xsd:string,
-        nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
+        nidm:coordinateSpace = 'niiri:coordinate_space_id_4',
         crypto:sha = "e43b6e01b0463fe7d40782137867a..." %% xsd:string])
     wasDerivedFrom(niiri:contrast_standard_error_map_id, niiri:contrast_variance_map_id)
 
@@ -120,7 +172,7 @@ document
   
     entity(niiri:residual_mean_squares_map_id,
         [prov:type = 'nidm:residualMeanSquaresMap',
-        prov:location = "file://./sigmasquareds.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./stats/sigmasquareds.nii.gz" %% xsd:anyURI,
         prov:label = "Residual Mean Squares Map" %% xsd:string,
         nidm:fileName = "sigmasquareds.nii.gz" %% xsd:string,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
@@ -132,10 +184,10 @@ document
         prov:label = "Design Matrix" %% xsd:string,
         nidm:fileName = "design_matrix.csv" %% xsd:string])
     entity(niiri:contrast_id_1,
-        [prov:type = 'nidm:contrast',
+        [prov:type = 'nidm:TContrast',
         nidm:contrastName = "Generation" %% xsd:string,
-        prov:label = "Contrast weights" %% xsd:string,
-        prov:value = "[1, 0, 0]" %% xsd:string])
+        prov:label = "T Contrast: Generation" %% xsd:string,
+        nidm:contrastWeights = "[1, 0, 0, 0]" %% xsd:string])
 
     activity(niiri:model_parameters_estimation_id,
         [prov:type = 'nidm:ModelParametersEstimation',
@@ -154,7 +206,7 @@ document
     wasAssociatedWith(niiri:contrast_estimation_id_1, niiri:software_id,-)
     used(niiri:contrast_estimation_id_1, niiri:residual_mean_squares_map_id,-)
     used(niiri:contrast_estimation_id_1, niiri:design_matrix_id,-)
-    wasGeneratedBy(niiri:contrast_map_id, niiri:contrast_estimation_id_1,-)
+    wasGeneratedBy(niiri:contrast_map_id_1, niiri:contrast_estimation_id_1,-)
     wasGeneratedBy(niiri:contrast_variance_map_id, niiri:contrast_estimation_id_1,-)  
     wasGeneratedBy(niiri:statistical_map_id_1, niiri:contrast_estimation_id_1,-)
     wasGeneratedBy(niiri:z_statistical_map_id_1, niiri:contrast_estimation_id_1,-)
@@ -174,20 +226,20 @@ document
         [prov:type = 'nidm:heightThreshold',
         prov:label = "Height Threshold: Z>2.3" %% xsd:string,
         prov:value = "2.3" %% xsd:float,
-        nidm:pValueUncorrected = "0.0107" %% xsd:float,
-        nidm:pValueFWER = "TODO: do we want that?" %% xsd:float])
+        nidm:userSpecifiedThresholdType = 'nidm:zStatistic'])
 
     entity(niiri:extent_threshold_id,
         [prov:type = 'nidm:extentThreshold',
         prov:label = "Extent Threshold: p<0.05 corr.",
-        nidm:pValueFWER = "0.05" %% xsd:float])
+        nidm:pValueFWER = "0.05" %% xsd:float,
+        nidm:userSpecifiedThresholdType = 'nidm:pValueFWER'])
 
     activity(niiri:inference_id_1,
         [prov:type = 'nidm:inference',
         prov:label = "Inference: Generation"])
 
     used(niiri:inference_id_1, niiri:z_statistical_map_id_1, -)
-    used(niiri:inference_id_1, niiri:search_space_id, -)
+    wasGeneratedBy(niiri:search_space_id, niiri:inference_id_1, -)
     used(niiri:inference_id_1, niiri:height_threshold_id, -)
     used(niiri:inference_id_1, niiri:extent_threshold_id, -)
 
@@ -199,7 +251,7 @@ document
 
     wasAssociatedWith(niiri:inference_id_1, niiri:software_id, -)
 
-    entity(niiri:excursion_set_id_1,
+    entity(niiri:excursion_set_id_1_1,
         [prov:type = 'nidm:excursionSet',
         prov:location = "file://./thresh_zstat1.nii.gz" %% xsd:anyURI,
         crypto:sha = "400a2f07d99ed9be06577e6ecc89222cf4b688c654bc89067da558e88b73b97dd1b25e6c98f2a735fa0a1409598cff7e6025bda55abb6b9f5ef65d8d307eeba8",
@@ -207,10 +259,10 @@ document
         nidm:voxelToWorldMapping = "[[1,2,3,4], [1,2,3,4], [1,2,3,4], [0,0,0,1]]" %% xsd:string,
         prov:label = "Excursion Set" %% xsd:string,        
         fsl:slicesPlot = "file://./rendered_thresh_zstat1.png" %% xsd:anyURI,
-        nidm:underlayFile = "file://./example_func.nii.nii.gz" %% xsd:anyURI,
-        nidm:coordinateSpace = 'niiri:coordinate_space_id_TODO'])
+        nidm:underlayFile = "file://./example_func.nii.gz" %% xsd:anyURI,
+        nidm:coordinateSpace = 'niiri:coordinate_space_id_7'])
 
-    wasGeneratedBy(niiri:excursion_set_id_1, niiri:inference_id_1, -)
+    wasGeneratedBy(niiri:excursion_set_id_1_1, niiri:inference_id_1, -)
 
 
 
@@ -231,14 +283,14 @@ entity(niiri:center_of_gravity_4,
 entity(niiri:COG_coordinate_0004,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "COG coordinate 4" %% xsd:string,
+    prov:label = "Coordinate 0004" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "34" %% xsd:float,
     nidm:coordinate2 = "14.7" %% xsd:float,
     nidm:coordinate3 = "14" %% xsd:float,
-    nidm:coordinate1InUnits = "-5.8" %% xsd:float,
-    nidm:coordinate2InUnits = "19.1" %% xsd:float,
-    nidm:coordinate3InUnits = "38.5" %% xsd:float])  
+    nidm:coordinate1InUnits = "-7.38" %% xsd:float,
+    nidm:coordinate2InUnits = "-72.5" %% xsd:float,
+    nidm:coordinate3InUnits = "-8.5" %% xsd:float])  
 
 entity(niiri:peak_0004_1,
     [prov:type = 'fsl:clusterMaximumStatistic',
@@ -250,7 +302,7 @@ entity(niiri:peak_0004_1,
 entity(niiri:coordinate_0004_1,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 4_1" %% xsd:string,
+    prov:label = "Coordinate 0004_1" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "41" %% xsd:int,
     nidm:coordinate2 = "17" %% xsd:int,
@@ -270,7 +322,7 @@ entity(niiri:peak_0004_2,
 entity(niiri:coordinate_0004_2,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 4_2" %% xsd:string,
+    prov:label = "Coordinate 0004_2" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "42" %% xsd:int,
     nidm:coordinate2 = "21" %% xsd:int,
@@ -290,7 +342,7 @@ entity(niiri:peak_0004_3,
 entity(niiri:coordinate_0004_3,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 4_3" %% xsd:string,
+    prov:label = "Coordinate 0004_3" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "28" %% xsd:int,
     nidm:coordinate2 = "7" %% xsd:int,
@@ -310,7 +362,7 @@ entity(niiri:peak_0004_4,
 entity(niiri:coordinate_0004_4,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 4_4" %% xsd:string,
+    prov:label = "Coordinate 0004_4" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "45" %% xsd:int,
     nidm:coordinate2 = "15" %% xsd:int,
@@ -330,7 +382,7 @@ entity(niiri:peak_0004_5,
 entity(niiri:coordinate_0004_5,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 4_5" %% xsd:string,
+    prov:label = "Coordinate 0004_5" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "39" %% xsd:int,
     nidm:coordinate2 = "13" %% xsd:int,
@@ -350,7 +402,7 @@ entity(niiri:peak_0004_6,
 entity(niiri:coordinate_0004_6,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 4_6" %% xsd:string,
+    prov:label = "Coordinate 0004_6" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "32" %% xsd:int,
     nidm:coordinate2 = "10" %% xsd:int,
@@ -377,14 +429,14 @@ entity(niiri:center_of_gravity_3,
 entity(niiri:COG_coordinate_0003,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "COG coordinate 3" %% xsd:string,
+    prov:label = "Coordinate 0003" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "43.4" %% xsd:float,
     nidm:coordinate2 = "40.3" %% xsd:float,
     nidm:coordinate3 = "23.9" %% xsd:float,
-    nidm:coordinate1InUnits = "-56.9" %% xsd:float,
-    nidm:coordinate2InUnits = "-57.1" %% xsd:float,
-    nidm:coordinate3InUnits = "9.86" %% xsd:float])  
+    nidm:coordinate1InUnits = "-47.2" %% xsd:float,
+    nidm:coordinate2InUnits = "17.3" %% xsd:float,
+    nidm:coordinate3InUnits = "9.18" %% xsd:float])  
 
 entity(niiri:peak_0003_1,
     [prov:type = 'fsl:clusterMaximumStatistic',
@@ -396,7 +448,7 @@ entity(niiri:peak_0003_1,
 entity(niiri:coordinate_0003_1,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 3_1" %% xsd:string,
+    prov:label = "Coordinate 0003_1" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "41" %% xsd:int,
     nidm:coordinate2 = "41" %% xsd:int,
@@ -416,7 +468,7 @@ entity(niiri:peak_0003_2,
 entity(niiri:coordinate_0003_2,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 3_2" %% xsd:string,
+    prov:label = "Coordinate 0003_2" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "43" %% xsd:int,
     nidm:coordinate2 = "41" %% xsd:int,
@@ -436,7 +488,7 @@ entity(niiri:peak_0003_3,
 entity(niiri:coordinate_0003_3,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 3_3" %% xsd:string,
+    prov:label = "Coordinate 0003_3" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "48" %% xsd:int,
     nidm:coordinate2 = "37" %% xsd:int,
@@ -456,7 +508,7 @@ entity(niiri:peak_0003_4,
 entity(niiri:coordinate_0003_4,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 3_4" %% xsd:string,
+    prov:label = "Coordinate 0003_4" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "46" %% xsd:int,
     nidm:coordinate2 = "45" %% xsd:int,
@@ -476,7 +528,7 @@ entity(niiri:peak_0003_5,
 entity(niiri:coordinate_0003_5,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 3_5" %% xsd:string,
+    prov:label = "Coordinate 0003_5" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "40" %% xsd:int,
     nidm:coordinate2 = "37" %% xsd:int,
@@ -496,7 +548,7 @@ entity(niiri:peak_0003_6,
 entity(niiri:coordinate_0003_6,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 3_6" %% xsd:string,
+    prov:label = "Coordinate 0003_6" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "45" %% xsd:int,
     nidm:coordinate2 = "42" %% xsd:int,
@@ -523,14 +575,14 @@ entity(niiri:center_of_gravity_2,
 entity(niiri:COG_coordinate_0002,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "COG coordinate 2" %% xsd:string,
+    prov:label = "Coordinate 0002" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "47.1" %% xsd:float,
     nidm:coordinate2 = "19.2" %% xsd:float,
     nidm:coordinate3 = "19.7" %% xsd:float,
-    nidm:coordinate1InUnits = "-47.2" %% xsd:float,
-    nidm:coordinate2InUnits = "17.3" %% xsd:float,
-    nidm:coordinate3InUnits = "9.18" %% xsd:float])  
+    nidm:coordinate1InUnits = "-56.9" %% xsd:float,
+    nidm:coordinate2InUnits = "-57.1" %% xsd:float,
+    nidm:coordinate3InUnits = "9.86" %% xsd:float])  
 
 entity(niiri:peak_0002_1,
     [prov:type = 'fsl:clusterMaximumStatistic',
@@ -542,7 +594,7 @@ entity(niiri:peak_0002_1,
 entity(niiri:coordinate_0002_1,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 2_1" %% xsd:string,
+    prov:label = "Coordinate 0002_1" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "47" %% xsd:int,
     nidm:coordinate2 = "18" %% xsd:int,
@@ -562,7 +614,7 @@ entity(niiri:peak_0002_2,
 entity(niiri:coordinate_0002_2,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 2_2" %% xsd:string,
+    prov:label = "Coordinate 0002_2" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "47" %% xsd:int,
     nidm:coordinate2 = "20" %% xsd:int,
@@ -589,14 +641,14 @@ entity(niiri:center_of_gravity_1,
 entity(niiri:COG_coordinate_0001,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "COG coordinate 1" %% xsd:string,
+    prov:label = "Coordinate 0001" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "32.3" %% xsd:float,
     nidm:coordinate2 = "39.2" %% xsd:float,
     nidm:coordinate3 = "31" %% xsd:float,
-    nidm:coordinate1InUnits = "-7.38" %% xsd:float,
-    nidm:coordinate2InUnits = "-72.5" %% xsd:float,
-    nidm:coordinate3InUnits = "-8.5" %% xsd:float])  
+    nidm:coordinate1InUnits = "-5.8" %% xsd:float,
+    nidm:coordinate2InUnits = "19.1" %% xsd:float,
+    nidm:coordinate3InUnits = "38.5" %% xsd:float])  
 
 entity(niiri:peak_0001_1,
     [prov:type = 'fsl:clusterMaximumStatistic',
@@ -608,7 +660,7 @@ entity(niiri:peak_0001_1,
 entity(niiri:coordinate_0001_1,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 1_1" %% xsd:string,
+    prov:label = "Coordinate 0001_1" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "33" %% xsd:int,
     nidm:coordinate2 = "38" %% xsd:int,
@@ -628,7 +680,7 @@ entity(niiri:peak_0001_2,
 entity(niiri:coordinate_0001_2,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 1_2" %% xsd:string,
+    prov:label = "Coordinate 0001_2" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "33" %% xsd:int,
     nidm:coordinate2 = "43" %% xsd:int,
@@ -648,7 +700,7 @@ entity(niiri:peak_0001_3,
 entity(niiri:coordinate_0001_3,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 1_3" %% xsd:string,
+    prov:label = "Coordinate 0001_3" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "36" %% xsd:int,
     nidm:coordinate2 = "39" %% xsd:int,
@@ -668,7 +720,7 @@ entity(niiri:peak_0001_4,
 entity(niiri:coordinate_0001_4,
     [prov:type = 'prov:location',
     prov:type = 'nidm:Coordinate',
-    prov:label = "Coordinate 1_4" %% xsd:string,
+    prov:label = "Coordinate 0001_4" %% xsd:string,
     nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
     nidm:coordinate1 = "33" %% xsd:int,
     nidm:coordinate2 = "46" %% xsd:int,
