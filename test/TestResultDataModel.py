@@ -18,14 +18,18 @@ logger = logging.getLogger(__name__)
 
 
 def get_readable_name(graph, item):
-    # Look for label
-    name = graph.label(item)
-    # Look for name without path
-    if not name:
-        name = os.path.basename(item)
-        # Keep full path
-        if not name:
-            name = item
+    if isinstance(item, rdflib.term.Literal):
+        name = item
+    elif isinstance(item, rdflib.term.URIRef):
+        # Look for label
+        name = graph.label(item)
+        prefix, namespace, name = graph.compute_qname(item)
+
+        name = prefix+":"+name
+
+        print name
+    else:
+        name = "unsupported type: "+item
     return name
 
 def get_alternatives(graph,s=None,p=None, o=None):
@@ -36,6 +40,8 @@ def get_alternatives(graph,s=None,p=None, o=None):
             found += "; "+get_readable_name(graph, o_in)
         if not p:  
             found += "; "+get_readable_name(graph, p_in)
+        if not s:  
+            found += "; "+get_readable_name(graph, s_in)
     if len(found) > 100:
         found = '<many alternatives>'
     else:
@@ -88,10 +94,10 @@ class TestResultDataModel(object):
     ''' Compare gt_graph and other_graph '''
     def compare_full_graphs(self, gt_graph, other_graph):
         # Check for predicates which are not in common to both graphs (XOR)
-        diff_graph = gt_graph ^ other_graph
+        diff_graph =  gt_graph ^ other_graph
 
         # FIXME: There is probably something better than using os.path.basename to remove namespaces
-        exlude_s = list()
+        exlude = list()
         missing_s = list()
 
         exc_wrong = ""
@@ -101,10 +107,27 @@ class TestResultDataModel(object):
         for s,p,o in diff_graph.triples( (None,  None, None) ):
             # If triple is found in other_graph
             if (s,  p, o) in other_graph:
+                # If subject is *not* found in gt_graph
+                if (s,  None, None) not in gt_graph:
+                    if not s in exlude:
+                        exc_added += "\nAdded s:\t'%s'"%(get_readable_name(other_graph,s))
+                        exlude.append(s)
+                # If predicate p is *not* found in gt_graph
+                elif (None,  p, None) not in gt_graph:
+                    if not p in exlude:
+                        exc_added += "\nAdded p:\t'%s'"%(get_readable_name(other_graph,p))
+                        exlude.append(p)
+                # If object o is *not* found in gt_graph (and o is a URI, i.e. not the value of an attribute)
+                elif (None,  None, o) not in gt_graph and isinstance(o, rdflib.term.URIRef):
+                    if not o in exlude:
+                        exc_added += "\nAdded o:\t'%s'"%(get_readable_name(other_graph,o))
+                        exlude.append(o)
                 # If subject and predicate found in gt_graph, then object is wrong
-                if (s,  p, None) in gt_graph:
-                    exc_wrong += "\nWrong o:\ts('%s') p('%s') o('%s') not in gold std (instead o: '%s'?)"%(get_readable_name(other_graph, s),get_readable_name(other_graph, p),get_readable_name(other_graph, o),get_alternatives(gt_graph,s=s,p=p))
-                    # exc_wrong += "\nWrong o:\t'%s' on '%s' should be '%s' (instead of '%s'?)"%(get_readable_name(other_graph, p),get_readable_name(other_graph, s),get_alternatives(gt_graph,s=s,p=p),get_readable_name(other_graph, o))
+                elif (s,  p, None) in gt_graph:
+                    if isinstance(o, rdflib.term.Literal):
+                        exc_wrong += "\nWrong o:\t p('%s') of s('%s') is ('%s') (instead o: '%s'?)"%(get_readable_name(other_graph, p),get_readable_name(other_graph, s),get_readable_name(other_graph, o),get_alternatives(gt_graph,s=s,p=p))
+                    else:
+                        exc_wrong += "\nWrong o:\ts('%s') p('%s') o('%s') not in gold std (instead o: '%s'?)"%(get_readable_name(other_graph, s),get_readable_name(other_graph, p),get_readable_name(other_graph, o),get_alternatives(gt_graph,s=s,p=p))
                 # If subject and object found in gt_graph, then predicate is wrong
                 elif (s,  None, o) in gt_graph:
                     exc_wrong += "\nWrong p:\tBetween '%s' and '%s' is '%s' (instead of '%s'?)"%(get_readable_name(other_graph,s),get_readable_name(other_graph,o),get_readable_name(other_graph,p),get_alternatives(gt_graph,s=s,o=o))
@@ -115,25 +138,15 @@ class TestResultDataModel(object):
                             exc_added += "\nAdded:\t'%s'"%(s)
                             exlude_s.append(s)
                     else:
-                        found_subject = ""
-                        for (s_gt_graph,  p_gt_graph, o_gt_graph) in gt_graph.triples((None,  p, o)):
-                            found_subject += "; "+os.path.basename(s_gt_graph)
-                        if len(found_subject) > 20:
-                            found_subject = 'many alternatives'
-                        else:
-                            found_subject = "'"+found_subject[2:]+"'?"
-                        exc_wrong += "\nWrong s:\t'%s' \tto '%s' \tis '%s' (instead of %s)."%(os.path.basename(p),get_readable_name(other_graph, o),os.path.basename(s),found_subject)
+                        exc_wrong += "\nWrong s:\ts('%s') p('%s') o('%s') not in gold std (instead s: '%s'?)"%(get_readable_name(other_graph, s),get_readable_name(other_graph, p),get_readable_name(other_graph, o),get_alternatives(gt_graph,p=p,o=o))
+                        # exc_wrong += "\nWrong s:\t'%s' \tto '%s' \tis '%s' (instead of %s)."%(os.path.basename(p),get_readable_name(other_graph, o),os.path.basename(s),found_subject)
                 # If only subject found in gt_graph
                 elif (s,  None, None) in gt_graph:
                     # gt_graph_possible_value = ""
                     # for (s_gt_graph,  p_gt_graph, o_gt_graph) in gt_graph.triples((s,  p, None)):
                     #     gt_graph_possible_value += "; "+os.path.basename(p_gt_graph)
-                    exc_added += "\nAdded:\tin '%s', '%s' \t ('%s')."%(other_graph.label(s),os.path.basename(p),os.path.basename(o))
-                # If subject is *not* found in gt_graph
-                else:
-                    if not s in exlude_s:
-                        exc_added += "\nAdded:\t'%s'"%(s)
-                        exlude_s.append(s)
+                    exc_added += "\nAdded:\tin '%s', '%s' \t ('%s')."%(get_readable_name(gt_graph, s),get_readable_name(other_graph, p),get_readable_name(other_graph, o))
+                
             # If subject and predicate are found in gt_graph 
             elif (s,  p, o) in gt_graph:
                 # If subject and predicate found in other_graph
@@ -142,14 +155,11 @@ class TestResultDataModel(object):
                     a = 1
                 # If subject found in other_graph
                 elif (s,  None, None) in other_graph:
-                    other_graph_possible_value = ""
-                    for (s_export,  p_export, o_export) in other_graph.triples((s,  None, None)):
-                        other_graph_possible_value += "; "+os.path.basename(p_export)
-                    exc_missing += "\nMissing:\t'%s' \ton '%s'"%(os.path.basename(p),gt_graph.label(s))
+                    exc_missing += "\nMissing p, o:\tp('%s') o('%s') \ton '%s'"%(get_readable_name(gt_graph,p),get_readable_name(gt_graph,o),get_readable_name(gt_graph,s))
                 # If subject is *not* found in other_graph
                 else:
                     if not s in missing_s:
-                        exc_missing += "\nMissing:\t'%s' "%(s)
+                        exc_missing += "\nMissing s:\t'%s' "%(get_readable_name(gt_graph,s))
                         missing_s.append(s)
 
         self.my_execption += exc_wrong+exc_added+exc_missing
