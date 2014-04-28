@@ -44,9 +44,9 @@ function peak_clusters(featDir)
         entities = [entities ['\n\t' 'nidm:coordinate1 = "' num2str(clusterTable.Z_COGX_vox_(i)) '" %%%% xsd:float,']];
         entities = [entities ['\n\t' 'nidm:coordinate2 = "' num2str(clusterTable.Z_COGY_vox_(i)) '" %%%% xsd:float,']];
         entities = [entities ['\n\t' 'nidm:coordinate3 = "' num2str(clusterTable.Z_COGZ_vox_(i)) '" %%%% xsd:float,']];
-        entities = [entities ['\n\t' 'nidm:coordinate1InUnits = "' num2str(clusterTableStd{num2str(i),{'Z_COGX_mm_'}}) '" %%%% xsd:float,']];
-        entities = [entities ['\n\t' 'nidm:coordinate2InUnits = "' num2str(clusterTableStd{num2str(i),{'Z_COGY_mm_'}}) '" %%%% xsd:float,']];
-        entities = [entities ['\n\t' 'nidm:coordinate3InUnits = "' num2str(clusterTableStd{num2str(i),{'Z_COGZ_mm_'}}) '" %%%% xsd:float])  ']];
+        entities = [entities ['\n\t' 'nidm:coordinate1InUnits = "' num2str(clusterTableStd{num2str(index),{'Z_COGX_mm_'}}) '" %%%% xsd:float,']];
+        entities = [entities ['\n\t' 'nidm:coordinate2InUnits = "' num2str(clusterTableStd{num2str(index),{'Z_COGY_mm_'}}) '" %%%% xsd:float,']];
+        entities = [entities ['\n\t' 'nidm:coordinate3InUnits = "' num2str(clusterTableStd{num2str(index),{'Z_COGZ_mm_'}}) '" %%%% xsd:float])  ']];
         
         % For each peak in that cluster
         peaks = peakTable(peakTable.CLUSTER==str2num(clusterTable.Properties.RowNames{i}),:);
