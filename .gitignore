@@ -14,3 +14,4 @@
 ## Test files (automatically generated)
 #################
 test/fsl/export/test01/*
+test/fsl/GroundTruth/*.txt
