@@ -11,3 +11,8 @@ output/
 #################
 *.m~
 
+#################
+## Test files (automatically generated)
+#################
+test/fsl/export/test01/*
+
