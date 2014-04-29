@@ -40,7 +40,7 @@ def get_alternatives(graph,s=None,p=None, o=None):
             found += "; "+get_readable_name(graph, p_in)
         if not s:  
             found += "; "+get_readable_name(graph, s_in)
-    if len(found) > 100:
+    if len(found) > 200:
         found = '<many alternatives>'
     else:
         found = found[2:]

@@ -21,22 +21,23 @@ function peak_clusters(featDir)
     for i = 1:height(clusterTable)
         index = num2str(clusterTable.Properties.RowNames{i});
         entities = [entities ['\n\n' 'entity(niiri:cluster_000' index ',']];
-        entities = [entities ['\n\t' '[prov:type = ''nidm:clusterLevelStatistic'',']];
+        entities = [entities ['\n\t' '[prov:type = ''nidm:ClusterLevelStatistic'',']];
         entities = [entities ['\n\t' 'prov:label = "Cluster Level Statistic: 000' index '" %%%% xsd:string,']];
         entities = [entities ['\n\t' 'nidm:clusterSizeInVoxels = "' num2str(clusterTable.Voxels(i)) '" %%%% xsd:int,']];
-        entities = [entities ['\n\t' 'nidm:pValueFWER = "' num2str(clusterTable.P(i)) '" %%%% xsd:float,']];
-        entities = [entities ['\n\t' 'nidm:centerOfGarvity = ''niiri:center_of_gravity_' index '''])']];
+        entities = [entities ['\n\t' 'nidm:pValueFWER = "' num2str(clusterTable.P(i)) '" %%%% xsd:float])']];
+%         entities = [entities ['\n\t' 'nidm:centerOfGarvity = ''niiri:center_of_gravity_' index '''])']];
 
-        entities = [entities ['\n\t' 'wasDerivedFrom(niiri:cluster_000' index ', niiri:excursion_set_id)  ']];
+        entities = [entities ['\n\t' 'wasDerivedFrom(niiri:cluster_000' index ', niiri:excursion_set_id_1)  ']];
 
         entities = [entities ['\n\n' 'entity(niiri:center_of_gravity_' index ',']];
-        entities = [entities ['\n\t' '[prov:type = ''fsl:centerOfGravity'',']];
+        entities = [entities ['\n\t' '[prov:type = ''fsl:CenterOfGravity'',']];
         entities = [entities ['\n\t' 'prov:label = "Center of gravity ' index '",']];
         entities = [entities ['\n\t' 'prov:location = ''niiri:COG_coordinate_000' index '''])']];
-        entities = [entities ['\n\t' 'wasDerivedFrom(niiri:center_of_gravity_' index ', niiri:cluster_000' index ')']];
+        
+        entities = [entities ['\n\n' 'wasDerivedFrom(niiri:center_of_gravity_' index ', niiri:cluster_000' index ')']];
 
         entities = [entities ['\n\n' 'entity(niiri:COG_coordinate_000' index ',']];
-        entities = [entities ['\n\t' '[prov:type = ''prov:location'',']];
+        entities = [entities ['\n\t' '[prov:type = ''prov:Location'',']];
         entities = [entities ['\n\t' 'prov:type = ''nidm:Coordinate'',']];
         entities = [entities ['\n\t' 'prov:label = "Coordinate 000' index '" %%%% xsd:string,']];
         entities = [entities ['\n\t' 'nidm:coordinateSystem = ''nidm:mniCoordinateSystem'',']];
@@ -55,14 +56,14 @@ function peak_clusters(featDir)
             peakIndex = [index '_' num2str(j)];
             
             entities = [entities ['\n\n' 'entity(niiri:peak_000' peakIndex ',']];
-            entities = [entities ['\n\t' '[prov:type = ''fsl:clusterMaximumStatistic'',']];
-            entities = [entities ['\n\t' 'prov:type = ''nidm:peakLevelStatistic'',']];
+            entities = [entities ['\n\t' '[prov:type = ''fsl:ClusterMaximumStatistic'',']];
+            entities = [entities ['\n\t' 'prov:type = ''nidm:PeakLevelStatistic'',']];
             entities = [entities ['\n\t' 'prov:label = "Peak 000' peakIndex '" %%%% xsd:string,']];
             entities = [entities ['\n\t' 'prov:location = ''niiri:coordinate_000' peakIndex ''',']];
             entities = [entities ['\n\t' 'nidm:equivalentZStatistic = "' num2str(peaks{j,'Z'}) '" %%%% xsd:float])']];
 
             entities = [entities ['\n\n' 'entity(niiri:coordinate_000' peakIndex ',']];
-            entities = [entities ['\n\t' '[prov:type = ''prov:location'',']];
+            entities = [entities ['\n\t' '[prov:type = ''prov:Location'',']];
             entities = [entities ['\n\t' 'prov:type = ''nidm:Coordinate'',']];
             entities = [entities ['\n\t' 'prov:label = "Coordinate 000' peakIndex '" %%%% xsd:string,']];
             entities = [entities ['\n\t' 'nidm:coordinateSystem = ''nidm:mniCoordinateSystem'',']];
