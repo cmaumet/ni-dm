@@ -300,8 +300,7 @@ document
         crypto:sha = "b84948d792ca23cbf5bb9a09fdedf2a5b34fc208641212a4f0cc9b42" %% xsd:string,
         nidm:fileName = "thresh_zstat1.nii.gz" %% xsd:string,
         prov:label = "Excursion Set" %% xsd:string,        
-        fsl:slicesPlot = "file://./rendered_thresh_zstat1.png" %% xsd:anyURI,
-        nidm:underlayFile = "file://./example_func.nii.gz" %% xsd:anyURI,
+        nidm:visualisation = "file://./rendered_thresh_zstat1.png" %% xsd:anyURI,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_12'])
 
     wasGeneratedBy(niiri:excursion_set_id_1, niiri:inference_id_1, -)
