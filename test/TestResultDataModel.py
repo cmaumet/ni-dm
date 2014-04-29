@@ -22,12 +22,10 @@ def get_readable_name(graph, item):
         name = item
     elif isinstance(item, rdflib.term.URIRef):
         # Look for label
-        name = graph.label(item)
+        # name = graph.label(item)
         prefix, namespace, name = graph.compute_qname(item)
 
         name = prefix+":"+name
-
-        print name
     else:
         name = "unsupported type: "+item
     return name

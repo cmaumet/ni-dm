@@ -153,16 +153,16 @@ document
     wasGeneratedBy(niiri:beta_map_id_3, niiri:model_parameters_estimation_id,-)
     wasGeneratedBy(niiri:beta_map_id_4, niiri:model_parameters_estimation_id,-)
   
-    entity(niiri:contrast_variance_map_id,
+    entity(niiri:contrast_variance_map_id_1,
         [prov:type = 'fsl:varcope',
         prov:location = "file://./varcope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Variance Map 1" %% xsd:string,
         nidm:fileName = "varcope1.nii.gz" %% xsd:string,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_4',
         crypto:sha = "e43b6e01b0463fe7d40782137867a..." %% xsd:string])
-    wasDerivedFrom(niiri:contrast_standard_error_map_id, niiri:contrast_variance_map_id)
+    wasDerivedFrom(niiri:contrast_standard_error_map_id_1, niiri:contrast_variance_map_id_1)
 
-    entity(niiri:contrast_standard_error_map_id,
+    entity(niiri:contrast_standard_error_map_id_1,
         [prov:type = 'nidm:contrastStandardErrorMap',
         prov:location = "file://./sqrt_varcope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Standard Error Map" %% xsd:string,
@@ -207,7 +207,7 @@ document
     used(niiri:contrast_estimation_id_1, niiri:residual_mean_squares_map_id,-)
     used(niiri:contrast_estimation_id_1, niiri:design_matrix_id,-)
     wasGeneratedBy(niiri:contrast_map_id_1, niiri:contrast_estimation_id_1,-)
-    wasGeneratedBy(niiri:contrast_variance_map_id, niiri:contrast_estimation_id_1,-)  
+    wasGeneratedBy(niiri:contrast_variance_map_id_1, niiri:contrast_estimation_id_1,-)  
     wasGeneratedBy(niiri:statistical_map_id_1, niiri:contrast_estimation_id_1,-)
     wasGeneratedBy(niiri:z_statistical_map_id_1, niiri:contrast_estimation_id_1,-)
 
@@ -251,7 +251,7 @@ document
 
     wasAssociatedWith(niiri:inference_id_1, niiri:software_id, -)
 
-    entity(niiri:excursion_set_id_1_1,
+    entity(niiri:excursion_set_id_1,
         [prov:type = 'nidm:excursionSet',
         prov:location = "file://./thresh_zstat1.nii.gz" %% xsd:anyURI,
         crypto:sha = "400a2f07d99ed9be06577e6ecc89222cf4b688c654bc89067da558e88b73b97dd1b25e6c98f2a735fa0a1409598cff7e6025bda55abb6b9f5ef65d8d307eeba8",
@@ -262,7 +262,7 @@ document
         nidm:underlayFile = "file://./example_func.nii.gz" %% xsd:anyURI,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_7'])
 
-    wasGeneratedBy(niiri:excursion_set_id_1_1, niiri:inference_id_1, -)
+    wasGeneratedBy(niiri:excursion_set_id_1, niiri:inference_id_1, -)
 
 
 
@@ -272,7 +272,7 @@ entity(niiri:cluster_0004,
     nidm:clusterSizeInVoxels = "1203" %% xsd:int,
     nidm:pValueFWER = "8.02e-24" %% xsd:float,
     nidm:centerOfGarvity = 'niiri:center_of_gravity_4'])
-    wasDerivedFrom(niiri:cluster_0004, niiri:excursion_set_id_1)  
+    wasDerivedFrom(niiri:cluster_0004, niiri:excursion_set_id)  
 
 entity(niiri:center_of_gravity_4,
     [prov:type = 'fsl:centerOfGravity',
@@ -295,7 +295,7 @@ entity(niiri:COG_coordinate_0004,
 entity(niiri:peak_0004_1,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 4_1" %% xsd:string,
+    prov:label = "Peak 0004_1" %% xsd:string,
     prov:location = 'niiri:coordinate_0004_1',
     nidm:equivalentZStatistic = "5.79" %% xsd:float])
 
@@ -315,7 +315,7 @@ entity(niiri:coordinate_0004_1,
 entity(niiri:peak_0004_2,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 4_2" %% xsd:string,
+    prov:label = "Peak 0004_2" %% xsd:string,
     prov:location = 'niiri:coordinate_0004_2',
     nidm:equivalentZStatistic = "5.63" %% xsd:float])
 
@@ -335,7 +335,7 @@ entity(niiri:coordinate_0004_2,
 entity(niiri:peak_0004_3,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 4_3" %% xsd:string,
+    prov:label = "Peak 0004_3" %% xsd:string,
     prov:location = 'niiri:coordinate_0004_3',
     nidm:equivalentZStatistic = "5.62" %% xsd:float])
 
@@ -355,7 +355,7 @@ entity(niiri:coordinate_0004_3,
 entity(niiri:peak_0004_4,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 4_4" %% xsd:string,
+    prov:label = "Peak 0004_4" %% xsd:string,
     prov:location = 'niiri:coordinate_0004_4',
     nidm:equivalentZStatistic = "5.61" %% xsd:float])
 
@@ -375,7 +375,7 @@ entity(niiri:coordinate_0004_4,
 entity(niiri:peak_0004_5,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 4_5" %% xsd:string,
+    prov:label = "Peak 0004_5" %% xsd:string,
     prov:location = 'niiri:coordinate_0004_5',
     nidm:equivalentZStatistic = "5.6" %% xsd:float])
 
@@ -395,7 +395,7 @@ entity(niiri:coordinate_0004_5,
 entity(niiri:peak_0004_6,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 4_6" %% xsd:string,
+    prov:label = "Peak 0004_6" %% xsd:string,
     prov:location = 'niiri:coordinate_0004_6',
     nidm:equivalentZStatistic = "5.56" %% xsd:float])
 
@@ -418,7 +418,7 @@ entity(niiri:cluster_0003,
     nidm:clusterSizeInVoxels = "499" %% xsd:int,
     nidm:pValueFWER = "1.26e-12" %% xsd:float,
     nidm:centerOfGarvity = 'niiri:center_of_gravity_3'])
-    wasDerivedFrom(niiri:cluster_0003, niiri:excursion_set_id_1)  
+    wasDerivedFrom(niiri:cluster_0003, niiri:excursion_set_id)  
 
 entity(niiri:center_of_gravity_3,
     [prov:type = 'fsl:centerOfGravity',
@@ -441,7 +441,7 @@ entity(niiri:COG_coordinate_0003,
 entity(niiri:peak_0003_1,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 3_1" %% xsd:string,
+    prov:label = "Peak 0003_1" %% xsd:string,
     prov:location = 'niiri:coordinate_0003_1',
     nidm:equivalentZStatistic = "5.61" %% xsd:float])
 
@@ -461,7 +461,7 @@ entity(niiri:coordinate_0003_1,
 entity(niiri:peak_0003_2,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 3_2" %% xsd:string,
+    prov:label = "Peak 0003_2" %% xsd:string,
     prov:location = 'niiri:coordinate_0003_2',
     nidm:equivalentZStatistic = "5.12" %% xsd:float])
 
@@ -481,7 +481,7 @@ entity(niiri:coordinate_0003_2,
 entity(niiri:peak_0003_3,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 3_3" %% xsd:string,
+    prov:label = "Peak 0003_3" %% xsd:string,
     prov:location = 'niiri:coordinate_0003_3',
     nidm:equivalentZStatistic = "4.63" %% xsd:float])
 
@@ -501,7 +501,7 @@ entity(niiri:coordinate_0003_3,
 entity(niiri:peak_0003_4,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 3_4" %% xsd:string,
+    prov:label = "Peak 0003_4" %% xsd:string,
     prov:location = 'niiri:coordinate_0003_4',
     nidm:equivalentZStatistic = "4.27" %% xsd:float])
 
@@ -521,7 +521,7 @@ entity(niiri:coordinate_0003_4,
 entity(niiri:peak_0003_5,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 3_5" %% xsd:string,
+    prov:label = "Peak 0003_5" %% xsd:string,
     prov:location = 'niiri:coordinate_0003_5',
     nidm:equivalentZStatistic = "4.22" %% xsd:float])
 
@@ -541,7 +541,7 @@ entity(niiri:coordinate_0003_5,
 entity(niiri:peak_0003_6,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 3_6" %% xsd:string,
+    prov:label = "Peak 0003_6" %% xsd:string,
     prov:location = 'niiri:coordinate_0003_6',
     nidm:equivalentZStatistic = "4.12" %% xsd:float])
 
@@ -564,7 +564,7 @@ entity(niiri:cluster_0002,
     nidm:clusterSizeInVoxels = "117" %% xsd:int,
     nidm:pValueFWER = "0.000621" %% xsd:float,
     nidm:centerOfGarvity = 'niiri:center_of_gravity_2'])
-    wasDerivedFrom(niiri:cluster_0002, niiri:excursion_set_id_1)  
+    wasDerivedFrom(niiri:cluster_0002, niiri:excursion_set_id)  
 
 entity(niiri:center_of_gravity_2,
     [prov:type = 'fsl:centerOfGravity',
@@ -587,7 +587,7 @@ entity(niiri:COG_coordinate_0002,
 entity(niiri:peak_0002_1,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 2_1" %% xsd:string,
+    prov:label = "Peak 0002_1" %% xsd:string,
     prov:location = 'niiri:coordinate_0002_1',
     nidm:equivalentZStatistic = "4.64" %% xsd:float])
 
@@ -607,7 +607,7 @@ entity(niiri:coordinate_0002_1,
 entity(niiri:peak_0002_2,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 2_2" %% xsd:string,
+    prov:label = "Peak 0002_2" %% xsd:string,
     prov:location = 'niiri:coordinate_0002_2',
     nidm:equivalentZStatistic = "4.43" %% xsd:float])
 
@@ -630,7 +630,7 @@ entity(niiri:cluster_0001,
     nidm:clusterSizeInVoxels = "81" %% xsd:int,
     nidm:pValueFWER = "0.00894" %% xsd:float,
     nidm:centerOfGarvity = 'niiri:center_of_gravity_1'])
-    wasDerivedFrom(niiri:cluster_0001, niiri:excursion_set_id_1)  
+    wasDerivedFrom(niiri:cluster_0001, niiri:excursion_set_id)  
 
 entity(niiri:center_of_gravity_1,
     [prov:type = 'fsl:centerOfGravity',
@@ -653,7 +653,7 @@ entity(niiri:COG_coordinate_0001,
 entity(niiri:peak_0001_1,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 1_1" %% xsd:string,
+    prov:label = "Peak 0001_1" %% xsd:string,
     prov:location = 'niiri:coordinate_0001_1',
     nidm:equivalentZStatistic = "4.61" %% xsd:float])
 
@@ -673,7 +673,7 @@ entity(niiri:coordinate_0001_1,
 entity(niiri:peak_0001_2,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 1_2" %% xsd:string,
+    prov:label = "Peak 0001_2" %% xsd:string,
     prov:location = 'niiri:coordinate_0001_2',
     nidm:equivalentZStatistic = "3.16" %% xsd:float])
 
@@ -693,7 +693,7 @@ entity(niiri:coordinate_0001_2,
 entity(niiri:peak_0001_3,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 1_3" %% xsd:string,
+    prov:label = "Peak 0001_3" %% xsd:string,
     prov:location = 'niiri:coordinate_0001_3',
     nidm:equivalentZStatistic = "3.03" %% xsd:float])
 
@@ -713,7 +713,7 @@ entity(niiri:coordinate_0001_3,
 entity(niiri:peak_0001_4,
     [prov:type = 'fsl:clusterMaximumStatistic',
     prov:type = 'nidm:peakLevelStatistic',
-    prov:label = "Peak 1_4" %% xsd:string,
+    prov:label = "Peak 0001_4" %% xsd:string,
     prov:location = 'niiri:coordinate_0001_4',
     nidm:equivalentZStatistic = "2.54" %% xsd:float])
 
