@@ -41,7 +41,7 @@ function coordinate_space_entity(niftiFile, num, forcedelete)
     
     entities = '';
     entities = [entities '\n\n' 'entity(niiri:coordinate_space_id_' num2str(num) ','];
-    entities = [entities '\n\t' '[prov:type = ''nidm:coordinateSpace'','];
+    entities = [entities '\n\t' '[prov:type = ''nidm:CoordinateSpace'','];
     entities = [entities '\n\t' 'prov:label = "Coordinate space ' num2str(num) '" %%%% xsd:string,'];
     entities = [entities '\n\t' 'nidm:voxelToWorldMapping = "' voxelToWorldAttribute '" %%%% xsd:string,'];
     % FIXME: Find units automatically     
