@@ -74,7 +74,16 @@ document
         nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
         nidm:numberOfDimensions = "3" %% xsd:int,
         nidm:dimensions = "[64, 64, 42]" %% xsd:string])
-    
+
+    entity(niiri:coordinate_space_id_8,
+        [prov:type = 'nidm:coordinateSpace',
+        prov:label = "Coordinate space 8" %% xsd:string,
+        nidm:voxelToWorldMapping = "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]" %% xsd:string,
+        nidm:voxelUnits = "['mm', 'mm', 'mm']" %% xsd:string,
+        nidm:voxelSize = "[3.5, 3.5, 3.5]" %% xsd:string,
+        nidm:coordinateSystem = 'nidm:mniCoordinateSystem',
+        nidm:numberOfDimensions = "3" %% xsd:int,
+        nidm:dimensions = "[64, 64, 42]" %% xsd:string])
 
     entity(niiri:statistical_map_id_1,
         [prov:type = 'nidm:statisticalMap',
@@ -86,7 +95,7 @@ document
         nidm:statisticType = 'nidm:tStatistic',
         nidm:errorDegreesOfFreedom = "102" %% xsd:float,
         nidm:effectDegreesOfFreedom = "1" %% xsd:float,
-        nidm:coordinateSpace = 'niiri:coordinate_space_id_6',
+        nidm:coordinateSpace = 'niiri:coordinate_space_id_7',
         crypto:sha = "400a2f07d99ed9be06577e6ecc89222cf4b688c654bc89067da558e88b73b97dd1b25e6c98f2a735fa0a1409598cff7e6025bda55abb6b9f5ef65d8d307eeba8"])
 
     entity(niiri:z_statistical_map_id_1,
@@ -155,7 +164,7 @@ document
   
     entity(niiri:contrast_variance_map_id_1,
         [prov:type = 'fsl:varcope',
-        prov:location = "file://./varcope1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./stats/varcope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Variance Map 1" %% xsd:string,
         nidm:fileName = "varcope1.nii.gz" %% xsd:string,
         nidm:coordinateSpace = 'niiri:coordinate_space_id_4',
@@ -164,10 +173,10 @@ document
 
     entity(niiri:contrast_standard_error_map_id_1,
         [prov:type = 'nidm:contrastStandardErrorMap',
-        prov:location = "file://./sqrt_varcope1.nii.gz" %% xsd:anyURI,
+        prov:location = "file://./stats/sqrt_varcope1.nii.gz" %% xsd:anyURI,
         prov:label = "Contrast Standard Error Map" %% xsd:string,
-        nidm:fileName = "std_varcope1.nii.gz" %% xsd:string,
-        nidm:coordinateSpace = 'niiri:coordinate_space_id_1',
+        nidm:fileName = "sqrt_varcope1.nii.gz" %% xsd:string,
+        nidm:coordinateSpace = 'niiri:coordinate_space_id_5',
         crypto:sha = "e43b6e01b0463fe7d40782137867a..." %% xsd:string])
   
     entity(niiri:residual_mean_squares_map_id,
@@ -260,7 +269,7 @@ document
         prov:label = "Excursion Set" %% xsd:string,        
         fsl:slicesPlot = "file://./rendered_thresh_zstat1.png" %% xsd:anyURI,
         nidm:underlayFile = "file://./example_func.nii.gz" %% xsd:anyURI,
-        nidm:coordinateSpace = 'niiri:coordinate_space_id_7'])
+        nidm:coordinateSpace = 'niiri:coordinate_space_id_8'])
 
     wasGeneratedBy(niiri:excursion_set_id_1, niiri:inference_id_1, -)
 
