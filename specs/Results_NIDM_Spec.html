@@ -73,7 +73,7 @@
 			<section class='informative'>
 				<h2>Introduction</h2>
 				<p>
-					The NIDASH Data Model (NI-DM) for fMRI Results (NI-ResultsDM) is 
+					The NIDASH Data Model (NI-DM) for fMRI Results (FIXME: do we want a name for that?) is 
 					a <a href="../../../spec/NIDM_Spec.html">
 					NI-DM</a> compliant structured representation of the....   
 				</p>
@@ -109,16 +109,11 @@
 	</section>
 
 	<section>
-		<h2>NI-Results Overview</h2>
+		<h2>NI- for Massively Univariate Results (NI-MUR) Overview</h2>
 
 		<p>
-			The NIDASH Data Model for fMRI Results (NI-ResultsDM) is summarized in Fig. 1.  It consists of an  
-			<dfn>inference</dfn> activity which uses both statistical maps and parameters to generate an 
-			<dfn>excursion_set</dfn>.  The <dfn>excursion_set</dfn> consists of peaks grouped by the
-			<dfn>peak_level</dfn> collection, clusters which contain the peaks and are grouped into a 
-			<dfn>cluster_level</dfn> collection, and sets which contain all clusters and are grouped
-			into a <dfn>set_level</dfn> collection.
-			Set 
+			NI-MUR Data Model is summarized in Fig. 1.  
+			FIXME: Description
 
 		</p>
 
@@ -306,8 +301,8 @@
 					<p></p>
 					<div class="attributes" id="attributes-DesignMatrix"> A <dfn title="dfn-DesignMatrix" id="dfn-DesignMatrix" class="internalDFN">DesignMatrix</dfn><sup><a class="internalDFN" href="#dfn-DesignMatrix"><span class="diamond"> ◊</span></a></sup><span class="withPn"></span> has:
 					<ul>
-						<li><span class="attribute" id="DesignMatrix.label">label</span>: an <em class="rfc2119" title="OPTIONAL">OPTIONAL</em> label describing the design matrix;</li>
-						<li><span class="attribute" id="DesignMatrix.visualisation">visualisation</span>: an <em class="rfc2119" title="OPTIONAL">OPTIONAL</em> graphical representation of the design matrix;</li>
+						<li><span class="attribute" id="DesignMatrix.label">prov:label</span>: an <em class="rfc2119" title="OPTIONAL">OPTIONAL</em> label describing the design matrix;</li>
+						<li><span class="attribute" id="DesignMatrix.visualisation">nidm:visualisation</span>: an <em class="rfc2119" title="OPTIONAL">OPTIONAL</em> graphical representation of the design matrix;</li>
 						<li><span class="attribute" id="DesignMatrix.location">location</span>: an <em class="rfc2119" title="OPTIONAL">OPTIONAL</em> a prov:location attribute providing the location of a csv file describing the design matrix.</li>
 						<li><span class="attribute" id="DesignMatrix.location">originalFileName</span>: an <em class="rfc2119" title="OPTIONAL">OPTIONAL</em> file name as initially produced by the neuroimaging analysis software.</li>
 					</ul>
