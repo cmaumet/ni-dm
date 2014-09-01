@@ -9,6 +9,7 @@ import os
 import re
 import urllib2, urllib
 import logging
+from urlparse import urlparse
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -46,7 +47,11 @@ def get_turtle(provn_file):
     else:
         # Open corresponding provn file
         logger.info(' Converting '+provn_file)
-        provn_file = open(provn_file, 'r')
+        parsed_url = urlparse(provn_file)
+        if parsed_url.scheme == 'https' or parsed_url.scheme == 'http':
+            provn_file = urllib2.urlopen(provn_file)
+        else:    
+            provn_file = open(provn_file, 'r')
         ex_provn = provn_file.read()
 
         # Convert to turtle using Prov Translator APIs

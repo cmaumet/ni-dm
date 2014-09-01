@@ -141,11 +141,14 @@ def get_attributes_from_owl(my_owl_graph):
 def get_owl_graph(owl_file):
     # Read owl (turtle) file
     owl_graph = Graph()
+    if type(owl_file) is str:
+        owl_file = open(owl_file, 'r')
+
     # This is a workaround to avoid issue with "#" in base prefix as 
     # described in https://github.com/RDFLib/rdflib/issues/379,
     # When the fix is introduced in rdflib these 2 lines will be replaced by:
     # self.owl.parse(owl_file, format='turtle')
-    owl_txt = open(owl_file, 'r').read().replace("http://www.w3.org/2002/07/owl#", 
+    owl_txt = owl_file.read().replace("http://www.w3.org/2002/07/owl#", 
                     "http://www.w3.org/2002/07/owl")
     owl_graph.parse(data=owl_txt, format='turtle')
 
