@@ -1,5 +1,9 @@
-Alternative serialisations available at: https://provenance.ecs.soton.ac.uk/store/documents/29279/ 
- 	
- 	json: https://provenance.ecs.soton.ac.uk/store/documents/29279.json 
- 	turtle: https://provenance.ecs.soton.ac.uk/store/documents/29279.ttl 
- 	svg graph: https://provenance.ecs.soton.ac.uk/store/documents/29279.svg
+
+	Alternative serialisations available at:https://provenance.ecs.soton.ac.uk/store/api/v0/documents/29660/
+	
+	json: https://provenance.ecs.soton.ac.uk/store/api/v0/documents/29660.json
+	turtle: https://provenance.ecs.soton.ac.uk/store/api/v0/documents/29660.ttl
+	svg graph: https://provenance.ecs.soton.ac.uk/store/api/v0/documents/29660.svg
+	PDF graph: https://provenance.ecs.soton.ac.uk/store/api/v0/documents/29660.pdf
+	png graph: https://provenance.ecs.soton.ac.uk/store/api/v0/documents/29660.png
+		
