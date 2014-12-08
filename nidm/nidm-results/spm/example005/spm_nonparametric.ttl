@@ -22,14 +22,14 @@ niiri:non_parametric_dististribution_id a prov:Entity , nidm:NonParametricNullDi
 
 niiri:statistic_map_id a prov:Entity , nidm:StatisticMap ;
 	rdfs:label "Pseudo T-Statistic Map: passive listening > rest" ;
-	prov:atLocation "file://./TStatistic.nii.gz"^^xsd:anyURI ;
-	nidm:statisticType nidm:TStatistic ;
-	nidm:filename "TStatistic.nii.gz"^^xsd:string ;
+	prov:atLocation "file://./PseudoTStatistic.nii.gz"^^xsd:anyURI ;
+	nidm:statisticType nidm:PseudoTStatistic ;
+	nidm:filename "PseudoTStatistic.nii.gz"^^xsd:string ;
 	dct:format "image/nifti"^^xsd:string ;
 	nidm:contrastName "passive listening > rest"^^xsd:string ;
 	nidm:effectDegreesOfFreedom "1"^^xsd:float ;
 	nidm:inCoordinateSpace niiri:coordinate_space_id_1 ;
-	crypto:sha512 "799e9bbf8c15b35c0098bca468846bf2cd895a3366382b5ceaa953f1e9e576955341a7c86e13e6fe9359da4ff1496a609f55ce9ecff8da2e461365372f2506d6"^^xsd:string ;
+	crypto:sha512 "799e9bbf8c15b35c0098bca4"^^xsd:string ;
 	prov:wasGeneratedBy niiri:contrast_estimation_id ;
 	nidm:varianceSmoothingFWHM "[6 6 6]"^^xsd:string .
 
