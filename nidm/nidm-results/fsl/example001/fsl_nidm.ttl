@@ -499,6 +499,7 @@ niiri:design_matrix_png_id a prov:Entity , nidm:Image ;
 niiri:inference_id_1 a prov:Activity , nidm:Inference ;
 	rdfs:label "Inference: Generation" ;
 	nidm:hasAlternativeHypothesis nidm:OneTailedTest ;
+    nidm:isParametricTest "true"^^xsd:boolean ;
     prov:used niiri:z_statistic_map_id_1, niiri:height_threshold_id, niiri:extent_threshold_id, niiri:display_map_id_1, niiri:peak_definition_criteria_id_1, niiri:cluster_definition_criteria_id_1, niiri:mask_id_1 ;
     prov:wasAssociatedWith niiri:software_id .
 
@@ -521,10 +522,6 @@ _:blank1 a prov:Generation .
 niiri:fsl_results_id prov:qualifiedGeneration _:blank1 .
 
 _:blank1 prov:atTime "2014-05-19T10:30:00.000+01:00"^^xsd:dateTime .
-
-niiri:peak_definition_criteria_id_1 a prov:Entity , nidm:PeakDefinitionCriteria ;
-	rdfs:label "Peak Definition Criteria" ;
-	nidm:minDistanceBetweenPeaks "0.0"^^xsd:float .
 
 niiri:peak_0001_2 a prov:Entity , nidm:Peak ;
     rdfs:label "Peak 0001_2" ;
@@ -623,4 +620,8 @@ niiri:peak_0004_6 a prov:Entity , nidm:Peak ;
     nidm:pValueUncorrected "1.34887e-08"^^xsd:float ;
     nidm:equivalentZStatistic "5.56"^^xsd:float ;
     prov:wasDerivedFrom niiri:cluster_0004 .
+
+niiri:peak_definition_criteria_id_1 a prov:Entity , nidm:PeakDefinitionCriteria ;
+	rdfs:label "Peak Definition Criteria" ;
+	nidm:minDistanceBetweenPeaks "0.0"^^xsd:float .
 
