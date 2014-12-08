@@ -294,6 +294,7 @@ def main():
 			conj_inference_id="niiri:inference_id",
 			label="Conjunction Inference",
 			alternative_hyp="nidm:OneTailedTest",
+			is_parametric="true",
 			stat_map_id_1="niiri:statistic_map_id", 
 			stat_map_id_2="niiri:statistic_map_id_2", 
 			height_thresh_id="niiri:height_threshold_id", 

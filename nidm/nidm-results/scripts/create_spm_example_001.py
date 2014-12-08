@@ -208,6 +208,7 @@ def main():
 			inference_id="niiri:inference_id",
 			label="Inference",
 			alternative_hyp="nidm:OneTailedTest",
+			is_parametric="true",
 			stat_map_id="niiri:statistic_map_id", 
 			height_thresh_id="niiri:height_threshold_id", 
 			extent_thresh_id="niiri:extent_threshold_id", 
