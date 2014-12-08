@@ -45,7 +45,15 @@
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
-    <td><b>nidm:NonParametricNullDistribution: </b>Non-parametric null distribution used by inference.</td>
+    <td><b>fsl:SymmetricDistribution: </b>Symmetric probability distribution.</td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:NonParametricNullDistribution: </b>Non-parametric null distribution used by inference. (former definition of NonParametricDistribution: "Probability distribution estimated empirically on the data without assumptions on the shape of the probability distribution.").</td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:PseudoTStatistic: </b>T-Statistic with smoothed variance.</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
