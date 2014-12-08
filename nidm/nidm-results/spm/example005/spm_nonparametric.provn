@@ -1,0 +1,19 @@
+document
+prefix crypto <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#>
+prefix neurolex <http://neurolex.org/wiki/>
+prefix dct <http://purl.org/dc/terms/>
+prefix spm <http://www.incf.org/ns/nidash/spm#>
+prefix pre_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix fsl <http://www.incf.org/ns/nidash/fsl#>
+prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
+prefix nidm <http://www.incf.org/ns/nidash/nidm#>
+prefix niiri <http://iri.nidash.org/>
+prefix xsd <http://www.w3.org/2001/XMLSchema>
+prefix bnode <http://openprovenance.org/provtoolbox/bnode/>
+activity(niiri:inference_id_1,-,-,[prov:type = 'nidm:Inference', prov:label = "Inference", nidm:isParametricTest = "false" %% xsd:boolean, nidm:hasAlternativeHypothesis = 'nidm:OneTailedTest'])
+entity(niiri:statistic_map_id,[prov:type = 'nidm:StatisticMap', prov:label = "Pseudo T-Statistic Map: passive listening > rest", prov:location = "file://./TStatistic.nii.gz" %% xsd:anyURI, nidm:statisticType = 'nidm:TStatistic', nidm:filename = "TStatistic.nii.gz" %% xsd:string, dct:format = "image/nifti" %% xsd:string, nidm:contrastName = "passive listening > rest" %% xsd:string, nidm:effectDegreesOfFreedom = "1" %% xsd:float, nidm:inCoordinateSpace = 'niiri:coordinate_space_id_1', crypto:sha512 = "799e9bbf8c15b35c0098bca468846bf2cd895a3366382b5ceaa953f1e9e576955341a7c86e13e6fe9359da4ff1496a609f55ce9ecff8da2e461365372f2506d6" %% xsd:string, nidm:varianceSmoothingFWHM = "[6 6 6]" %% xsd:string])
+entity(niiri:non_parametric_dististribution_id,[prov:type = 'nidm:NonParametricNullDistribution', prov:label = "Non-Parametric Distribution", nidm:numberOfPermutations = "5000" %% xsd:int, nidm:exchangeabilityBlockSize = "4" %% xsd:int])
+used(niiri:inference_id_1,niiri:non_parametric_dististribution_id,-)
+used(niiri:inference_id_1,niiri:statistic_map_id,-)
+wasGeneratedBy(niiri:statistic_map_id,niiri:contrast_estimation_id,-)
+endDocument
