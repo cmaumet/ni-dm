@@ -1,0 +1,2 @@
+	nidm:pValueUncorrected "$p_unc"^^xsd:float ;
+	nidm:pValueFWER "$p_fwe"^^xsd:float .

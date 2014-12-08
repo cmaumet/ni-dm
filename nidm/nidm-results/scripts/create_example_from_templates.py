@@ -6,11 +6,14 @@ Use templates defined in terms/templates to create a new NIDM example.
 """
 import os
 from string import Template
+import logging
 
 NIDM_TERMS_DIR = os.path.join(os.path.dirname(
         os.path.dirname(os.path.abspath(__file__))), 'terms')
 TPL_DIR = os.path.join(NIDM_TERMS_DIR, 'templates')
 EX_DIR = os.path.join(NIDM_TERMS_DIR, 'examples')
+
+logger = logging.getLogger(__name__)
 
 class ExampleFromTemplate(object):
     
@@ -48,20 +51,24 @@ class ExampleFromTemplate(object):
                 fid = open(os.path.join(TPL_DIR, base_template_name+".txt"), 'r')
                 nidm_base_tpm = Template(fid.read())
                 fid.close()
-                print "found"
-                print base_template_name
             else:
                 nidm_base_tpm = None
 
             class_example = ""
             if nidm_base_tpm:
-                class_example = nidm_base_tpm.substitute(**substitutes)
+                try:
+                    class_example = nidm_base_tpm.substitute(**substitutes)
+                except KeyError, k:
+                    logger.debug(base_template_name)
+                    raise KeyError(k);
                 class_example = class_example[:-1]+" ;\n"
 
-            # try:
-            class_example += nidm_tpm.substitute(**substitutes)
-            # except KeyError:
-            #     print nidm_class
+            try:
+                class_example += nidm_tpm.substitute(**substitutes)
+            except KeyError, k:
+                logger.debug(template_name)
+                raise KeyError(k);
+
 
             if self.one_file_per_class:
                 example_file = os.path.join(self.dir, nidm_class+".txt")
