@@ -11,9 +11,9 @@ prefix niiri <http://iri.nidash.org/>
 prefix xsd <http://www.w3.org/2001/XMLSchema>
 prefix bnode <http://openprovenance.org/provtoolbox/bnode/>
 activity(niiri:inference_id_1,-,-,[prov:type = 'nidm:Inference', prov:label = "Inference", nidm:isParametricTest = "false" %% xsd:boolean, nidm:hasAlternativeHypothesis = 'nidm:OneTailedTest'])
-entity(niiri:statistic_map_id,[prov:type = 'nidm:StatisticMap', prov:label = "Pseudo T-Statistic Map: passive listening > rest", prov:location = "file://./PseudoTStatistic.nii.gz" %% xsd:anyURI, nidm:statisticType = 'nidm:PseudoTStatistic', nidm:filename = "PseudoTStatistic.nii.gz" %% xsd:string, dct:format = "image/nifti" %% xsd:string, nidm:contrastName = "passive listening > rest" %% xsd:string, nidm:effectDegreesOfFreedom = "1" %% xsd:float, nidm:inCoordinateSpace = 'niiri:coordinate_space_id_1', crypto:sha512 = "799e9bbf8c15b35c0098bca4" %% xsd:string, nidm:varianceSmoothingFWHM = "[6 6 6]" %% xsd:string])
-entity(niiri:non_parametric_dististribution_id,[prov:type = 'nidm:NonParametricNullDistribution', prov:label = "Non-Parametric Distribution", nidm:numberOfPermutations = "5000" %% xsd:int, nidm:exchangeabilityBlockSize = "4" %% xsd:int])
-used(niiri:inference_id_1,niiri:non_parametric_dististribution_id,-)
+entity(niiri:non_parametric_null_dististribution_id,[prov:type = 'nidm:NonParametricNullDistribution', prov:label = "Non-Parametric Null Distribution", nidm:numberOfPermutations = "5000" %% xsd:int, nidm:exchangeabilityBlockSize = "4" %% xsd:int])
+entity(niiri:statistic_map_id,[prov:type = 'nidm:StatisticMap', prov:label = "Smoothed Variance T-Statistic Map: passive listening > rest", prov:location = "file://./SmoothedVarianceTStatistic.nii.gz" %% xsd:anyURI, nidm:statisticType = 'nidm:SmoothedVarianceTStatistic', nidm:filename = "SmoothedVarianceTStatistic.nii.gz" %% xsd:string, dct:format = "image/nifti" %% xsd:string, nidm:contrastName = "passive listening > rest" %% xsd:string, nidm:effectDegreesOfFreedom = "1" %% xsd:float, nidm:inCoordinateSpace = 'niiri:coordinate_space_id_1', crypto:sha512 = "799e9bbf8c15b35c0098bca4" %% xsd:string, nidm:varianceSmoothingFWHM = "[6 6 6]" %% xsd:string])
+used(niiri:inference_id_1,niiri:non_parametric_null_dististribution_id,-)
 used(niiri:inference_id_1,niiri:statistic_map_id,-)
 wasGeneratedBy(niiri:statistic_map_id,niiri:contrast_estimation_id,-)
 endDocument

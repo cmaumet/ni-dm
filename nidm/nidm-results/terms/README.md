@@ -53,7 +53,7 @@
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
-    <td><b>nidm:PseudoTStatistic: </b>T-Statistic with smoothed variance.</td>
+    <td><b>nidm:SmoothedVarianceTStatistic: </b>T-Statistic with smoothed variance.</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
