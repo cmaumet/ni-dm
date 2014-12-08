@@ -1623,15 +1623,15 @@ fsl:ContrastVarianceMap rdf:type owl:Class ;
 
 
 
-###  http://www.incf.org/ns/nidash/fsl#NonParametricSymmetricDistribution
+###  http://www.incf.org/ns/nidash/fsl#SymmetricDistribution
 
-fsl:NonParametricSymmetricDistribution rdf:type owl:Class ;
-                                       
-                                       rdfs:subClassOf nidm:ErrorDistribution ;
-                                       
-                                       rdfs:isDefinedBy "Probability distribution estimated empirically on the data assuming only symmetry of the probability distribution." ;
-                                       
-                                       obo:IAO_0000114 obo:IAO_0000122 .
+fsl:SymmetricDistribution rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf nidm:ErrorDistribution ;
+                          
+                          rdfs:isDefinedBy "Symmetric probability distribution." ;
+                          
+                          obo:IAO_0000114 obo:IAO_0000124 .
 
 
 
@@ -2220,25 +2220,13 @@ nidm:NIDMObjectModel rdf:type owl:Class ;
 
 
 
-###  http://www.incf.org/ns/nidash/nidm#NonParametricDistribution
-
-nidm:NonParametricDistribution rdf:type owl:Class ;
-                               
-                               rdfs:subClassOf nidm:ErrorDistribution ;
-                               
-                               rdfs:isDefinedBy "Probability distribution estimated empirically on the data without assumptions on the shape of the probability distribution." ;
-                               
-                               obo:IAO_0000114 obo:IAO_0000122 .
-
-
-
 ###  http://www.incf.org/ns/nidash/nidm#NonParametricNullDistribution
 
 nidm:NonParametricNullDistribution rdf:type owl:Class ;
                                    
                                    rdfs:subClassOf prov:Entity ;
                                    
-                                   rdfs:isDefinedBy "Non-parametric null distribution used by inference." ;
+                                   rdfs:isDefinedBy "Non-parametric null distribution used by inference. (former definition of NonParametricDistribution: \"Probability distribution estimated empirically on the data without assumptions on the shape of the probability distribution.\")." ;
                                    
                                    obo:IAO_0000114 obo:IAO_0000124 .
 
