@@ -1083,6 +1083,20 @@ nidm:userSpecifiedThresholdType rdf:type owl:DatatypeProperty ;
 
 
 
+###  http://www.incf.org/ns/nidash/nidm#varianceSmoothingFWHM
+
+nidm:varianceSmoothingFWHM rdf:type owl:DatatypeProperty ;
+                           
+                           rdfs:isDefinedBy "Full width at half maximum (in world units) of the gaussian kernel used to smoothed the variance map to compute the pseudo-T Statistic." ;
+                           
+                           obo:IAO_0000114 obo:IAO_0000124 ;
+                           
+                           rdfs:domain nidm:StatisticMap ;
+                           
+                           rdfs:range xsd:string .
+
+
+
 ###  http://www.incf.org/ns/nidash/nidm#version
 
 nidm:version rdf:type owl:DatatypeProperty ;

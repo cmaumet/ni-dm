@@ -44,6 +44,10 @@
     <td><b>nidm:SPM: </b>Statistical Parametric Mapping software package for the analysis of neuroimaging data from the FIL Methods Group.</td>
 </tr>
 <tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:NonParametricNullDistribution: </b>Non-parametric null distribution used by inference.</td>
+</tr>
+<tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
     <td><b>nidm:ContrastEstimation: </b>The process of estimating a contrast from the estimated parameters of statistical model.</td>
 </tr>
@@ -201,6 +205,30 @@
     <td><img src="../../../doc/content/specs/img/orange.png?raw=true"/>  </td>
     <td><b>nidm:userSpecifiedThresholdType: </b>Type of method used to define a threshold (e.g. statistic value, uncorrected P-value or corrected P-value). (editor: Discussed in https://github.com/incf-nidash/nidm/pull/150)</td>
     <td>nidm:ExtentThreshold nidm:HeightThreshold </td>
+    <td>xsd:string </td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:exchangeabilityBlockSize: </b>Size of exchangeability blocks used to define a non-parametric null distribution.</td>
+    <td>nidm:NonParametricNullDistribution </td>
+    <td>xsd:int </td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:isParametricTest: </b>True if inference is done using a parametric test, false for a non-parametric test.</td>
+    <td>nidm:Inference </td>
+    <td>xsd:boolean </td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:numberOfPermutations: </b>Number of permutations used to define a non-parametric null distribution.</td>
+    <td>nidm:NonParametricNullDistribution </td>
+    <td>xsd:int </td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:varianceSmoothingFWHM: </b>Full width at half maximum (in world units) of the gaussian kernel used to smoothed the variance map to compute the pseudo-T Statistic.</td>
+    <td>nidm:StatisticMap </td>
     <td>xsd:string </td>
 </tr>
 <tr>

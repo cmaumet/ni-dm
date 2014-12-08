@@ -11,7 +11,7 @@ prefix niiri <http://iri.nidash.org/>
 prefix xsd <http://www.w3.org/2001/XMLSchema>
 prefix bnode <http://openprovenance.org/provtoolbox/bnode/>
 activity(niiri:model_parameters_estimation_id,-,-,[prov:type = 'nidm:ModelParametersEstimation', prov:label = "Model Parameters Estimation", nidm:withEstimationMethod = 'nidm:GeneralizedLeastSquares'])
-activity(niiri:inference_id_1,-,-,[prov:type = 'nidm:Inference', prov:label = "Inference: Generation", nidm:hasAlternativeHypothesis = 'nidm:OneTailedTest'])
+activity(niiri:inference_id_1,-,-,[prov:type = 'nidm:Inference', prov:label = "Inference: Generation", nidm:hasAlternativeHypothesis = 'nidm:OneTailedTest', nidm:isParametricTest = "true" %% xsd:boolean])
 activity(niiri:contrast_estimation_id_1,-,-,[prov:type = 'nidm:ContrastEstimation', prov:label = "Contrast estimation: Generation"])
 agent(niiri:software_id,[prov:type = 'nidm:FSL', prov:type = 'prov:SoftwareAgent', prov:label = "FSL", nidm:softwareVersion = "fsl-5_0_x" %% xsd:string, fsl:featVersion = "6.00" %% xsd:string])
 entity(niiri:cluster_definition_criteria_id_1,[prov:type = 'nidm:ClusterDefinitionCriteria', prov:label = "Cluster Connectivity Criterion: 26", nidm:hasConnectivityCriterion = 'nidm:voxel26Connected'])
