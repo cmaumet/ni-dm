@@ -33,13 +33,33 @@ class ExampleFromTemplate(object):
         for nidm_class, substitutes in sorted(self.nidm_classes.items()):
 
             template_name = str.split(nidm_class, "-")[0]
-
             fid = open(os.path.join(TPL_DIR, template_name+".txt"), 'r')
             nidm_tpm = Template(fid.read())
             fid.close()
 
+            templates = str.split(nidm_class, "_")
+            if len(templates) > 1:
+                base_template_name = templates[0]            
+            else:
+                base_template_name = None
+
+            if base_template_name and \
+                os.path.isfile(os.path.join(TPL_DIR, base_template_name+".txt")):
+                fid = open(os.path.join(TPL_DIR, base_template_name+".txt"), 'r')
+                nidm_base_tpm = Template(fid.read())
+                fid.close()
+                print "found"
+                print base_template_name
+            else:
+                nidm_base_tpm = None
+
+            class_example = ""
+            if nidm_base_tpm:
+                class_example = nidm_base_tpm.substitute(**substitutes)
+                class_example = class_example[:-1]+" ;\n"
+
             # try:
-            class_example = nidm_tpm.substitute(**substitutes)
+            class_example += nidm_tpm.substitute(**substitutes)
             # except KeyError:
             #     print nidm_class
 
