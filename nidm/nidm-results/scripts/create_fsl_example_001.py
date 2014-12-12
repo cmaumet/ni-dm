@@ -180,7 +180,7 @@ def main():
 			sha="3a68a4e5963766af86d22a871a4dbca9568a46441a567855b3a84dbd47ea01acea11ed77b37ce85078a219adaa92264296a4548c1ba39b11ff028e8fefd95d03",
 			coordinate_space_id="niiri:coordinate_space_id_1",
 			contrast_est_id="niiri:contrast_estimation_id_1"),
-		"HeightThreshold": dict(
+		"HeightThreshold_Value": dict(
 			height_threshold_id="niiri:height_threshold_id",
 			label="Height Threshold: Z>2.3",
 			value="2.3",
