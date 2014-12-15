@@ -56,6 +56,10 @@
     <td><b>nidm:SmoothedVarianceTStatistic: </b>T-Statistic with smoothed variance.</td>
 </tr>
 <tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:ThresholdFreeClusterEnhancement: </b>Corresponding citation: Smith, S. M. and Nichols, T. E. (2009). Threshold-free cluster enhancement: addressing problems of smoothing, threshold dependence and localisation in cluster inference. NeuroImage, 44(1), 83-98. doi:10.1016/j.neuroimage.2008.03.061</td>
+</tr>
+<tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
     <td><b>nidm:ContrastEstimation: </b>The process of estimating a contrast from the estimated parameters of statistical model.</td>
 </tr>
@@ -214,6 +218,24 @@
     <td><b>nidm:userSpecifiedThresholdType: </b>Type of method used to define a threshold (e.g. statistic value, uncorrected P-value or corrected P-value). (editor: Discussed in https://github.com/incf-nidash/nidm/pull/150)</td>
     <td>nidm:ExtentThreshold nidm:HeightThreshold </td>
     <td>xsd:string </td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:EParameter: </b>Pre-defined parameter E for threshold-free cluster enhancement statistic.</td>
+    <td>nidm:Statistic </td>
+    <td>xsd:float </td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:HParameter: </b>Pre-defined parameter H for threshold-free cluster enhancement statistic.</td>
+    <td>nidm:Statistic </td>
+    <td>xsd:float </td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
+    <td><b>nidm:clusterMass: </b>Mass of a cluster.</td>
+    <td>nidm:Cluster </td>
+    <td>xsd:float </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/red.png?raw=true"/>  </td>
