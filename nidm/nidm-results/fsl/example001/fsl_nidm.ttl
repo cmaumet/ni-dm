@@ -8,6 +8,7 @@
 @prefix nidm: <http://www.incf.org/ns/nidash/nidm#> .
 @prefix niiri: <http://iri.nidash.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 
 niiri:cluster_definition_criteria_id_1 a prov:Entity , nidm:ClusterDefinitionCriteria ;
 	rdfs:label "Cluster Connectivity Criterion: 26" ;
@@ -505,7 +506,7 @@ niiri:inference_id_1 a prov:Activity , nidm:Inference ;
 niiri:model_parameters_estimation_id prov:used niiri:error_model_id ;
 	a prov:Activity , nidm:ModelParametersEstimation ;
 	rdfs:label "Model Parameters Estimation" ;
-	nidm:withEstimationMethod nidm:GeneralizedLeastSquares ;
+	nidm:withEstimationMethod obo:STATO_0000372 ; # obo:'generalized least squares estimation'
 	prov:used niiri:design_matrix_id ;
     prov:used niiri:data_id ;
     prov:used niiri:error_model_id ;
