@@ -1837,9 +1837,7 @@ nidm:NIDM_0000003 rdf:type owl:Class ;
                   
                   rdfs:subClassOf nidm:NIDM_0000021 ;
                   
-                  obo:IAO_0000117 "TN" ;
-                  
-                  obo:IAO_0000116 "Under discussion at https://github.com/ISA-tools/stato/issues/28" ;
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/pull/306 and https://github.com/ISA-tools/stato/issues/28" ;
                   
                   obo:IAO_0000114 obo:IAO_0000423 .
 
@@ -1935,9 +1933,7 @@ nidm:NIDM_0000010 rdf:type owl:Class ;
                   
                   rdfs:subClassOf nidm:NIDM_0000021 ;
                   
-                  obo:IAO_0000117 "TN" ;
-                  
-                  obo:IAO_0000116 "Under discussion at https://github.com/ISA-tools/stato/issues/28" ;
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/pull/306 and https://github.com/ISA-tools/stato/issues/28" ;
                   
                   obo:IAO_0000114 obo:IAO_0000423 .
 
@@ -2146,9 +2142,11 @@ nidm:NIDM_0000021 rdf:type owl:Class ;
                   
                   rdfs:subClassOf prov:Entity ;
                   
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/pull/306" ;
+                  
                   obo:IAO_0000115 "Dependence structure of the error, used as part of model estimation." ;
                   
-                  obo:IAO_0000114 obo:IAO_0000122 .
+                  obo:IAO_0000114 obo:IAO_0000423 .
 
 
 
@@ -2192,9 +2190,7 @@ nidm:NIDM_0000024 rdf:type owl:Class ;
                   
                   rdfs:comment "Under gaussianity assumption this is equivalent to compound symmetry but not in general." ;
                   
-                  obo:IAO_0000117 "TN" ;
-                  
-                  obo:IAO_0000116 "Under discussion at https://github.com/ISA-tools/stato/issues/28" ;
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/pull/306 and https://github.com/ISA-tools/stato/issues/28" ;
                   
                   obo:IAO_0000114 obo:IAO_0000423 .
 
@@ -2411,9 +2407,7 @@ nidm:NIDM_0000048 rdf:type owl:Class ;
                   
                   rdfs:subClassOf nidm:NIDM_0000021 ;
                   
-                  obo:IAO_0000116 "Under discussion at https://github.com/ISA-tools/stato/issues/28" ;
-                  
-                  obo:IAO_0000117 "TN" ;
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/pull/306 and https://github.com/ISA-tools/stato/issues/28" ;
                   
                   obo:IAO_0000114 obo:IAO_0000423 .
 
@@ -2745,9 +2739,7 @@ nidm:NIDM_0000069 rdf:type owl:Class ;
                   
                   rdfs:subClassOf nidm:NIDM_0000021 ;
                   
-                  obo:IAO_0000116 "Under discussion at https://github.com/ISA-tools/stato/issues/28" ;
-                  
-                  obo:IAO_0000117 "TN" ;
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/pull/306 and https://github.com/ISA-tools/stato/issues/28" ;
                   
                   obo:IAO_0000114 obo:IAO_0000423 .
 
