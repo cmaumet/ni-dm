@@ -62,6 +62,8 @@ nidm:NIDM_0000088 rdf:type owl:ObjectProperty ;
                   
                   rdfs:label "has Drift Model" ;
                   
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/298" ;
+                  
                   obo:IAO_0000115 "A property that associates a drift model to a design matrix (only used for first-level fMRI experiments)." ;
                   
                   obo:IAO_0000114 obo:IAO_0000125 ;
@@ -377,6 +379,8 @@ afni:driftBasisOrder rdf:type owl:DatatypeProperty ;
                      
                      obo:IAO_0000115 "The number of basis in the drift model." ;
                      
+                     obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/298" ;
+                     
                      obo:IAO_0000114 obo:IAO_0000125 ;
                      
                      rdfs:domain afni:LegendrePolynomialDriftModel ;
@@ -390,6 +394,8 @@ afni:driftBasisOrder rdf:type owl:DatatypeProperty ;
 fsl:driftCutoffPeriod rdf:type owl:DatatypeProperty ;
                       
                       rdfs:label "FSL's Drift Cut-off Period" ;
+                      
+                      obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/298" ;
                       
                       obo:IAO_0000115 "Full Width at Half Maximum in seconds of the Gaussian weight function used in the running line smoother." ;
                       
@@ -1399,6 +1405,8 @@ spm:driftCutoffPeriod rdf:type owl:DatatypeProperty ;
                       
                       obo:IAO_0000115 "Discrete Cosine Transform basis cut-off, specified as period length in seconds and ensures that all basis elements will have period of this duration or longer." ;
                       
+                      obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/298" ;
+                      
                       obo:IAO_0000114 obo:IAO_0000125 ;
                       
                       rdfs:domain spm:DCTDriftModel ;
@@ -1657,6 +1665,8 @@ afni:LegendrePolynomialDriftModel rdf:type owl:Class ;
                                   
                                   obo:IAO_0000115 "A drift model in which the drifts are modeled by a Legendre orthogonal polynomial basis added to the regression model" ;
                                   
+                                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/298" ;
+                                  
                                   obo:IAO_0000114 obo:IAO_0000125 .
 
 
@@ -1738,6 +1748,8 @@ fsl:GaussianRunningLineDriftModel rdf:type owl:Class ;
                                   rdfs:label "FSL's Gaussian Running Line Drift Model" ;
                                   
                                   rdfs:subClassOf nidm:NIDM_0000087 ;
+                                  
+                                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/298" ;
                                   
                                   obo:IAO_0000115 "A drift model in which the drifts are modeled with a Gaussian-weighted running line smoother, fit to and subtracted from the data and each column of the design matrix." ;
                                   
@@ -2947,6 +2959,8 @@ nidm:NIDM_0000087 rdf:type owl:Class ;
                   
                   obo:IAO_0000115 "A model used to compensate for low frequency baseline drifts when analyzing functional MRI data at the subject level." ;
                   
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/298" ;
+                  
                   obo:IAO_0000114 obo:IAO_0000125 .
 
 
@@ -3012,6 +3026,8 @@ spm:DCTDriftModel rdf:type owl:Class ;
                   rdfs:subClassOf nidm:NIDM_0000087 ;
                   
                   obo:IAO_0000115 "A drift model in which the drifts are modeled by a Discrete Cosine Transform basis added to regression model" ;
+                  
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/298" ;
                   
                   obo:IAO_0000114 obo:IAO_0000125 .
 
