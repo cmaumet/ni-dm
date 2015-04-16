@@ -1501,6 +1501,8 @@ spm:searchVolumeReselsGeometry rdf:type owl:DatatypeProperty ;
                                
                                obo:IAO_0000112 "[6 68.8 589.1 1475.5]" ;
                                
+                               obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/310" ;
+                               
                                obo:IAO_0000114 obo:IAO_0000125 ;
                                
                                rdfs:domain nidm:NIDM_0000068 ;
@@ -1519,6 +1521,8 @@ spm:smallestSignifClusterSizeInVerticesFDR05 rdf:type owl:DatatypeProperty ;
                                              
                                              obo:IAO_0000112 "5" ;
                                              
+                                             obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/310" ;
+                                             
                                              obo:IAO_0000114 obo:IAO_0000125 ;
                                              
                                              rdfs:domain nidm:NIDM_0000068 ;
@@ -1533,6 +1537,8 @@ spm:smallestSignifClusterSizeInVerticesFWE05 rdf:type owl:DatatypeProperty ;
                                              
                                              obo:IAO_0000112 "2" ;
                                              
+                                             obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/310" ;
+                                             
                                              obo:IAO_0000115 "Smallest cluster size in vertices significant at family-wise error rate corrected alpha value of 0.05." ;
                                              
                                              obo:IAO_0000114 obo:IAO_0000125 ;
@@ -1546,6 +1552,8 @@ spm:smallestSignifClusterSizeInVerticesFWE05 rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/nidash/spm#smallestSignifClusterSizeInVoxelsFDR05
 
 spm:smallestSignifClusterSizeInVoxelsFDR05 rdf:type owl:DatatypeProperty ;
+                                           
+                                           obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/310" ;
                                            
                                            obo:IAO_0000112 "3" ;
                                            
@@ -1562,6 +1570,8 @@ spm:smallestSignifClusterSizeInVoxelsFDR05 rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/nidash/spm#smallestSignifClusterSizeInVoxelsFWE05
 
 spm:smallestSignifClusterSizeInVoxelsFWE05 rdf:type owl:DatatypeProperty ;
+                                           
+                                           obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/310" ;
                                            
                                            obo:IAO_0000115 """Smallest cluster size in voxels significant at family-wise error corrected alpha value of 0.05. 
 """ ;
