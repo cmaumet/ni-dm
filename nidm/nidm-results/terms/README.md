@@ -16,12 +16,12 @@ Thank you in advance for taking part in NIDM-Results term curation!
 <tr><th>Curation Status</th><th>Issue/PR</th><th>Term</th></tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='AFNI's Legendre Polinomial Drift Model'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/298">#298</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='AFNI's Legendre Polinomial Drift Model'"> [more] </a></td>
     <td><b>afni:'AFNI's Legendre Polinomial Drift Model': </b>A drift model in which the drifts are modeled by a Legendre orthogonal polynomial basis added to the regression model</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='FSL's Gaussian Running Line Drift Model'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/298">#298</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='FSL's Gaussian Running Line Drift Model'"> [more] </a></td>
     <td><b>fsl:'FSL's Gaussian Running Line Drift Model': </b>A drift model in which the drifts are modeled with a Gaussian-weighted running line smoother, fit to and subtracted from the data and each column of the design matrix</td>
 </tr>
 <tr>
@@ -36,12 +36,12 @@ Thank you in advance for taking part in NIDM-Results term curation!
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='Drift Model'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/298">#298</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Drift Model'"> [more] </a></td>
     <td><b>nidm:'Drift Model': </b>A model used to compensate for low frequency baseline drifts when analyzing functional MRI data at the subject level</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='SPM's DCT Drift Model'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/298">#298</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='SPM's DCT Drift Model'"> [more] </a></td>
     <td><b>spm:'SPM's DCT Drift Model': </b>A drift model in which the drifts are modeled by a Discrete Cosine Transform basis added to regression model</td>
 </tr>
 <tr>
@@ -197,34 +197,38 @@ Discussed with @afni-rickr in <a href="https://github.com/incf-nidash/nidm/pull/
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
-    <td>Under discussion at <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Arbitrarily Correlated Error'"> [more] </a></td>
-    <td><b>nidm:'Arbitrarily Correlated Error': </b>&lt;undefined&gt; (editor: TN)</td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/306">#306</a> and <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Arbitrarily Correlated Error'"> [more] </a></td>
+    <td><b>nidm:'Arbitrarily Correlated Error': </b>&lt;undefined&gt;</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
-    <td>Under discussion at <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Compound Symmetric Error'"> [more] </a></td>
-    <td><b>nidm:'Compound Symmetric Error': </b>&lt;undefined&gt; (editor: TN)</td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/306">#306</a> and <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Compound Symmetric Error'"> [more] </a></td>
+    <td><b>nidm:'Compound Symmetric Error': </b>&lt;undefined&gt;</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
-    <td>Under discussion at: <a href="https://github.com/ISA-tools/stato/pull/23">ISA-tools/stato#23</a>
-Range: Vector of integers not found.<br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Contrast Weights'"> [more] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/305">#305</a>, also discussed at <a href="https://github.com/ISA-tools/stato/pull/23">ISA-tools/stato#23</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Contrast Weights'"> [more] </a></td>
     <td><b>nidm:'Contrast Weights': </b>Vector defining the linear combination associated with a particular contrast. </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
-    <td>Under discussion at <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Exchangeable Error'"> [more] </a></td>
-    <td><b>nidm:'Exchangeable Error': </b>&lt;undefined&gt; (editor: TN)</td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/306">#306</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Error Dependence'"> [more] </a></td>
+    <td><b>nidm:'Error Dependence': </b>Dependence structure of the error, used as part of model estimation</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
-    <td>Under discussion at <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Independent Error'"> [more] </a></td>
-    <td><b>nidm:'Independent Error': </b>&lt;undefined&gt; (editor: TN)</td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/306">#306</a> and <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Exchangeable Error'"> [more] </a></td>
+    <td><b>nidm:'Exchangeable Error': </b>&lt;undefined&gt;</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
-    <td>Under discussion at <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Serially Correlated Error'"> [more] </a></td>
-    <td><b>nidm:'Serially Correlated Error': </b>&lt;undefined&gt; (editor: TN)</td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/306">#306</a> and <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Independent Error'"> [more] </a></td>
+    <td><b>nidm:'Independent Error': </b>&lt;undefined&gt;</td>
+</tr>
+<tr>
+    <td><img src="../../../doc/content/specs/img/yellow.png?raw=true"/>  </td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/306">#306</a> and <a href="https://github.com/ISA-tools/stato/pull/28">ISA-tools/stato#28</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Serially Correlated Error'"> [more] </a></td>
+    <td><b>nidm:'Serially Correlated Error': </b>&lt;undefined&gt;</td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/orange.png?raw=true"/>  </td>
@@ -243,7 +247,7 @@ Range: Vector of integers not found.<br/><a href="https://github.com/incf-nidash
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/orange.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='Resels Per Voxel Map'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/307">#307</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='Resels Per Voxel Map'"> [more] </a></td>
     <td><b>nidm:'Resels Per Voxel Map': </b>A map whose value at each location is the number of resels per voxel. </td>
 </tr>
 <tr>
@@ -271,28 +275,28 @@ Range: Vector of integers not found.<br/><a href="https://github.com/incf-nidash
 <tr><th>Curation Status</th><th>Issue/PR</th><th>Term</th><th>Domain</th><th>Range</th></tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='AFNI's drift Basis Order'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/298">#298</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='AFNI's drift Basis Order'"> [more] </a></td>
     <td><b>afni:'AFNI's drift Basis Order': </b>The number of basis in the drift model</td>
     <td>afni:LegendrePolynomialDriftModel </td>
     <td>xsd:int </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='FSL's Drift Cut-off Period'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/298">#298</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='FSL's Drift Cut-off Period'"> [more] </a></td>
     <td><b>fsl:'FSL's Drift Cut-off Period': </b>Full Width at Half Maximum in seconds of the Gaussian weight function used in the running line smoother</td>
     <td>fsl:GaussianRunningLineDriftModel </td>
     <td>xsd:float </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='cluster Size In Voxels'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/308">#308</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='cluster Size In Voxels'"> [more] </a></td>
     <td><b>nidm:'cluster Size In Voxels': </b>Number of voxels that make up the cluster</td>
     <td>nidm:NIDM_0000026 nidm:NIDM_0000070 </td>
     <td>xsd:positiveInteger </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='expected Number Of Clusters'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/309">#309</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='expected Number Of Clusters'"> [more] </a></td>
     <td><b>nidm:'expected Number Of Clusters': </b>Expected number of clusters in an excursion set</td>
     <td>nidm:NIDM_0000068 </td>
     <td></td>
@@ -306,7 +310,7 @@ Range: Vector of integers not found.<br/><a href="https://github.com/incf-nidash
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='has Drift Model'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/298">#298</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='has Drift Model'"> [more] </a></td>
     <td><b>nidm:'has Drift Model': </b>A property that associates a drift model to a design matrix (only used for first-level fMRI experiments)</td>
     <td>nidm:NIDM_0000019 </td>
     <td>nidm:NIDM_0000087 </td>
@@ -327,42 +331,42 @@ Range: Vector of integers not found.<br/><a href="https://github.com/incf-nidash
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='SPM's Drift Cut-off Period'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/298">#298</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='SPM's Drift Cut-off Period'"> [more] </a></td>
     <td><b>spm:'SPM's Drift Cut-off Period': </b>Discrete Cosine Transform basis cut-off, specified as period length in seconds and ensures that all basis elements will have period of this duration or longer</td>
     <td>spm:DCTDriftModel </td>
     <td>xsd:float </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q=searchVolumeReselsGeometry"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/310">#310</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q=searchVolumeReselsGeometry"> [more] </a></td>
     <td><b>spm:searchVolumeReselsGeometry: </b>Description of geometry of search volume.  As per Worsley et al. [ http://www.ncbi.nlm.nih.gov/pubmed/20408186 ], the first element is the Euler Characteristic of the search volume, the second element is twice the average caliper diameter, the third element is half the surface area, and the fourth element is the volume.  With the exception of the first element (which is a unitless integer) all quantities are in units of Resels</td>
     <td>nidm:NIDM_0000068 </td>
     <td>xsd:string </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q=smallestSignifClusterSizeInVerticesFDR05"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/310">#310</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q=smallestSignifClusterSizeInVerticesFDR05"> [more] </a></td>
     <td><b>spm:smallestSignifClusterSizeInVerticesFDR05: </b>Smallest cluster size in vertices that are significant at a false discovery rate corrected alpha value of 0.05.  </td>
     <td>nidm:NIDM_0000068 </td>
     <td>xsd:positiveInteger </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q=smallestSignifClusterSizeInVerticesFWE05"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/310">#310</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q=smallestSignifClusterSizeInVerticesFWE05"> [more] </a></td>
     <td><b>spm:smallestSignifClusterSizeInVerticesFWE05: </b>Smallest cluster size in vertices significant at family-wise error rate corrected alpha value of 0.05</td>
     <td>nidm:NIDM_0000068 </td>
     <td>xsd:positiveInteger </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q=smallestSignifClusterSizeInVoxelsFDR05"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/310">#310</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q=smallestSignifClusterSizeInVoxelsFDR05"> [more] </a></td>
     <td><b>spm:smallestSignifClusterSizeInVoxelsFDR05: </b>Smallest cluster size in voxels significant at false discovery rate corrected alpha value of 0.05.  </td>
     <td>nidm:NIDM_0000068 </td>
     <td>xsd:positiveInteger </td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/green.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q=smallestSignifClusterSizeInVoxelsFWE05"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/310">#310</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q=smallestSignifClusterSizeInVoxelsFWE05"> [more] </a></td>
     <td><b>spm:smallestSignifClusterSizeInVoxelsFWE05: </b>Smallest cluster size in voxels significant at family-wise error corrected alpha value of 0.05. 
 </td>
     <td>nidm:NIDM_0000068 </td>
@@ -433,7 +437,7 @@ Range: Vector of integers not found.<br/><a href="https://github.com/incf-nidash
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/orange.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='cluster Size In Vertices'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/308">#308</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='cluster Size In Vertices'"> [more] </a></td>
     <td><b>nidm:'cluster Size In Vertices': </b>Number of vertices that make up the cluster</td>
     <td>nidm:NIDM_0000026 nidm:NIDM_0000070 </td>
     <td>xsd:positiveInteger </td>
@@ -482,14 +486,14 @@ Range: Vector of integers not found.<br/><a href="https://github.com/incf-nidash
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/orange.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='expected Number Of Vertices Per Cluster'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/309">#309</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='expected Number Of Vertices Per Cluster'"> [more] </a></td>
     <td><b>nidm:'expected Number Of Vertices Per Cluster': </b>Expected number of vertices in a cluster</td>
     <td>nidm:NIDM_0000068 </td>
     <td></td>
 </tr>
 <tr>
     <td><img src="../../../doc/content/specs/img/orange.png?raw=true"/>  </td>
-    <td><a href="https://github.com/incf-nidash/nidm//issues?&q='expected Number Of Voxels Per Cluster'"> [find issues/PR] </a></td>
+    <td>Under discussion at <a href="https://github.com/incf-nidash/nidm/pull/309">#309</a><br/><a href="https://github.com/incf-nidash/nidm//issues?&q='expected Number Of Voxels Per Cluster'"> [more] </a></td>
     <td><b>nidm:'expected Number Of Voxels Per Cluster': </b>Expected number of voxels in a cluster</td>
     <td>nidm:NIDM_0000068 </td>
     <td></td>
