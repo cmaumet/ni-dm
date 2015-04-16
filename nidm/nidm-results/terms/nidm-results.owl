@@ -468,6 +468,8 @@ nidm:NIDM_0000084 rdf:type owl:DatatypeProperty ;
                   
                   rdfs:label "cluster Size In Voxels" ;
                   
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/308" ;
+                  
                   obo:IAO_0000112 "18" ;
                   
                   obo:IAO_0000115 "Number of voxels that make up the cluster." ;
