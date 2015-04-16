@@ -1208,6 +1208,8 @@ nidm:NIDM_0000141 rdf:type owl:DatatypeProperty ;
                   
                   obo:IAO_0000112 "9.51" ;
                   
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/309" ;
+                  
                   obo:IAO_0000114 obo:IAO_0000125 ;
                   
                   rdfs:domain nidm:NIDM_0000068 ;
