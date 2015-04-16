@@ -1231,6 +1231,8 @@ nidm:NIDM_0000142 rdf:type owl:DatatypeProperty ;
                   
                   obo:IAO_0000115 "Expected number of vertices in a cluster." ;
                   
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/309" ;
+                  
                   obo:IAO_0000112 "60.632" ;
                   
                   obo:IAO_0000114 obo:IAO_0000120 ;
@@ -1253,6 +1255,8 @@ nidm:NIDM_0000143 rdf:type owl:DatatypeProperty ;
                   rdfs:label "expected Number Of Voxels Per Cluster" ;
                   
                   obo:IAO_0000112 "60.632" ;
+                  
+                  obo:IAO_0000116 "Under discussion at https://github.com/incf-nidash/nidm/issues/309" ;
                   
                   obo:IAO_0000115 "Expected number of voxels in a cluster." ;
                   
