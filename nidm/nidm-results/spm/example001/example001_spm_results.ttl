@@ -46,7 +46,7 @@
 @prefix nidm_DesignMatrix: <http://purl.org/nidash/nidm#NIDM_0000019> .
 @prefix nidm_regressorNames: <http://purl.org/nidash/nidm#NIDM_0000021> .
 @prefix nidm_hasfMRIDesign: <http://purl.org/nidash/nidm#NIDM_0000010> .
-@prefix nidm_SineBasisSet: <http://purl.org/nidash/nidm#NIDM_0000151> .
+@prefix nidm_EventRelatedDesign: <http://purl.org/nidash/nidm#NIDM_0000153> .
 @prefix nidm_hasHRFBasis: <http://purl.org/nidash/nidm#NIDM_0000102> .
 @prefix nidm_hasDriftModel: <http://purl.org/nidash/nidm#NIDM_0000088> .
 @prefix nidm_ErrorModel: <http://purl.org/nidash/nidm#NIDM_0000023> .
@@ -262,8 +262,8 @@ niiri:design_matrix_id a prov:Entity , nidm_DesignMatrix: ;
 	dct:format "text/csv"^^xsd:string ;
 	nfo:fileName "DesignMatrix.csv"^^xsd:string ;
 	dc:description niiri:design_matrix_png_id ;
-    nidm_regressorNames: "[\"Listening\"]"^^xsd:string ;
-    nidm_hasfMRIDesign: nidm_SineBasisSet: ;
+    nidm_regressorNames: "[\"Sn(1) active*bf(1)\", \"Sn(1) constant\"]"^^xsd:string ;
+    nidm_hasfMRIDesign: nidm_EventRelatedDesign: ;
     nidm_hasHRFBasis: spm_SPMsCanonicalHRF: ;
     nidm_hasDriftModel: niiri:drift_model_id.
 
@@ -474,7 +474,7 @@ niiri:residual_mean_squares_map_id a prov:Entity , nidm_ResidualMeanSquaresMap: 
 
 niiri:drift_model_id a prov:Entity , spm_DCTDriftModel: ;
 	rdfs:label "SPM's DCT Drift Model" ;
-	spm_SPMsDriftCutoffPeriod: 2 .
+	spm_SPMsDriftCutoffPeriod: "128"^^xsd:float .
 
 niiri:inference_id prov:used niiri:resels_per_voxel_map_id .
 
