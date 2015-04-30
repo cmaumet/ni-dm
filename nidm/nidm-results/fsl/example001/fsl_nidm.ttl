@@ -129,7 +129,7 @@ niiri:contrast_id_1 a prov:Entity , obo_contrastweightmatrix: ;
 niiri:coordinate_space_id_1 a prov:Entity , nidm_CoordinateSpace: ;
 	rdfs:label "Coordinate space" ;
 	nidm_voxelToWorldMapping: "[[ -3.5, 0, 0, 108.5], [ 0, 3.5, 0, -108.5], [ 0, 0, 3.5, -52.5], [ 0, 0, 0, 1]]"^^xsd:string ;
-	nidm_voxelUnits: "[ 'mm', 'mm', 'mm' ]"^^xsd:string ;
+	nidm_voxelUnits: "[ \"mm\", \"mm\", \"mm\" ]"^^xsd:string ;
 	nidm_voxelSize: "[ 3.5, 3.5, 3.5 ]"^^xsd:string ;
 	nidm_inWorldCoordinateSystem: nidm_SubjectCoordinateSystem: ;
 	nidm_numberOfDimensions: "3"^^xsd:int ;
