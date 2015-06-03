@@ -302,8 +302,8 @@ niiri:extent_threshold_id_3 a prov:Entity, nidm_ExtentThreshold:, nidm_PValueUnc
 niiri:extent_threshold_id a prov:Entity, nidm_ExtentThreshold:, obo_statistic: ;
     rdfs:label "Extent Threshold: k>=0" ;
     nidm_clusterSizeInVoxels: "0"^^xsd:int ;
-    nidm_equivalentThreshold: niiri:height_threshold_id_2 ;
-    nidm_equivalentThreshold: niiri:height_threshold_id_2 ;
+    nidm_equivalentThreshold: niiri:extent_threshold_id_2 ;
+    nidm_equivalentThreshold: niiri:extent_threshold_id_3 ;
     nidm_clusterSizeInResels: "0"^^xsd:float .
 
 niiri:grand_mean_map_id a prov:Entity , nidm_GrandMeanMap: ;
@@ -325,10 +325,10 @@ niiri:height_threshold_id_3 a prov:Entity, nidm_HeightThreshold:, nidm_PValueUnc
     prov:value "2.7772578456986e-06"^^xsd:float .
 
 niiri:height_threshold_id a prov:Entity, nidm_HeightThreshold:, obo_FWERadjustedpvalue: ;
-    rdfs:label "Height Threshold: p<0.05 (FWE)" ;
+    rdfs:label "Height Threshold: p<0.050000 (FWE)" ;
     prov:value "0.0499999999999976"^^xsd:float ;
     nidm_equivalentThreshold: niiri:height_threshold_id_2 ;
-    nidm_equivalentThreshold: niiri:height_threshold_id_2 .
+    nidm_equivalentThreshold: niiri:height_threshold_id_3 .
 
 niiri:maximum_intensity_projection_id a prov:Entity , dctype:Image ;
 	prov:atLocation "file://./MaximumIntensityProjection.png"^^xsd:anyURI ;
