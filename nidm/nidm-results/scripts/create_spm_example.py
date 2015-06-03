@@ -244,8 +244,8 @@ def main():
             label="Extent Threshold: k>=0",
             cluster_size_vox="0",
             cluster_size_resels="0",
-            equiv_thresh="niiri:height_threshold_id_2",
-            equiv_thresh2="niiri:height_threshold_id_3"
+            equiv_thresh="niiri:extent_threshold_id_2",
+            equiv_thresh2="niiri:extent_threshold_id_3"
             ),
         "ExtentThreshold-2": dict(
             extent_threshold_id="niiri:extent_threshold_id_2",
