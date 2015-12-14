@@ -126,9 +126,12 @@ class NIDMRelease(object):
         # Create specification (before the address of examples are updated to
         # avoid issue with examples pointing to tag not pushed yet)
         create_spec(self.nidm_original_version)
-        if self.nidm_version == "100":
+        if self.nidm_version == "110":
             image_dir_prev = os.path.join(
                 SPECSPATH, "img", "nidm-results_100")
+        if self.nidm_version == "120":
+            image_dir_prev = os.path.join(
+                SPECSPATH, "img", "nidm-results_110")
         image_dir = os.path.join(
             SPECSPATH, "img", "nidm-results_"+self.nidm_version)
         if not os.path.isdir(image_dir):
