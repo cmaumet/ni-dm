@@ -124,6 +124,10 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 dct:hasPart rdf:type owl:ObjectProperty .
 
 
+###  http://semanticscience.org/ontology/sio.owl#isIdenticalTo
+
+sio:SIO_001242 rdf:type owl:ObjectProperty .
+
 
 ###  http://purl.org/nidash/nidm#NIDM_0000010
 
@@ -169,7 +173,26 @@ dct:license rdf:type owl:DatatypeProperty .
 dct:title rdf:type owl:DatatypeProperty .
 
 
+###  http://purl.org/nidash/nidm#NIDM_0000500
 
+nidm:NIDM_0000500 rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "has Image Contrast Type" ;
+                  
+                  obo:IAO_0000116 "To be discussed" ;
+                  
+                  obo:IAO_0000115 "A property that associates an 'ImageContrastType' to a 'ImageAcquisitionObject' " .
+
+
+###  http://purl.org/nidash/nidm#NIDM_0000501
+
+nidm:NIDM_0000501 rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "has Image Function Type" ;
+                  
+                  obo:IAO_0000116 "To be discussed" ;
+                  
+                  obo:IAO_0000115 "A property that associates an 'ImageFunctionType' to a 'ImageAcquisitionObject' " .
 
 
 #################################################################
@@ -199,6 +222,73 @@ nidm:AcquisitionObject rdf:type owl:Class ;
                    obo:IAO_0000117 <http://purl.org/nicholsn/card.ttl> .
 
 
+###  http://purl.org/nidash/nidm#ImageAcquisitionObject
+
+nidm:ImageAcquisitionObject rdf:type owl:Class ;
+                               
+                               rdfs:label "Image Acquisition Object"^^xsd:string ;
+                               
+                               rdfs:subClassOf nidm:AcquisitionObject ;
+                               
+                               obo:IAO_0000115 "An image acquisition object is an entity that is the result of the image acquisition activity."^^xsd:string .
+                    
+
+###  http://purl.org/nidash/nidm#DemographicsAcquisitionObject
+
+nidm:DemographicsAcquisitionObject rdf:type owl:Class ;
+                               
+                               rdfs:label "Demographics Acquisition Object"^^xsd:string ;
+                               
+                               rdfs:subClassOf nidm:AcquisitionObject ;
+                               
+                               obo:IAO_0000115 "A demographics acquisition object is an entity that represents the demographics information acquired from a person in the participant role."^^xsd:string ;
+                               
+                               obo:IAO_0000114 obo:IAO_0000428 ;
+                               
+                               obo:IAO_0000117 <http://purl.org/nicholsn/card.ttl> .
+           
+
+###  http://purl.org/nidash/nidm#BehavioralAcquisitionObject
+
+nidm:DemographicsAcquisitionObject rdf:type owl:Class ;
+                               
+                               rdfs:label "Behavioral Acquisition Object"^^xsd:string ;
+                               
+                               rdfs:subClassOf nidm:AcquisitionObject ;
+                               
+                               obo:IAO_0000115 "A behavioral acquisition object is an entity that is collected during a behavioral task by a study participant. The object may be acquired concurrently with other types of data, e.g., imaging data."^^xsd:string .
+                               
+
+
+
+### http://purl.org/nidash/nidm#DataAcquisition
+
+nidm:DataAcquisition rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf prov:Activity .
+
+
+### http://purl.org/nidash/nidm#MRImageDataAcquisition
+
+nidm:MRImageDataAcquisition rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf nidm:DataAcquisition .
+
+
+### http://purl.org/nidash/nidm#DemographicsDataAcquisition
+
+nidm:DemographicsDataAcquisition rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf nidm:DataAcquisition .
+
+
+### http://purl.org/nidash/nidm#BehavioralAssessmentDataAcquisition
+
+nidm:BehavioralAssessmentDataAcquisition rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf nidm:DataAcquisition .
+
+
 
 ###  http://purl.org/nidash/nidm#AnatomicalScan
 
@@ -208,9 +298,9 @@ nidm:AnatomicalScan rdf:type owl:Class ;
 
 
 
-###  http://purl.org/nidash/nidm#AnatomyImagingAcquisition
+###  http://purl.org/nidash/nidm#AnatomicalImagingAcquisition
 
-nidm:AnatomyImagingAcquisition rdf:type owl:Class ;
+nidm:AnatomicalImagingAcquisition rdf:type owl:Class ;
                            
                            rdfs:subClassOf prov:Activity .
 
@@ -247,13 +337,11 @@ nidm:Condition rdf:type owl:Class ;
            rdfs:subClassOf prov:Entity .
 
 
-
 ###  http://purl.org/nidash/nidm#Contrast
 
 nidm:Contrast rdf:type owl:Class ;
           
           rdfs:subClassOf prov:Entity .
-
 
 
 ###  http://purl.org/nidash/nidm#DataCollection
@@ -263,29 +351,11 @@ nidm:DataCollection rdf:type owl:Class ;
                 rdfs:subClassOf prov:Collection .
 
 
-
-###  http://purl.org/nidash/nidm#DemographicsAcquisitionObject
-
-nidm:DemographicsAcquisitionObject rdf:type owl:Class ;
-                               
-                               rdfs:label "Demographics Acquisition Object"^^xsd:string ;
-                               
-                               rdfs:subClassOf nidm:AcquisitionObject ;
-                               
-                               obo:IAO_0000115 "A demographics acquisition object is an entity that represents the demographics information acquired from a person in the participant role."^^xsd:string ;
-                               
-                               obo:IAO_0000114 obo:IAO_0000428 ;
-                               
-                               obo:IAO_0000117 <http://purl.org/nicholsn/card.ttl> .
-
-
-
 ###  http://purl.org/nidash/nidm#FunctionalScan
 
 nidm:FunctionalScan rdf:type owl:Class ;
                 
                 rdfs:subClassOf prov:Entity .
-
 
 
 ###  http://purl.org/nidash/nidm#Group
@@ -294,6 +364,96 @@ nidm:Group rdf:type owl:Class ;
        
        rdfs:subClassOf prov:Collection .
 
+
+###  http://purl.org/nidash/nidm#ImageContrastType
+
+nidm:ImageContrastType rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf Entity .
+
+
+###  http://purl.org/nidash/nidm#T1Weighted
+
+nidm:T1Weighted rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#T2Weighted
+
+nidm:T2Weighted rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#T2*Weighted
+
+nidm:T2*Weighted rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#ProtonDensityWeighted
+
+nidm:ProtonDensityWeighted rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#FlowWeighted
+
+nidm:FlowWeighted rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#DiffusionWeighted
+
+nidm:DiffusionWeighted rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#SusceptibilityWeighted
+
+nidm:SusceptibilityWeighted rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageContrastType .
+
+
+###  http://purl.org/nidash/nidm#ImageObjectFunctionType
+
+nidm:ImageObjectFunctionType rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf Entity .
+
+
+###  http://purl.org/nidash/nidm#DiffusionTensorObject
+
+nidm:DiffusionTensorObject rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageObjectFunctionType .
+
+
+###  http://purl.org/nidash/nidm#DynamicSusceptibilityContrastObject
+
+nidm:DynamicSusceptibilityContrastObject rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageObjectFunctionType .
+
+
+###  http://purl.org/nidash/nidm#DynamicContrastEnhancementObject
+
+nidm:DynamicContrastEnhancementObject rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageObjectFunctionType .
+
+
+###  http://purl.org/nidash/nidm#AnatomicalImageObject
+
+nidm:AnatomicalImageObject rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf ImageObjectFunctionType .
 
 
 ###  http://purl.org/nidash/nidm#InvestigationCollection
@@ -327,13 +487,62 @@ nidm:MRIAcquisitionObject rdf:type owl:Class ;
                       obo:IAO_0000117 <http://purl.org/nicholsn/card.ttl> .
 
 
+###  http://purl.org/nidash/nidm#TaskBasedImagingAcquisition
+
+nidm:TaskBasedImagingAcquisition rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf prov:Activity .
+
+
+###  http://purl.org/nidash/nidm#Subject
+
+nidm:Subject rdf:type owl:Class ;
+           
+           rdfs:subClassOf prov:Agent .
+
+
+###  http://purl.org/nidash/nidm#ExVivoSubject
+
+qibo:ExVivoSubject rdf:type owl:Class ;
+           
+           rdfs:subClassOf nidm:Subject .
+
+
+###  http://purl.org/nidash/nidm#InVivoSubject
+
+qibo:InVivoSubject rdf:type owl:Class ;
+           
+           rdfs:subClassOf nidm:Subject .
+
+
+###  http://purl.org/nidash/nidm#InVitroSubject
+
+qibo:InVitroSubject rdf:type owl:Class ;
+           
+           rdfs:subClassOf nidm:Subject .
+
+
+###  http://purl.org/nidash/nidm#Phantom
+
+nidm:Phantom rdf:type owl:Class ;
+
+	   sio:SIO_001242 qibo:PhantomExperimentalSubject
+           
+           rdfs:subClassOf nidm:Subject .
+
+
+###  http://purl.org/nidash/nidm#SubjectOrganismType
+
+qibo:SubjectOrganismType rdf:type owl:Class ;
+           
+           rdfs:subClassOf prov:Entity .
+
 
 ###  http://purl.org/nidash/nidm#MRScanner
 
 nidm:MRScanner rdf:type owl:Class ;
            
            rdfs:subClassOf prov:Agent .
-
 
 
 ###  http://purl.org/nidash/nidm#Model
@@ -482,14 +691,6 @@ nidm:StudyParticipant rdf:type owl:Class ;
 nidm:Task rdf:type owl:Class ;
       
       rdfs:subClassOf prov:Collection .
-
-
-
-###  http://purl.org/nidash/nidm#TaskBasedImagingAcquisition
-
-nidm:TaskBasedImagingAcquisition rdf:type owl:Class ;
-                             
-                             rdfs:subClassOf prov:Activity .
 
 
 
