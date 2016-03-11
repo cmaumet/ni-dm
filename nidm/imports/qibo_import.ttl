@@ -1,0 +1,3545 @@
+@prefix : <http://www.owl-ontologies.com/Ontology1298855822.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.owl-ontologies.com/Ontology1298855822.owl> .
+
+<http://www.owl-ontologies.com/Ontology1298855822.owl> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#synonym
+
+:synonym rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+
+rdf:type rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#ObjectProperty_11
+
+:ObjectProperty_11 rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#estimates
+
+:estimates rdf:type owl:FunctionalProperty ,
+                    owl:InverseFunctionalProperty ,
+                    owl:ObjectProperty ;
+           
+           rdfs:domain :Post-processing_Algorithm ;
+           
+           rdfs:range :Quantitative_Imaging_Biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#generates
+
+:generates rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :Acquisition_Device ;
+           
+           rdfs:range :Quantitative_Imaging_Biomarker ;
+           
+           owl:inverseOf :is_generated_by .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#has
+
+:has rdf:type owl:FunctionalProperty ,
+              owl:InverseFunctionalProperty ,
+              owl:ObjectProperty ;
+     
+     rdfs:range :Biological_Target ;
+     
+     rdfs:domain :Imaging_Subject ;
+     
+     owl:inverseOf :is_present_in .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#has_undergone
+
+:has_undergone rdf:type owl:FunctionalProperty ,
+                        owl:InverseFunctionalProperty ,
+                        owl:ObjectProperty ;
+               
+               rdfs:label "has undergone"^^xsd:string ;
+               
+               rdfs:range :Biological_Intervention ;
+               
+               rdfs:domain :Imaging_Subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#images
+
+:images rdf:type owl:FunctionalProperty ,
+                 owl:InverseFunctionalProperty ,
+                 owl:ObjectProperty ;
+        
+        rdfs:domain :Acquisition_Device ;
+        
+        rdfs:range :Imaging_Subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#influences
+
+:influences rdf:type owl:FunctionalProperty ,
+                     owl:InverseFunctionalProperty ,
+                     owl:ObjectProperty ;
+            
+            rdfs:domain :Biological_Intervention ;
+            
+            rdfs:range :Biological_Target ;
+            
+            owl:inverseOf :is_influenced_by .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#involves
+
+:involves rdf:type owl:FunctionalProperty ,
+                   owl:InverseFunctionalProperty ,
+                   owl:ObjectProperty ;
+          
+          rdfs:range :Biological_Target ;
+          
+          rdfs:domain :Indicated_Biology .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_a_biomarker_for
+
+:is_a_biomarker_for rdf:type owl:FunctionalProperty ,
+                             owl:ObjectProperty ;
+                    
+                    rdfs:label "is a biomarker for"^^xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_a_change_in_measurement
+
+:is_a_change_in_measurement rdf:type owl:FunctionalProperty ,
+                                     owl:ObjectProperty ;
+                            
+                            rdfs:label "is a change in measurement"^^xsd:string ;
+                            
+                            rdfs:comment "When the measurement is a change in some other parameter, such as an increase in diameter."^^xsd:string ;
+                            
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( :Measurement_of_Change
+                                                        owl:Thing
+                                                      )
+                                        ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_administered_to
+
+:is_administered_to rdf:type owl:FunctionalProperty ,
+                             owl:InverseFunctionalProperty ,
+                             owl:ObjectProperty ;
+                    
+                    rdfs:domain :Imaging_Agent ;
+                    
+                    rdfs:range :Imaging_Subject .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_administered_with
+
+:is_administered_with rdf:type owl:FunctionalProperty ,
+                               owl:InverseFunctionalProperty ,
+                               owl:ObjectProperty ;
+                      
+                      rdfs:range :Imaging_Agent ;
+                      
+                      rdfs:domain :Imaging_Subject ;
+                      
+                      owl:inverseOf :is_administered_to .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_applicable_to
+
+:is_applicable_to rdf:type owl:FunctionalProperty ,
+                           owl:InverseFunctionalProperty ,
+                           owl:ObjectProperty ;
+                  
+                  rdfs:range :Biomarker_Use ;
+                  
+                  rdfs:domain :Indicated_Biology ;
+                  
+                  owl:inverseOf :pertains_to .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_applied_to
+
+:is_applied_to rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "is applied to"^^xsd:string .
+
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_biomarker_of
+
+:is_biomarker_of rdf:type owl:FunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:label "is biomarker of"^^xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_derived_from
+
+:is_derived_from rdf:type owl:FunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:label "is derived from"^^xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_enhanced_by
+
+:is_enhanced_by rdf:type owl:FunctionalProperty ,
+                         owl:InverseFunctionalProperty ,
+                         owl:ObjectProperty ;
+                
+                rdfs:domain :Biological_Target ;
+                
+                rdfs:range :Imaging_Agent .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_estimated_by
+
+:is_estimated_by rdf:type owl:FunctionalProperty ,
+                          owl:InverseFunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:range :Post-processing_Algorithm ;
+                 
+                 rdfs:domain :Quantitative_Imaging_Biomarker ;
+                 
+                 owl:inverseOf :estimates .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_from_source
+
+:is_from_source rdf:type owl:FunctionalProperty ,
+                         owl:ObjectProperty ;
+                
+                rdfs:label "is from source"^^xsd:string ;
+                
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :In_vitro_subject
+                                            owl:Thing
+                                          )
+                            ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_generated_by
+
+:is_generated_by rdf:type owl:FunctionalProperty ,
+                          owl:InverseFunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:label "is generated by"^^xsd:string ;
+                 
+                 rdfs:range :Acquisition_Device ;
+                 
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Quantitative_Imaging_Biomarker
+                                             owl:Thing
+                                           )
+                             ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_imaged_with
+
+:is_imaged_with rdf:type owl:FunctionalProperty ,
+                         owl:InverseFunctionalProperty ,
+                         owl:ObjectProperty ;
+                
+                rdfs:label "is imaged with"^^xsd:string ;
+                
+                rdfs:comment "Only the biological subject is imaged.  We do not consider the Target or the Agent to be imaged, since they are within the subject, which is being imaged."^^xsd:string ;
+                
+                rdfs:range :Acquisition_Device ;
+                
+                owl:inverseOf :images ;
+                
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Imaging_Subject
+                                            owl:Thing
+                                          )
+                            ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_implemented_by
+
+:is_implemented_by rdf:type owl:FunctionalProperty ,
+                            owl:InverseFunctionalProperty ,
+                            owl:ObjectProperty ;
+                   
+                   rdfs:range :Acquisition_Device ;
+                   
+                   rdfs:domain :Imaging_Technique .
+
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_influenced_by
+
+:is_influenced_by rdf:type owl:FunctionalProperty ,
+                           owl:InverseFunctionalProperty ,
+                           owl:ObjectProperty ;
+                  
+                  rdfs:range :Biological_Intervention ;
+                  
+                  rdfs:domain :Biological_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_measured_by
+
+:is_measured_by rdf:type owl:FunctionalProperty ,
+                         owl:InverseFunctionalProperty ,
+                         owl:ObjectProperty ;
+                
+                rdfs:label "is measured by"^^xsd:string ;
+                
+                rdfs:domain :Biological_Target ;
+                
+                rdfs:range :Quantitative_Imaging_Biomarker ;
+                
+                owl:inverseOf :measures .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_measured_relative_to
+
+:is_measured_relative_to rdf:type owl:FunctionalProperty ,
+                                  owl:ObjectProperty ;
+                         
+                         rdfs:label "is measured relative to"^^xsd:string ;
+                         
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Locational_Parameter
+                                                     owl:Thing
+                                                   )
+                                     ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_measurement_of
+
+:is_measurement_of rdf:type owl:FunctionalProperty ,
+                            owl:ObjectProperty ;
+                   
+                   rdfs:label "is measurement of"^^xsd:string ;
+                   
+                   rdfs:range :Indicated_Biology ;
+                   
+                   rdfs:domain :Quantitative_Imaging_Biomarker ;
+                   
+                   owl:inverseOf :is_quantified_by .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_of_modality
+
+:is_of_modality rdf:type owl:FunctionalProperty ,
+                         owl:InverseFunctionalProperty ,
+                         owl:ObjectProperty ;
+                
+                rdfs:range :Acquisition_Device ;
+                
+                rdfs:domain :Imaging_Agent .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_performed_on
+
+:is_performed_on rdf:type owl:FunctionalProperty ,
+                          owl:InverseFunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:domain :Biological_Intervention ;
+                 
+                 rdfs:range :Imaging_Subject ;
+                 
+                 owl:inverseOf :has_undergone .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_present_in
+
+:is_present_in rdf:type owl:FunctionalProperty ,
+                        owl:InverseFunctionalProperty ,
+                        owl:ObjectProperty ;
+               
+               rdfs:domain :Biological_Target ;
+               
+               rdfs:range :Imaging_Subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_quantified_by
+
+:is_quantified_by rdf:type owl:FunctionalProperty ,
+                           owl:InverseFunctionalProperty ,
+                           owl:ObjectProperty ;
+                  
+                  rdfs:label "is quantified by"^^xsd:string ;
+                  
+                  rdfs:range :Quantitative_Imaging_Biomarker ;
+                  
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :Indicated_Biology
+                                              owl:Thing
+                                            )
+                              ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_targetted_by
+
+:is_targetted_by rdf:type owl:FunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:label "is targetted by"^^xsd:string ;
+                 
+                 rdfs:comment "A biological target may be targetted by an exogenous material such as an imaging agent, or the target may itself be imageable, thus not requiring the use of an Imaging Agent."^^xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_used_in
+
+:is_used_in rdf:type owl:ObjectProperty ;
+            
+            rdfs:range :Biomarker_Use .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_used_in_subject
+
+:is_used_in_subject rdf:type owl:FunctionalProperty ,
+                             owl:InverseFunctionalProperty ,
+                             owl:ObjectProperty ;
+                    
+                    rdfs:domain :Biomarker_Use ;
+                    
+                    rdfs:range :Imaging_Subject ;
+                    
+                    owl:inverseOf :is_benefit_from .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#measures
+
+:measures rdf:type owl:InverseFunctionalProperty ,
+                   owl:ObjectProperty ;
+          
+          rdfs:range :Biological_Target ;
+          
+          rdfs:domain :Quantitative_Imaging_Biomarker .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#participates_in
+
+:participates_in rdf:type owl:FunctionalProperty ,
+                          owl:InverseFunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:label "participates in"^^xsd:string ;
+                 
+                 rdfs:range :Indicated_Biology ;
+                 
+                 owl:inverseOf :involves ;
+                 
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Biological_Target
+                                             owl:Thing
+                                           )
+                             ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#pertains_to
+
+:pertains_to rdf:type owl:FunctionalProperty ,
+                      owl:InverseFunctionalProperty ,
+                      owl:ObjectProperty ;
+             
+             rdfs:domain :Biomarker_Use ;
+             
+             rdfs:range :Indicated_Biology .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#requires_parameter
+
+:requires_parameter rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:label "requires parameter"^^xsd:string ;
+                    
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Post-processing_Algorithm
+                                                owl:Thing
+                                              )
+                                ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#requires_preceding_algorithm
+
+:requires_preceding_algorithm rdf:type owl:ObjectProperty ;
+                              
+                              rdfs:label "requires preceding algorithm"^^xsd:string ;
+                              
+                              rdfs:domain [ rdf:type owl:Class ;
+                                            owl:unionOf ( :Post-processing_Algorithm
+                                                          owl:Thing
+                                                        )
+                                          ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#results_in_parameter
+
+:results_in_parameter rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:label "results in parameter"^^xsd:string ;
+                      
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Post-processing_Algorithm
+                                                  owl:Thing
+                                                )
+                                  ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#targeting
+
+:targeting rdf:type owl:FunctionalProperty ,
+                    owl:ObjectProperty ;
+           
+           rdfs:label "targeting"^^xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#used_for
+
+:used_for rdf:type owl:FunctionalProperty ,
+                   owl:InverseFunctionalProperty ,
+                   owl:ObjectProperty ;
+          
+          rdfs:label "is used for"^^xsd:string ;
+          
+          rdfs:range :Biomarker_Use ;
+          
+          rdfs:domain :Quantitative_Imaging_Biomarker ;
+          
+          owl:inverseOf :uses .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#used_with
+
+:used_with rdf:type owl:ObjectProperty ;
+           
+           rdfs:range :Imaging_Agent ;
+           
+           rdfs:domain :Imaging_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#uses
+
+:uses rdf:type owl:FunctionalProperty ,
+               owl:InverseFunctionalProperty ,
+               owl:ObjectProperty ;
+      
+      rdfs:domain :Biomarker_Use ;
+      
+      rdfs:range :Quantitative_Imaging_Biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#uses_image_techniques
+
+:uses_image_techniques rdf:type owl:FunctionalProperty ,
+                                owl:InverseFunctionalProperty ,
+                                owl:ObjectProperty ;
+                       
+                       rdfs:domain :Acquisition_Device ;
+                       
+                       rdfs:range :Imaging_Technique ;
+                       
+                       owl:inverseOf :is_implemented_by .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#uses_imaging_agent
+
+:uses_imaging_agent rdf:type owl:FunctionalProperty ,
+                             owl:InverseFunctionalProperty ,
+                             owl:ObjectProperty ;
+                    
+                    rdfs:domain :Acquisition_Device ;
+                    
+                    rdfs:range :Imaging_Agent ;
+                    
+                    owl:inverseOf :is_of_modality .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Emitter
+
+:Emitter rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         
+         rdfs:label "Emitter"^^xsd:string ;
+         
+         rdfs:range xsd:string ;
+         
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Radionuclide
+                                     owl:Thing
+                                   )
+                     ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Genetic_background
+
+:Genetic_background rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    
+                    rdfs:label "Genetic background"^^xsd:string ;
+                    
+                    rdfs:comment """which mouse strain this mutant mouse derived from.
+
+genetic background may be instances of Mouse"""^^xsd:string ;
+                    
+                    rdfs:range xsd:string .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#affinity
+
+:affinity rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          
+          rdfs:label "affinity"^^xsd:string ;
+          
+          rdfs:range xsd:string ;
+          
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Imaging_Agent
+                                      owl:Thing
+                                    )
+                      ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#binding_affinity__Ki_
+
+:binding_affinity__Ki_ rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       
+                       rdfs:label "binding affinity (Ki)"^^xsd:string ;
+                       
+                       rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#biodistribution
+
+:biodistribution rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 
+                 rdfs:label "biodistribution"^^xsd:string ;
+                 
+                 rdfs:range xsd:string ;
+                 
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Imaging_Agent
+                                             owl:Thing
+                                           )
+                             ] .
+
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#dose
+
+:dose rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      
+      rdfs:label "dose"^^xsd:string ;
+      
+      rdfs:range xsd:string ;
+      
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Induced_gene_expression
+                                  owl:Thing
+                                )
+                  ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#emission_spectrum
+
+:emission_spectrum rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   
+                   rdfs:label "emission_spectrum"^^xsd:string ;
+                   
+                   rdfs:range xsd:float ;
+                   
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Optical
+                                               owl:Thing
+                                             )
+                               ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#emission_wavelength
+
+:emission_wavelength rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     
+                     rdfs:label "emission_wavelength"^^xsd:string ;
+                     
+                     rdfs:range xsd:float ;
+                     
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Optical
+                                                 owl:Thing
+                                               )
+                                 ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#energy
+
+:energy rdf:type owl:DatatypeProperty ;
+        
+        rdfs:label "energy"^^xsd:string ;
+        
+        rdfs:range xsd:string ;
+        
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :Radionuclide
+                                    owl:Thing
+                                  )
+                    ] .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#excitation_spectrum
+
+:excitation_spectrum rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     
+                     rdfs:label "excitation_spectrum"^^xsd:string ;
+                     
+                     rdfs:range xsd:float ;
+                     
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Optical
+                                                 owl:Thing
+                                               )
+                                 ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#excretion
+
+:excretion rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           
+           rdfs:label "excretion"^^xsd:string ;
+           
+           rdfs:range xsd:string ;
+           
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Imaging_Agent
+                                       owl:Thing
+                                     )
+                       ] .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#gene_knockin_or_knockout
+
+:gene_knockin_or_knockout rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          
+                          rdfs:label "gene knockin or knockout"^^xsd:string ;
+                          
+                          rdfs:range xsd:string ;
+                          
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( :Genetically_engineered_mutant_mouse
+                                                      owl:Thing
+                                                    )
+                                      ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#genetic_background
+
+:genetic_background rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    
+                    rdfs:label "genetic background"^^xsd:string ;
+                    
+                    rdfs:comment "mainly instances from the Mouse class"^^xsd:string ;
+                    
+                    rdfs:range xsd:string ;
+                    
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Genetically_engineered_mutant_mouse
+                                                owl:Thing
+                                              )
+                                ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#half_life
+
+:half_life rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           
+           rdfs:label "half life"^^xsd:string ;
+           
+           rdfs:range xsd:string ;
+           
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Radionuclide
+                                       owl:Thing
+                                     )
+                       ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#has_been_treated_with
+
+:has_been_treated_with rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       
+                       rdfs:label "has been treated with"^^xsd:string ;
+                       
+                       rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#has_temporality
+
+:has_temporality rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 
+                 rdfs:label "has temporality"^^xsd:string ;
+                 
+                 rdfs:range xsd:string ;
+                 
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Quantitative_Imaging_Biomarker
+                                             owl:Thing
+                                           )
+                             ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#has_unit
+
+:has_unit rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          
+          rdfs:label "has unit"^^xsd:string ;
+          
+          rdfs:range xsd:string ;
+          
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Quantitative_Imaging_Biomarker
+                                      owl:Thing
+                                    )
+                      ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#image_type
+
+:image_type rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            
+            rdfs:label "image_type"^^xsd:string ;
+            
+            rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#immunodeficiency_type
+
+:immunodeficiency_type rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       
+                       rdfs:label "immunodeficiency_type"^^xsd:string ;
+                       
+                       rdfs:range xsd:string ;
+                       
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Xenograft
+                                                   owl:Thing
+                                                 )
+                                   ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#intravascular_half-life
+
+:intravascular_half-life rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         
+                         rdfs:label "intravascular half-life"^^xsd:string ;
+                         
+                         rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#isAutomated
+
+:isAutomated rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             
+             rdfs:label "isAutomated"^^xsd:string ;
+             
+             rdfs:range xsd:boolean ;
+             
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Image_segmentation_algorithm
+                                         owl:Thing
+                                       )
+                         ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_abnormal
+
+:is_abnormal rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             
+             rdfs:label "is_abnormal"^^xsd:string ;
+             
+             rdfs:comment """Target  is not  expressed in normal cells, e.g. disialoganglioside in micad. 
+These targets may not normally be found in GO."""^^xsd:string ;
+             
+             rdfs:range xsd:boolean ;
+             
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Anatomical_component
+                                         owl:Thing
+                                       )
+                         ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_endogenous
+
+:is_endogenous rdf:type owl:DatatypeProperty ;
+               
+               rdfs:label "is endogenous"^^xsd:string ;
+               
+               rdfs:range xsd:boolean .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_genetic
+
+:is_genetic rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            
+            rdfs:label "is genetic"^^xsd:string ;
+            
+            rdfs:range xsd:boolean ;
+            
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Disease
+                                        owl:Thing
+                                      )
+                        ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_of_dimension
+
+:is_of_dimension rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 
+                 rdfs:label "is of dimension"^^xsd:string ;
+                 
+                 rdfs:range xsd:string ;
+                 
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Quantitative_Imaging_Biomarker
+                                             owl:Thing
+                                           )
+                             ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_of_species
+
+:is_of_species rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               
+               rdfs:label "is of species"^^xsd:string ;
+               
+               rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_pathological
+
+:is_pathological rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 
+                 rdfs:label "is_pathological"^^xsd:string ;
+                 
+                 rdfs:range xsd:boolean ;
+                 
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Biological_Target
+                                             :Biological_process
+                                             owl:Thing
+                                           )
+                             ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#is_set_of_objects
+
+:is_set_of_objects rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   
+                   rdfs:label "is set of objects"^^xsd:string ;
+                   
+                   rdfs:range xsd:boolean .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#light_source
+
+:light_source rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              
+              rdfs:label "light_source"^^xsd:string ;
+              
+              rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#lipophilic
+
+:lipophilic rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            
+            rdfs:label "lipophilic"^^xsd:string ;
+            
+            rdfs:range xsd:boolean ;
+            
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Imaging_Agent
+                                        owl:Thing
+                                      )
+                        ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#location
+
+:location rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          
+          rdfs:label "location"^^xsd:string ;
+          
+          rdfs:range xsd:string ;
+          
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Xenograft
+                                      owl:Thing
+                                    )
+                      ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#molecular_weight
+
+:molecular_weight rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  
+                  rdfs:label "molecular weight"^^xsd:string ;
+                  
+                  rdfs:range xsd:float .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#mutant_gene
+
+:mutant_gene rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             
+             rdfs:label "mutant gene"^^xsd:string ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Genetically_engineered_mutant_mouse
+                                         owl:Thing
+                                       )
+                         ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#name
+
+:name rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      
+      rdfs:label "name"^^xsd:string ;
+      
+      rdfs:range xsd:string ;
+      
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Adenocarcinoma
+                                  :Imaging_Subject
+                                  :Therapeutic_intervention
+                                  owl:Thing
+                                )
+                  ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#probe_activity
+
+:probe_activity rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                
+                rdfs:label "probe activity"^^xsd:string ;
+                
+                rdfs:range xsd:string .
+
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#radioactivity
+
+:radioactivity rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               
+               rdfs:label "radioactivity"^^xsd:string ;
+               
+               rdfs:range xsd:string ;
+               
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Radionuclide
+                                           owl:Thing
+                                         )
+                           ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#requires_input
+
+:requires_input rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                
+                rdfs:label "requires input"^^xsd:string ;
+                
+                rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#route_of_elimination
+
+:route_of_elimination rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      
+                      rdfs:label "route of elimination"^^xsd:string ;
+                      
+                      rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#scintillator
+
+:scintillator rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              
+              rdfs:label "scintillator"^^xsd:string ;
+              
+              rdfs:range xsd:string ;
+              
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Radionuclide_imaging
+                                          owl:Thing
+                                        )
+                          ] .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#sensitivity
+
+:sensitivity rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             
+             rdfs:label "sensitivity"^^xsd:string ;
+             
+             rdfs:range xsd:float ;
+             
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Biomarker_Use
+                                         owl:Thing
+                                       )
+                         ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#strain_name
+
+:strain_name rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             
+             rdfs:label "strain name"^^xsd:string ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Mouse
+                                         owl:Thing
+                                       )
+                         ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#strain_type
+
+:strain_type rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             
+             rdfs:label "strain type"^^xsd:string ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Mouse
+                                         owl:Thing
+                                       )
+                         ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#to_imaging_agent
+
+:to_imaging_agent rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  
+                  rdfs:label "to_imaging_agent"^^xsd:string ;
+                  
+                  rdfs:comment """Imaging agent directly binds to the biological target, or the biological target is downstream to what imaging agent binds
+e.g. MRI with magnetic nanoparticles monitors downstream anti-angiogenic effects of mTOR inhibition"""^^xsd:string ;
+                  
+                  rdfs:range xsd:string .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#toxicity
+
+:toxicity rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          
+          rdfs:label "toxicity"^^xsd:string ;
+          
+          rdfs:range xsd:string ;
+          
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Imaging_Agent
+                                      owl:Thing
+                                    )
+                      ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#tracer_half_life
+
+:tracer_half_life rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  
+                  rdfs:label "tracer half life"^^xsd:string ;
+                  
+                  rdfs:range xsd:float ;
+                  
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :Radioisotope
+                                              owl:Thing
+                                            )
+                              ] .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#uses_MRI_pulse_sequence
+
+:uses_MRI_pulse_sequence rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         
+                         rdfs:label "uses MRI pulse sequence"^^xsd:string ;
+                         
+                         rdfs:range xsd:string ;
+                         
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Magnetic_resonance_imaging
+                                                     owl:Thing
+                                                   )
+                                     ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#uses_PET_reconstruction_algorithm
+
+:uses_PET_reconstruction_algorithm rdf:type owl:DatatypeProperty ,
+                                            owl:FunctionalProperty ;
+                                   
+                                   rdfs:label "uses PET reconstruction algorithm"^^xsd:string ;
+                                   
+                                   rdfs:range xsd:string ;
+                                   
+                                   rdfs:domain [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :Positron_Emission_Tomography
+                                                               owl:Thing
+                                                             )
+                                               ] .
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Acquisition_Device
+
+:Acquisition_Device rdf:type owl:Class .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Activation
+
+:Activation rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Functional_Measurement .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Affine_registration_algorithm
+
+:Affine_registration_algorithm rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :Image_registration_algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Amount
+
+:Amount rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Quantitative_Imaging_Biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Anatomical_Measurement
+
+:Anatomical_Measurement rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Quantitative_Imaging_Biomarker .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Anatomical_structure
+
+:Anatomical_structure rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Anatomical_component .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Area
+
+:Area rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Size_Parameter .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Attenuation_correction_algorithm
+
+:Attenuation_correction_algorithm rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :Noise_correction_algorithm .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Binding_Affinity_Biomarker
+
+:Binding_Affinity_Biomarker rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Functional_Measurement .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Biodistribution
+
+:Biodistribution rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Preclinical .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Biological_Target
+
+:Biological_Target rdf:type owl:Class .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Biological_macromolecule
+
+:Biological_macromolecule rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Imaging_Agent .
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Cerebral_blood_flow
+
+:Cerebral_blood_flow rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Perfusion_biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Clinical_Endpoint
+
+:Clinical_Endpoint rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Biomarker_Use ,
+                                   :Clinical_Trial_Endpoint .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Clinical_Trial_Endpoint
+
+:Clinical_Trial_Endpoint rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Drug_Development .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Computed_Radiography
+
+:Computed_Radiography rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :X-ray .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Computed_Tomography
+
+:Computed_Tomography rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :X-ray_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Concentration_biomarker
+
+:Concentration_biomarker rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Kinetic_biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Cone_Beam_CT
+
+:Cone_Beam_CT rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Multi-slice_CT__Multi-row_detector_CT_ .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Cross-linked_Iron_Oxide_Nanoparticle
+
+:Cross-linked_Iron_Oxide_Nanoparticle rdf:type owl:Class ;
+                                      
+                                      rdfs:subClassOf :Superparamagnetic_Iron_Oxide_Nanoparticle .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Diagnosis
+
+:Diagnosis rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Clinical_Endpoint .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Diffusion_biomarker
+
+:Diffusion_biomarker rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Kinetic_biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Digital_Radiography_Direct_Radiography
+
+:Digital_Radiography_Direct_Radiography rdf:type owl:Class ;
+                                        
+                                        rdfs:subClassOf :X-ray .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Dual_Source_CT
+
+:Dual_Source_CT rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Computed_Tomography .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Dual_energy
+
+:Dual_energy rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Computed_Tomography .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Dynamic_PET
+
+:Dynamic_PET rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Positron_Emission_Tomography .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Electron_Beam_CT__EBCT_
+
+:Electron_Beam_CT__EBCT_ rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Computed_Tomography .
+
+
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ex_vivo_bodily_substance
+
+:Ex_vivo_bodily_substance rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Ex_vivo_subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ex_vivo_cells
+
+:Ex_vivo_cells rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Ex_vivo_subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ex_vivo_subject
+
+:Ex_vivo_subject rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Imaging_Subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ex_vivo_tissue_biopsy
+
+:Ex_vivo_tissue_biopsy rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Ex_vivo_subject .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Film_Radiography
+
+:Film_Radiography rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :X-ray .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Fluid_attenuation_inversion_recovery__FLAIR_
+
+:Fluid_attenuation_inversion_recovery__FLAIR_ rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf :Acquisition_Device .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Functional_Measurement
+
+:Functional_Measurement rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Quantitative_Imaging_Biomarker .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Gadolinium
+
+:Gadolinium rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Atom .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Gadolinium_
+
+:Gadolinium_ rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Magnetic_resonance_susceptibility .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Gamma_Camera
+
+:Gamma_Camera rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Acquisition_Device .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Gamma_camera_Anger_camera
+
+:Gamma_camera_Anger_camera rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Autoradiography .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Gene_Knock-In_Model
+
+:Gene_Knock-In_Model rdf:type owl:Class ;
+                     
+                     rdfs:label "Gene Knock-In Model"^^xsd:string ;
+                     
+                     rdfs:subClassOf :Transgenic_Model .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Gene_Knock-Out_Model
+
+:Gene_Knock-Out_Model rdf:type owl:Class ;
+                      
+                      rdfs:label "Gene Knock-Out Model"^^xsd:string ;
+                      
+                      rdfs:subClassOf :Transgenic_Model .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Genetically_engineered_mutant_mouse
+
+:Genetically_engineered_mutant_mouse rdf:type owl:Class ;
+                                     
+                                     rdfs:subClassOf :Mutant_strain .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Gold_Nanoparticle
+
+:Gold_Nanoparticle rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Nanoprobe .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Helical_CT
+
+:Helical_CT rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Computed_Tomography .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#High_field_MRI
+
+:High_field_MRI rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Magnetic_Resonance_Imaging .
+
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Human_subject
+
+:Human_subject rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Organism .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Hyperpolarized
+
+:Hyperpolarized rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Magnetic_resonance_susceptibility .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Image_Analysis_Technique
+
+:Image_Analysis_Technique rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Post-processing_Algorithm .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Image_Processing_Technique
+
+:Image_Processing_Technique rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Post-processing_Algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Image_Reconstruction_Algorithm
+
+:Image_Reconstruction_Algorithm rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf :Image_Visualization_Algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Image_Statistical_analysis
+
+:Image_Statistical_analysis rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Parameter_Extraction_Algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Image_Visualization_Algorithm
+
+:Image_Visualization_Algorithm rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :Post-processing_Algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Image_registration_algorithm
+
+:Image_registration_algorithm rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Image_Processing_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Image_segmentation_algorithm
+
+:Image_segmentation_algorithm rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Image_Processing_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Image_thresholding_algorithm
+
+:Image_thresholding_algorithm rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Image_Processing_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Imaging_Agent
+
+:Imaging_Agent rdf:type owl:Class .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Imaging_Agent_Source_of_Emitted_Energy
+
+:Imaging_Agent_Source_of_Emitted_Energy rdf:type owl:Class ;
+                                        
+                                        rdfs:subClassOf :Imaging_Agent .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Imaging_Subject
+
+:Imaging_Subject rdf:type owl:Class .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Imaging_Technique
+
+:Imaging_Technique rdf:type owl:Class .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#In_vitro_cell
+
+:In_vitro_cell rdf:type owl:Class ;
+               
+               rdfs:subClassOf :In_vitro_subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#In_vitro_primary_cell
+
+:In_vitro_primary_cell rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Cell_line .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#In_vitro_subject
+
+:In_vitro_subject rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Imaging_Subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#In_vitro_tissue_biopsy
+
+:In_vitro_tissue_biopsy rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :In_vitro_subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#In_vivo_subject
+
+:In_vivo_subject rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Imaging_Subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Inbred_strain
+
+:Inbred_strain rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Mouse .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Iron
+
+:Iron rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Magnetic_resonance_susceptibility .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Iron_nanoparticle
+
+:Iron_nanoparticle rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Iron .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Kinetic_biomarker
+
+:Kinetic_biomarker rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Functional_Measurement .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Large_Superparamagnetic_Iron_Oxide_Nanoparticle
+
+:Large_Superparamagnetic_Iron_Oxide_Nanoparticle rdf:type owl:Class ;
+                                                 
+                                                 rdfs:subClassOf :Superparamagnetic_Iron_Oxide_Nanoparticle .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Linear_registration_algorithm
+
+:Linear_registration_algorithm rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :Image_registration_algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Magnetic_Resonance_Imaging
+
+:Magnetic_Resonance_Imaging rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Magnetic_resonance_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Magnetic_Resonance_Spectroscopy
+
+:Magnetic_Resonance_Spectroscopy rdf:type owl:Class ;
+                                 
+                                 rdfs:subClassOf :Magnetic_resonance_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Magnetic_resonance_angiography
+
+:Magnetic_resonance_angiography rdf:type owl:Class ;
+                                
+                                rdfs:label "Magnetic resonance angiography"^^xsd:string ;
+                                
+                                rdfs:subClassOf :Magnetic_Resonance_Imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Magnetic_resonance_imaging
+
+:Magnetic_resonance_imaging rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Imaging_Technique ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :uses_MRI_pulse_sequence ;
+                                              owl:hasValue "Gradient echo sequence"^^xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :uses_MRI_pulse_sequence ;
+                                              owl:hasValue "Saturation recovery sequence"^^xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :uses_MRI_pulse_sequence ;
+                                              owl:hasValue "Echo planar sequence"^^xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :uses_MRI_pulse_sequence ;
+                                              owl:hasValue "Spiral sequence"^^xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :uses_MRI_pulse_sequence ;
+                                              owl:hasValue "Spin echo sequence"^^xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :uses_MRI_pulse_sequence ;
+                                              owl:hasValue "Diffusion pulse sequence"^^xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :uses_MRI_pulse_sequence ;
+                                              owl:hasValue "Inversion recovery sequence"^^xsd:string
+                                            ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Magnetic_resonance_susceptibility
+
+:Magnetic_resonance_susceptibility rdf:type owl:Class ;
+                                   
+                                   rdfs:subClassOf :Imaging_Agent_Source_of_Emitted_Energy .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Mammography
+
+:Mammography rdf:type owl:Class ;
+             
+             rdfs:subClassOf :X-ray .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Manganese
+
+:Manganese rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Magnetic_resonance_susceptibility .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Metabolic_rate_biomarker
+
+:Metabolic_rate_biomarker rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Functional_Measurement .
+
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Micro_Computed_Tomography
+
+:Micro_Computed_Tomography rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Tomography .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Microvascular_permeability
+
+:Microvascular_permeability rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Permeability_biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Model
+
+:Model rdf:type owl:Class ;
+       
+       rdfs:subClassOf :In_vivo_subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Model_of_Disease
+
+:Model_of_Disease rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Model .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Molecular_Target
+
+:Molecular_Target rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Biological_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Monkey
+
+:Monkey rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Non-human_mammalian_organism .
+
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Morphological_Parameter
+
+:Morphological_Parameter rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Anatomical_Measurement .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Motion_correction_algorithm
+
+:Motion_correction_algorithm rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Noise_correction_algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Mouse
+
+:Mouse rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Rodent_Model .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Mouse_Model_of_Disease
+
+:Mouse_Model_of_Disease rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Mouse .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Mouse_Xenograft_Model
+
+:Mouse_Xenograft_Model rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Mouse .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Multi-modality
+
+:Multi-modality rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Acquisition_Device .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Multi-slice_CT__Multi-row_detector_CT_
+
+:Multi-slice_CT__Multi-row_detector_CT_ rdf:type owl:Class ;
+                                        
+                                        rdfs:subClassOf :Computed_Tomography .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Multiple_tracer_PET
+
+:Multiple_tracer_PET rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Positron_Emission_Tomography .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Multispectral_imaging
+
+:Multispectral_imaging rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Whole_Animal_Optical_Imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Mutant_strain
+
+:Mutant_strain rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Mouse .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Nanoprobe
+
+:Nanoprobe rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Imaging_Agent .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Negative_Change
+
+:Negative_Change rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Measurement_of_Change .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Neurotransmitter
+
+:Neurotransmitter rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Extracellular_signaling_molecule .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Nitrogen-13
+
+:Nitrogen-13 rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Radioisotope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Noise_correction_algorithm
+
+:Noise_correction_algorithm rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Image_Processing_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Non-human_mammalian_organism
+
+:Non-human_mammalian_organism rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Organism .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Non-mammalian_organism
+
+:Non-mammalian_organism rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Organism .
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Non-rigid_registration_algorithm
+
+:Non-rigid_registration_algorithm rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :Image_registration_algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Non-specific
+
+:Non-specific rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Biological_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Nuclear_receptor
+
+:Nuclear_receptor rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Intracellular_receptor .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Organismal_Target
+
+:Organismal_Target rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Biological_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Oxygen-15
+
+:Oxygen-15 rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Radioisotope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#PET_CT
+
+:PET_CT rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Multi-modality .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#PET_MRI
+
+:PET_MRI rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Multi-modality .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Parameter_Extraction_Algorithm
+
+:Parameter_Extraction_Algorithm rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf :Image_Analysis_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Pathological_target
+
+:Pathological_target rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Protein__ .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Pathway-Level_Target
+
+:Pathway-Level_Target rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Biological_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Patient_Selection
+
+:Patient_Selection rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Putative_Surrogate_Endpoint .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Perfluorocarbon_emulsion
+
+:Perfluorocarbon_emulsion rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Ultrasonic .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Perfusion_MRI
+
+:Perfusion_MRI rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Magnetic_Resonance_Imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Perfusion_biomarker
+
+:Perfusion_biomarker rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Kinetic_biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Permeability_biomarker
+
+:Permeability_biomarker rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Kinetic_biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Phantom_experimental_subject
+
+:Phantom_experimental_subject rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Imaging_Subject .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Pharmacokinetic_profile
+
+:Pharmacokinetic_profile rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Preclinical .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Physiological_temperature_biomarker
+
+:Physiological_temperature_biomarker rdf:type owl:Class ;
+                                     
+                                     rdfs:subClassOf :Functional_Measurement .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Pig
+
+:Pig rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Non-human_mammalian_organism .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Planar_Nuclear_Medicine_Imaging
+
+:Planar_Nuclear_Medicine_Imaging rdf:type owl:Class ;
+                                 
+                                 rdfs:subClassOf :Single_Photon_Imaging .
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Positron_Emission_Tomography
+
+:Positron_Emission_Tomography rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Radionuclide_imaging ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :uses_PET_reconstruction_algorithm ;
+                                                owl:hasValue "Attenuation-weighted OSEM (AWOSEM)"^^xsd:string
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :uses_PET_reconstruction_algorithm ;
+                                                owl:hasValue "Fourier rebinning (FORE)"^^xsd:string
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :uses_PET_reconstruction_algorithm ;
+                                                owl:hasValue "Ordered-subset expection maxmization (OSEM)"^^xsd:string
+                                              ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Post-processing_Algorithm
+
+:Post-processing_Algorithm rdf:type owl:Class .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Preclinical
+
+:Preclinical rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Drug_Development .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Putative_Surrogate_Endpoint
+
+:Putative_Surrogate_Endpoint rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Clinical_Trial_Endpoint .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Quantitation_Algorithm
+
+:Quantitation_Algorithm rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Image_Analysis_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Quantitative_Imaging_Biomarker
+
+:Quantitative_Imaging_Biomarker rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf owl:Thing ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_temporality ;
+                                                  owl:hasValue "serial"^^xsd:string
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_temporality ;
+                                                  owl:hasValue "dynamic"^^xsd:string
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_temporality ;
+                                                  owl:hasValue "single"^^xsd:string
+                                                ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Quantum_Dot_
+
+:Quantum_Dot_ rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Nanoprobe .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Radioisotope
+
+:Radioisotope rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Imaging_Agent .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Radiolabeled_analog
+
+:Radiolabeled_analog rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Radionuclide .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Radiolabeled_antibody
+
+:Radiolabeled_antibody rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Radionuclide .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Radionuclide
+
+:Radionuclide rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Imaging_Agent_Source_of_Emitted_Energy ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :Emitter ;
+                                owl:hasValue "Gamma"^^xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :Emitter ;
+                                owl:hasValue "Alpha"^^xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :Emitter ;
+                                owl:hasValue "Multiple radiation emitter"^^xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :Emitter ;
+                                owl:hasValue "Beta"^^xsd:string
+                              ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Radionuclide_imaging
+
+:Radionuclide_imaging rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Imaging_Technique ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :scintillator ;
+                                        owl:hasValue "Bismuth germanate (BGO)"^^xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :scintillator ;
+                                        owl:hasValue "Thallium-activated sodium iodide (NaI(TI))"^^xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :scintillator ;
+                                        owl:hasValue "Lutetium yttrium oxyorthosilicate (LYSO)"^^xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :scintillator ;
+                                        owl:hasValue "Lutetium oxyorthosilicate (LSO)"^^xsd:string
+                                      ] .
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Rat_subject
+
+:Rat_subject rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Rodent_Model .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Research_Use
+
+:Research_Use rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Biomarker_Use .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Respiratory_motion_correction_algorithm
+
+:Respiratory_motion_correction_algorithm rdf:type owl:Class ;
+                                         
+                                         rdfs:subClassOf :Motion_correction_algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Response_Assessment
+
+:Response_Assessment rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Putative_Surrogate_Endpoint .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Rodent_Model
+
+:Rodent_Model rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Non-human_mammalian_organism .
+
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#SPECT_CT
+
+:SPECT_CT rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Multi-modality .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Sarcoma
+
+:Sarcoma rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Oncologic_disease_pathology .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Scanning_Electron_Microscope
+
+:Scanning_Electron_Microscope rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Electron_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Scanning_Probe_Microscope
+
+:Scanning_Probe_Microscope rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Scanning_Tunneling_Microscope
+
+:Scanning_Tunneling_Microscope rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :Scanning_Probe_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Scanning_Tunneling_Microscope123
+
+:Scanning_Tunneling_Microscope123 rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :Electron_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Scanning_confocal_microscope
+
+:Scanning_confocal_microscope rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Confocal_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Scanning_optical_microscope
+
+:Scanning_optical_microscope rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Optical_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Scatter_correction_algorithm
+
+:Scatter_correction_algorithm rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Noise_correction_algorithm .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Scintigraphy
+
+:Scintigraphy rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Radionuclide_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Screening
+
+:Screening rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Clinical_Endpoint .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Second_messenger
+
+:Second_messenger rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Intracellular_signaling_molecule .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Seizure
+
+:Seizure rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Neurologic_disease .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Selectin
+
+:Selectin rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Cell_adhesion_protein .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Sex_differentiation_disorder
+
+:Sex_differentiation_disorder rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Endocrine_disease .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Shape_Parameter
+
+:Shape_Parameter rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Morphological_Parameter .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Side_Effect
+
+:Side_Effect rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Preclinical .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Simulated_Emission_Depletion_Microscope
+
+:Simulated_Emission_Depletion_Microscope rdf:type owl:Class ;
+                                         
+                                         rdfs:subClassOf :Super_Resolution_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Single_Photon_Emission_Computed_Tomography
+
+:Single_Photon_Emission_Computed_Tomography rdf:type owl:Class ;
+                                            
+                                            rdfs:subClassOf :Single_Photon_Imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Single_Photon_Imaging
+
+:Single_Photon_Imaging rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Radionuclide_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Size_Parameter
+
+:Size_Parameter rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Morphological_Parameter .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Skin
+
+:Skin rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Multicellular_Organ-level_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Small_Molecule
+
+:Small_Molecule rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Imaging_Agent .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Small_molecule_anitcancer_drug
+
+:Small_molecule_anitcancer_drug rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf :Anticancer_therapy .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Smoothness
+
+:Smoothness rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Texture_Parameter .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Somatostatin_receptor
+
+:Somatostatin_receptor rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Membrane_receptor .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Spleen
+
+:Spleen rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Multicellular_Organ-level_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Staging
+
+:Staging rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Clinical_Endpoint .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Standard_Superparamagnetic_Iron_Oxide_Nanoparticle
+
+:Standard_Superparamagnetic_Iron_Oxide_Nanoparticle rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf :Superparamagnetic_Iron_Oxide_Nanoparticle .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Stem_Cell
+
+:Stem_Cell rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Cell .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Stereoscopic
+
+:Stereoscopic rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Light_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Stimulated_Raman_Scattering
+
+:Stimulated_Raman_Scattering rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Raman_Scattering_Spectroscopy .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Stomach
+
+:Stomach rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Multicellular_Organ-level_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Striatum
+
+:Striatum rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Brain .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Subcellular_process
+
+:Subcellular_process rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Biological_process .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Super-resolution_fluorescence_microscopy
+
+:Super-resolution_fluorescence_microscopy rdf:type owl:Class ;
+                                          
+                                          rdfs:subClassOf :Fluorescence_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Super_Resolution_Microscope
+
+:Super_Resolution_Microscope rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Optical_Microscope ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "RESOLOFT"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "STED"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "STORM"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "SIM"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "SSIM"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "PALM"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "2CLM"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "Vertico-SMI"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "GSD"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "SPEM"^^xsd:string
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :super_resolution_technique ;
+                                               owl:hasValue "4Pi"^^xsd:string
+                                             ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Superparamagnetic_Iron_Oxide_Nanoparticle
+
+:Superparamagnetic_Iron_Oxide_Nanoparticle rdf:type owl:Class ;
+                                           
+                                           rdfs:subClassOf :Nanoprobe .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Superparamagnetic_iron_oxide_particle__SPIO_
+
+:Superparamagnetic_iron_oxide_particle__SPIO_ rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf :Iron_nanoparticle .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Surface_Area
+
+:Surface_Area rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Size_Parameter .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Surgical_procedure
+
+:Surgical_procedure rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Biological_Intervention .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Syndrome
+
+:Syndrome rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Disease .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Synthetic_fluorescent_dye
+
+:Synthetic_fluorescent_dye rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Fluorescence_imaging_agent .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Syrian_Hamster
+
+:Syrian_Hamster rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Hamster .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Systemic_Target
+
+:Systemic_Target rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Biological_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Systemic_disease_pathology
+
+:Systemic_disease_pathology rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Disease .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#T1-weighted_MRI
+
+:T1-weighted_MRI rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Magnetic_Resonance_Imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#T2-weighted_MRI
+
+:T2-weighted_MRI rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Magnetic_Resonance_Imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#T2__weighted_MRI
+
+:T2__weighted_MRI rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :T2-weighted_MRI .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#TOF_PET
+
+:TOF_PET rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Positron_Emission_Tomography .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#T_cell_proliferation
+
+:T_cell_proliferation rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Cell_proliferation .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Targeted_Mutant_Mouse
+
+:Targeted_Mutant_Mouse rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Genetically_engineered_mutant_mouse .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Temporo-spatially_modified_gene_expression
+
+:Temporo-spatially_modified_gene_expression rdf:type owl:Class ;
+                                            
+                                            rdfs:subClassOf :Induced_gene_expression .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tetracycline_induced_gene_expression
+
+:Tetracycline_induced_gene_expression rdf:type owl:Class ;
+                                      
+                                      rdfs:subClassOf :Induced_gene_expression .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tetracycline_induced_gene_silencing
+
+:Tetracycline_induced_gene_silencing rdf:type owl:Class ;
+                                     
+                                     rdfs:subClassOf :Induced_gene_expression .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tetramer
+
+:Tetramer rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Nanoprobe .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Texture_Parameter
+
+:Texture_Parameter rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Morphological_Parameter .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Therapeutic_intervention
+
+:Therapeutic_intervention rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Biological_Intervention .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Thickness
+
+:Thickness rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Size_Parameter .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Thrombosis
+
+:Thrombosis rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Multicellular_process .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Thymidine_kinase
+
+:Thymidine_kinase rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Intracellular_protein .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Thymus
+
+:Thymus rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Multicellular_Organ-level_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Thyroid_disease
+
+:Thyroid_disease rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Endocrine_disease .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Time_activity_curve__TAC_
+
+:Time_activity_curve__TAC_ rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Kinetic_biomarker .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Time_of_flight__TOF_
+
+:Time_of_flight__TOF_ rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Magnetic_Resonance_Imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tomography
+
+:Tomography rdf:type owl:Class ;
+            
+            rdfs:label "Tomography"^^xsd:string ;
+            
+            rdfs:subClassOf :Imaging_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Total_Internal_Reflection_Fluorescence__TIRF_
+
+:Total_Internal_Reflection_Fluorescence__TIRF_ rdf:type owl:Class ;
+                                               
+                                               rdfs:subClassOf :Laser_based_Optical_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transcription
+
+:Transcription rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Subcellular_process .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transcription_factor
+
+:Transcription_factor rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Intracellular_signaling_molecule .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transduced_cell
+
+:Transduced_cell rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :In_vitro_cell .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transferase
+
+:Transferase rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Enzyme .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transgenic_Model
+
+:Transgenic_Model rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Model .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transgenic_engineering
+
+:Transgenic_engineering rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Genetic_engineering .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transgenic_model
+
+:Transgenic_model rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Targeted_Mutant_Mouse .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transient_Gene_Knock-Out_Model
+
+:Transient_Gene_Knock-Out_Model rdf:type owl:Class ;
+                                
+                                rdfs:label "Transient Gene Knock-Out Model"^^xsd:string ;
+                                
+                                rdfs:subClassOf :Transgenic_Model .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Translation
+
+:Translation rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Subcellular_process .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transmission_Electron_Micrscope
+
+:Transmission_Electron_Micrscope rdf:type owl:Class ;
+                                 
+                                 rdfs:subClassOf :Electron_Microscope ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :sectioning_technique ;
+                                                   owl:hasValue "slicing"^^xsd:string
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :sectioning_technique ;
+                                                   owl:hasValue "freeze-fracturing"^^xsd:string
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :sectioning_technique ;
+                                                   owl:hasValue "freeze-etching"^^xsd:string
+                                                 ] .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Transplant_rejection
+
+:Transplant_rejection rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Disease .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Treatment_assessment
+
+:Treatment_assessment rdf:type owl:Class ;
+                      
+                      rdfs:label "Treatment assessment"^^xsd:string ;
+                      
+                      rdfs:subClassOf :Clinical_Endpoint .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Treatment_selection
+
+:Treatment_selection rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Treatment_assessment .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tube_current_modulated_CT
+
+:Tube_current_modulated_CT rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Computed_Tomography .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tumor
+
+:Tumor rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Multicellular_Organ-level_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tumor_Assessment
+
+:Tumor_Assessment rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Response_Assessment .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tumor_cell
+
+:Tumor_cell rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Cellular_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Tyrosinase
+
+:Tyrosinase rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Intracellular_protein .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ultra-small_superparamagnetic_iron_oxide_particle__USPIO_
+
+:Ultra-small_superparamagnetic_iron_oxide_particle__USPIO_ rdf:type owl:Class ;
+                                                           
+                                                           rdfs:subClassOf :Iron_nanoparticle .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ultrasmall_Superparamagnetic_Iron_Oxide_Nanoparticle
+
+:Ultrasmall_Superparamagnetic_Iron_Oxide_Nanoparticle rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf :Superparamagnetic_Iron_Oxide_Nanoparticle .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ultrasonic
+
+:Ultrasonic rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Imaging_Agent_Source_of_Emitted_Energy .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ultrasonic_Force_Microscope
+
+:Ultrasonic_Force_Microscope rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Acoustic_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ultrasound_imaging
+
+:Ultrasound_imaging rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Imaging_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Ultraviolet_Microscope
+
+:Ultraviolet_Microscope rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Urinary_Bladder
+
+:Urinary_Bladder rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Multicellular_Organ-level_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Urogenital_disease
+
+:Urogenital_disease rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Systemic_disease_pathology .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Uterus
+
+:Uterus rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Multicellular_Organ-level_Target .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#VEGF
+
+:VEGF rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Growth_factor .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Vascular_Space
+
+:Vascular_Space rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Anatomical_space .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Vascular_disease
+
+:Vascular_disease rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Cardiovascular_disease .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Viral_infectious_disease
+
+:Viral_infectious_disease rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Infectious_disease_pathology .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Vitamin
+
+:Vitamin rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Chemically_Synthetic_Molecule .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Volume
+
+:Volume rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Size_Parameter .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Vomiting
+
+:Vomiting rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Gastrointestinal_disease .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Whole_Animal_Optical_Imaging
+
+:Whole_Animal_Optical_Imaging rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Optical_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Wide_field_fluorescent_microscope
+
+:Wide_field_fluorescent_microscope rdf:type owl:Class ;
+                                   
+                                   rdfs:subClassOf :Optical_Microscope .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Widefield_fluorescence_microscopy
+
+:Widefield_fluorescence_microscopy rdf:type owl:Class ;
+                                   
+                                   rdfs:subClassOf :Fluorescence_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Wild_strain
+
+:Wild_strain rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Mouse .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#X-ray
+
+:X-ray rdf:type owl:Class ;
+       
+       rdfs:subClassOf :X-ray_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#X-ray_Microscope
+
+:X-ray_Microscope rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :X-ray_imaging .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#X-ray_attenuator
+
+:X-ray_attenuator rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Imaging_Agent_Source_of_Emitted_Energy .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#X-ray_imaging
+
+:X-ray_imaging rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Imaging_Technique .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Xenograft
+
+:Xenograft rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Surgical_procedure .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Xenograft_Model
+
+:Xenograft_Model rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Model .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Xenograft_rat_subject
+
+:Xenograft_rat_subject rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Rat_subject .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Yeast
+
+:Yeast rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Non-mammalian_organism .
+
+
+
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Zebrafish
+
+:Zebrafish rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Non-mammalian_organism .
+
+
+
