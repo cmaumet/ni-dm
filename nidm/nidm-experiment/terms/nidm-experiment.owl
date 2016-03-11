@@ -647,7 +647,7 @@ nidm:Subject rdf:type owl:Class ;
 
 nidm:ExVivoSubject rdf:type owl:Class ;
 
-	   sio:SIO_001242 "qibo:ExVivoSubject" ;
+	   sio:SIO_001242 qibo:ExVivoSubject ;
            
            rdfs:subClassOf nidm:Subject .
 
@@ -656,7 +656,7 @@ nidm:ExVivoSubject rdf:type owl:Class ;
 
 nidm:InVivoSubject rdf:type owl:Class ;
 
-           sio:SIO_001242 "qibo:InVivoSubject" ;
+           sio:SIO_001242 qibo:InVivoSubject ;
 
            rdfs:subClassOf nidm:Subject .
 
@@ -665,7 +665,7 @@ nidm:InVivoSubject rdf:type owl:Class ;
 
 qibo:InVitroSubject rdf:type owl:Class ;
 
-           sio:SIO_001242 "qibo:InVitroSubject" ;
+           sio:SIO_001242 qibo:InVitroSubject ;
            
            rdfs:subClassOf nidm:Subject .
 
