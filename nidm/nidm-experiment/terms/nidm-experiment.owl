@@ -663,7 +663,7 @@ nidm:InVivoSubject rdf:type owl:Class ;
 
 ###  http://purl.org/nidash/nidm#InVitroSubject
 
-qibo:InVitroSubject rdf:type owl:Class ;
+nidm:InVitroSubject rdf:type owl:Class ;
 
            sio:SIO_001242 "qibo:InVitroSubject" ;
            
