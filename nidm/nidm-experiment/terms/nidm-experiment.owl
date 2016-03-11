@@ -112,6 +112,11 @@ rdfs:seeAlso rdf:type owl:AnnotationProperty ;
 owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
+###  http://semanticscience.org/resource/SIO_001242
+
+sio:SIO_001242 rdf:type owl:AnnotationProperty .
+
+
 
 
 
@@ -144,9 +149,6 @@ nidm:NIDM_0000010 rdf:type owl:ObjectProperty ;
 
 
 
-###  http://semanticscience.org/resource/SIO_001242
-
-sio:SIO_001242 rdf:type owl:ObjectProperty .
 
 
 
