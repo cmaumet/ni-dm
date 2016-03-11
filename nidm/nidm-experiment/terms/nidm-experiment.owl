@@ -475,7 +475,9 @@ nidm:ImageObjectFunctionType rdf:type owl:Class ;
 
 ###  http://purl.org/nidash/nidm#ImageObjectUsageType
 
-nidm:ImageObjectUsageType rdf:type owl:Class .
+nidm:ImageObjectUsageType rdf:type owl:Class ;
+
+                             rdfs:subClassOf prov:Entity .
 
 
 
