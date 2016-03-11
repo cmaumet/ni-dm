@@ -213,6 +213,10 @@ nidm:NIDM_0000501 rdf:type owl:DatatypeProperty ;
 #
 #################################################################
 
+###  http://www.owl-ontologies.com/Ontology1298855822.owl#Imaging_Subject
+
+qibo:Imaging_Subject rdfs:subClassOf prov:Entity .
+
 
 ###  http://purl.org/nidash/nidm#AcquisitionObject
 
