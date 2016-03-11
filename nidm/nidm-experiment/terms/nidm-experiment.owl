@@ -410,7 +410,7 @@ nidm:Group rdf:type owl:Class ;
 
 nidm:ImageContrastType rdf:type owl:Class ;
                          
-                         rdfs:subClassOf Entity .
+                         rdfs:subClassOf prov:Entity .
 
 
 
@@ -418,7 +418,7 @@ nidm:ImageContrastType rdf:type owl:Class ;
 
 nidm:T1Weighted rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageContrastType .
+                         rdfs:subClassOf nidm:ImageContrastType .
 
 
 
@@ -426,7 +426,7 @@ nidm:T1Weighted rdf:type owl:Class ;
 
 nidm:T2Weighted rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageContrastType .
+                         rdfs:subClassOf nidm:ImageContrastType .
 
 
 
@@ -434,7 +434,7 @@ nidm:T2Weighted rdf:type owl:Class ;
 
 nidm:T2*Weighted rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageContrastType .
+                         rdfs:subClassOf nidm:ImageContrastType .
 
 
 
@@ -442,7 +442,7 @@ nidm:T2*Weighted rdf:type owl:Class ;
 
 nidm:ProtonDensityWeighted rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageContrastType .
+                         rdfs:subClassOf nidm:ImageContrastType .
 
 
 
@@ -450,7 +450,7 @@ nidm:ProtonDensityWeighted rdf:type owl:Class ;
 
 nidm:FlowWeighted rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageContrastType .
+                         rdfs:subClassOf nidm:ImageContrastType .
 
 
 
@@ -458,7 +458,7 @@ nidm:FlowWeighted rdf:type owl:Class ;
 
 nidm:DiffusionWeighted rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageContrastType .
+                         rdfs:subClassOf nidm:ImageContrastType .
 
 
 
@@ -466,7 +466,7 @@ nidm:DiffusionWeighted rdf:type owl:Class ;
 
 nidm:SusceptibilityWeighted rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageContrastType .
+                         rdfs:subClassOf nidm:ImageContrastType .
 
 
 
@@ -474,7 +474,7 @@ nidm:SusceptibilityWeighted rdf:type owl:Class ;
 
 nidm:ImageObjectFunctionType rdf:type owl:Class ;
                          
-                         rdfs:subClassOf Entity .
+                         rdfs:subClassOf prov:Entity .
 
 
 
@@ -482,7 +482,7 @@ nidm:ImageObjectFunctionType rdf:type owl:Class ;
 
 nidm:DiffusionTensorObject rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageObjectUsageType .
+                         rdfs:subClassOf nidm:ImageObjectUsageType .
 
 
 
@@ -490,7 +490,7 @@ nidm:DiffusionTensorObject rdf:type owl:Class ;
 
 nidm:DynamicSusceptibilityContrastObject rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageObjectUsageType .
+                         rdfs:subClassOf nidm:ImageObjectUsageType .
 
 
 
@@ -498,7 +498,7 @@ nidm:DynamicSusceptibilityContrastObject rdf:type owl:Class ;
 
 nidm:DynamicContrastEnhancementObject rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageObjectUsageType .
+                         rdfs:subClassOf nidm:ImageObjectUsageType .
 
 
 
@@ -506,7 +506,7 @@ nidm:DynamicContrastEnhancementObject rdf:type owl:Class ;
 
 nidm:SusceptibilityWeightedImagingObject rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageObjectUsageType .
+                         rdfs:subClassOf nidm:ImageObjectUsageType .
 
 
 
@@ -514,7 +514,7 @@ nidm:SusceptibilityWeightedImagingObject rdf:type owl:Class ;
 
 nidm:AnatomicalObject rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageObjectUsageType .
+                         rdfs:subClassOf nidm:ImageObjectUsageType .
 
 
 
@@ -522,7 +522,7 @@ nidm:AnatomicalObject rdf:type owl:Class ;
 
 nidm:StructuralObject rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageObjectUsageType .
+                         rdfs:subClassOf nidm:ImageObjectUsageType .
 
 
 
@@ -530,7 +530,7 @@ nidm:StructuralObject rdf:type owl:Class ;
 
 nidm:FunctionalObject rdf:type owl:Class ;
                          
-                         rdfs:subClassOf ImageObjectUsageType .
+                         rdfs:subClassOf nidm:ImageObjectUsageType .
 
 
 
