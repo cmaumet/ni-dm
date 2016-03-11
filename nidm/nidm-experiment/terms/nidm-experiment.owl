@@ -674,7 +674,7 @@ nidm:InVitroSubject rdf:type owl:Class ;
 
 nidm:Phantom rdf:type owl:Class ;
 
-	   sio:SIO_001242 qibo:PhantomExperimentalSubject
+     sio:SIO_001242 qibo:PhantomExperimentalSubject ;
            
            rdfs:subClassOf nidm:Subject .
 
