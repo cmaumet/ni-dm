@@ -430,9 +430,9 @@ nidm:T2Weighted rdf:type owl:Class ;
 
 
 
-###  http://purl.org/nidash/nidm#T2*Weighted
+###  http://purl.org/nidash/nidm#T2StarWeighted
 
-nidm:T2*Weighted rdf:type owl:Class ;
+nidm:T2StarWeighted rdf:type owl:Class ;
                          
                          rdfs:subClassOf nidm:ImageContrastType .
 
